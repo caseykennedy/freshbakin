@@ -22,19 +22,17 @@ const MarqueeProps = {
   speed: 20,
 }
 
-const Speakers: React.FC = () => {
+const Speakers = () => {
   return (
     <S.Speakers>
       <Section border={true}>
-        <Heading className="text--lg">
-          Section
-        </Heading>
+        <Heading className="text--lg">Section</Heading>
       </Section>
     </S.Speakers>
   )
 }
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <S.Hero>
       <Marquee {...MarqueeProps}>
@@ -51,14 +49,26 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
-<Section border={true}>
-  <Heading as="h1">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-  <Heading as="h2">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-  <Heading as="h3">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-  <Heading as="h4">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-  <Heading as="h5">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-  <Heading as="h6">FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.</Heading>
-</Section>
+      <Section border={true}>
+        <Heading as="h1">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+        <Heading as="h2">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+        <Heading as="h3">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+        <Heading as="h4">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+        <Heading as="h5">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+        <Heading as="h6">
+          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
+        </Heading>
+      </Section>
       <Speakers />
 
       {/* <Section border={true}>

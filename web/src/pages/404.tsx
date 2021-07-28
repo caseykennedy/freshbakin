@@ -13,10 +13,8 @@ import theme from '../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const fourofourPage = () => {
+const PageNotFound = () => {
   return <Box>404</Box>
 }
 
-export default fourofourPage
-
-// ___________________________________________________________________
+export default PageNotFound

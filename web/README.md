@@ -1,6 +1,6 @@
 # FreshBakin' Event Marketing Website
 
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/2f87b92c-414f-4c1d-b2ba-a1469441fa70/deploy-status)](https://app.netlify.com/sites/dotnft/deploys) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5697a8c2-8ee0-4ec9-98cf-9222e540c319/deploy-status)](https://app.netlify.com/sites/friendly-banach-2a3716/deploys)
 
 ## Features
 
