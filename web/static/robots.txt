@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://dweb-summit.com/sitemap.xml

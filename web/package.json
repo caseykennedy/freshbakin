@@ -1,0 +1,120 @@
+{
+  "name": "freshbakin-website",
+  "private": true,
+  "description": "The marketing website for the 2021 dWeb Summit.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "node ./scripts/bootstrap-fauna-database.js",
+    "build": "gatsby build",
+    "cleancache": "gatsby clean",
+    "develop": "gatsby develop",
+    "dev": "gatsby develop -o",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "ssr": "gatsby build && gatsby serve",
+    "lint": "tslint -t stylish -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json -t stylish --fix",
+    "format": "prettier --write content/**/*.yaml",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@reach/dialog": "^0.10.5",
+    "@reach/visually-hidden": "^0.10.4",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@types/lodash": "^4.14.168",
+    "@types/react-hamburger-menu": "0.0.3",
+    "@types/react-typist": "^2.0.1",
+    "@types/theme-ui": "^0.6.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "coingecko-api": "^1.0.10",
+    "framer-motion": "^4.1.4",
+    "gatsby": "^3.3.0",
+    "gatsby-image": "^3.9.0",
+    "gatsby-plugin-google-tagmanager": "^3.3.0",
+    "gatsby-plugin-image": "^1.3.0",
+    "gatsby-plugin-manifest": "^3.3.0",
+    "gatsby-plugin-netlify": "^3.3.0",
+    "gatsby-plugin-nprogress": "^3.3.0",
+    "gatsby-plugin-offline": "^4.3.0",
+    "gatsby-plugin-react-helmet": "^4.3.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-sanity-image": "^0.6.0",
+    "gatsby-plugin-sharp": "^3.3.0",
+    "gatsby-plugin-sitemap": "^3.3.0",
+    "gatsby-plugin-styled-components": "^4.3.0",
+    "gatsby-plugin-theme-ui": "^0.10.1",
+    "gatsby-plugin-typescript": "^3.3.0",
+    "gatsby-source-filesystem": "^3.3.0",
+    "gatsby-source-sanity": "^7.0.4",
+    "gatsby-transformer-sharp": "^3.3.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "polished": "^4.1.1",
+    "react": "^17.0.2",
+    "react-add-to-calendar": "^0.1.5",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-dom": "^17.0.2",
+    "react-fast-marquee": "^1.2.1",
+    "react-hamburger-menu": "^1.2.1",
+    "react-helmet": "^6.1.0",
+    "react-id-swiper": "^4.0.0",
+    "react-is": "^16.13.1",
+    "react-qr-code": "^1.1.1",
+    "react-responsive-modal": "^6.0.1",
+    "react-toggle-dark-mode": "^1.0.4",
+    "react-typist": "^2.0.5",
+    "styled-components": "^5.2.1",
+    "styled-normalize": "^8.0.7",
+    "styled-system": "^5.1.5",
+    "swiper": "^6.5.7",
+    "theme-ui": "^0.10.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.2",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-helmet": "^6.1.1",
+    "@types/styled-components": "^5.1.9",
+    "@types/styled-system": "^5.1.11",
+    "cross-env": "^5.2.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "start-server-and-test": "^1.12.0",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "tslint-react": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caseykennedy/meno"
+  },
+  "bugs": {
+    "url": "https://github.com/caseykennedy/handshake-foundation/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.yaml": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "xo --fix",
+      "git add"
+    ]
+  }
+}
