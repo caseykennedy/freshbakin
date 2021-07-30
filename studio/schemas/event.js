@@ -1,11 +1,11 @@
 export default {
-  name: 'post',
-  title: 'Blog Post',
+  name: 'event',
+  title: 'Event',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Event Name',
       type: 'string',
       validation: Rule =>
         Rule.required()
@@ -14,34 +14,72 @@ export default {
           .warning(`A title shouldn't exceed 72 characters.`)
     },
     {
+      name: 'subTitle',
+      title: 'Sub-title',
+      type: 'string',
+      description: 'Tour name, set length, etc.'
+    },
+    {
+      name: 'venue',
+      title: 'Venue',
+      type: 'string'
+    },
+    {
+      name: 'ageRestriction',
+      title: 'Age Restriction',
+      type: 'string',
+      description: 'e.g.: 18+ | 21+'
+    },
+    {
+      name: 'startDate',
+      title: 'Date',
+      type: 'datetime',
+      description: 'Date of the event.',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description:
-        'Some frontend will require a slug to be set to be able to show the post',
+      description: 'Event name + date + year — e.g.: EVENT-NAME-OCTOBER-2022',
       options: {
         source: 'title'
       },
       validation: Rule => Rule.required()
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      description:
-        'You can use this field to schedule post where you show them',
-      type: 'datetime',
+      name: 'price',
+      title: 'Price',
+      type: 'string',
+      description: 'Price only, no $ signs.'
+    },
+    {
+      name: 'ticketUrl',
+      title: 'Ticket URL',
+      type: 'url',
+      description: 'Use a valid URL. e.g.: https://freshbakin.com'
+    },
+    {
+      name: 'city',
+      title: 'City',
+      type: 'string',
       validation: Rule => Rule.required()
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'reference',
-      to: [{ type: 'person' }],
+      name: 'state',
+      title: 'State',
+      type: 'string',
+      description: 'Use abbreviation. e.g.: nv',
       validation: Rule => Rule.required()
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'address',
+      title: 'Address',
+      type: 'string'
+    },
+    {
+      name: 'category',
+      title: 'Category',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'postCategory' } }],
       validation: Rule => Rule.required()
@@ -58,7 +96,7 @@ export default {
     },
     {
       name: 'figure',
-      title: 'Figure',
+      title: 'Poster',
       type: 'figure',
       validation: Rule => Rule.required()
     },
@@ -69,20 +107,10 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'body',
-      title: 'Body',
+      name: 'info',
+      title: 'Info',
       type: 'blockContent',
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'sources',
-      title: 'Sources',
-      type: 'array',
-      of: [
-        {
-          type: 'source'
-        }
-      ]
     }
   ],
   orderings: [
@@ -106,7 +134,7 @@ export default {
   preview: {
     select: {
       title: 'title',
-      publishedAt: 'publishedAt',
+      publishedAt: 'startDate',
       image: 'figure'
     },
     prepare({ title = 'No title', publishedAt, image }) {

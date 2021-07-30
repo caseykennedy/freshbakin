@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import blockText from './blockText'
+import event from './event'
 import figure from './figure'
 import mainImage from './mainImage'
 import pageTitle from './pageTitle'
@@ -30,6 +31,7 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
+    event,
     figure,
     mainImage,
     pageTitle,

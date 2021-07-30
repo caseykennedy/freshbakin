@@ -15,6 +15,75 @@ type GatsbyImageDataShape = {
   width: number
 }
 
+// Event shape
+// ___________________________________________________________________
+
+type EventShape = {
+  events: {
+    edges: PostEdges[]
+  }
+}
+
+type EventEdges = {
+  node: EventQuery
+}
+
+type EventData = {
+  event: EventQuery
+}
+
+type EventQuery = {
+  _rawExcerpt: string
+  _rawInfo: string
+  address: string
+  ageRestriction: string
+  category: {
+    title: string
+  }[]
+  city: string
+  figure: {
+    alt: string
+    asset: {
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+    caption: string
+  }
+  price: string
+  slug: {
+    current: string
+  }
+  startDate: string
+  state: string
+  subTitle: string
+  tags: {
+    tag: string
+  }
+  ticketUrl: string
+  title: string
+  venue: string
+}
+
+type EventContextShape = {
+  pageContext: {
+    event: EventQuery
+    prev: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+    next: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+  }
+}
+
 // Post shape
 // ___________________________________________________________________
 

@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
   ${Typography}
 
   ::-webkit-scrollbar {
-    width: ${theme.space[3]};
+    width: ${theme.space[6]};
   }
 
   /* Track */

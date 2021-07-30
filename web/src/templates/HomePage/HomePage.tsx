@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Marquee from 'react-fast-marquee'
 
@@ -14,6 +14,8 @@ import { Box, Button, Flex, Heading, Text, Grid } from 'theme-ui'
 // Components
 import Section from '../../components/Section'
 import Newsletter from './Newsletter'
+
+import useEvent from '../../hooks/useEvent'
 
 // ___________________________________________________________________
 
@@ -45,10 +47,23 @@ const Hero = () => {
 }
 
 const HomePage: React.FC = () => {
+  const events = useEvent()
+  console.log(events)
   return (
     <S.HomePage>
       <Section bg="black" color="white">
-        shows
+        <Grid columns={3} gap={theme.space[4]}>
+          {events.map(({ node: event }, key) => (
+            <div key={key}>
+              <GatsbyImage
+                image={event.figure.asset.gatsbyImageData}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={event.figure.alt}
+              />
+            </div>
+          ))}
+        </Grid>
       </Section>
     </S.HomePage>
   )

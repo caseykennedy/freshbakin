@@ -1,10 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdStop, MdSettings } from 'react-icons/md'
+import { MdStop, MdSettings, MdLibraryMusic } from 'react-icons/md'
 import { GoFile } from 'react-icons/go'
 
 export default () =>
   S.list()
-    .title('dotNFT Content')
+    .title("Fresh Bakin' Content")
     .items([
       // Settings
       // _________________________________________________________________
@@ -36,7 +36,17 @@ export default () =>
         .schemaType('post')
         .child(S.documentTypeList('post').title('Post'))
 
-        .icon(GoFile)
+        .icon(GoFile),
+
+      // Event
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Events')
+        .schemaType('event')
+        .child(S.documentTypeList('event').title('Events'))
+
+        .icon(MdLibraryMusic)
 
       // End
       // _________________________________________________________________
