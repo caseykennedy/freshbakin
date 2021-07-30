@@ -5,35 +5,29 @@
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
-// Stolzl Light
-import StolzlLightEot from './fonts/Stolzl-Light.eot'
-import StolzlLightOtf from './fonts/Stolzl-Light.otf'
-import StolzlLightWoff from './fonts/Stolzl-Light.woff'
-import StolzlLightWoff2 from './fonts/Stolzl-Light.woff2'
+// Aeonik Regular
+import AeonikRegularEot from './fonts/AeonikRegular.eot'
+import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
+import AeonikRegularWoff from './fonts/AeonikRegular.woff'
+import AeonikRegularOtf from './fonts/AeonikRegular.otf'
 
-// Stolzl Regular
-import StolzlRegularEot from './fonts/Stolzl-Regular.eot'
-import StolzlRegularOtf from './fonts/Stolzl-Regular.otf'
-import StolzlRegularWoff from './fonts/Stolzl-Regular.woff'
-import StolzlRegularWoff2 from './fonts/Stolzl-Regular.woff2'
+// Aeonik Light
+import AeonikLightEot from './fonts/AeonikLight.eot'
+import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
+import AeonikLightWoff from './fonts/AeonikLight.woff'
+import AeonikLightOtf from './fonts/AeonikLight.otf'
 
-// Stolzl Book
-import StolzlBookEot from './fonts/Stolzl-Book.eot'
-import StolzlBookOtf from './fonts/Stolzl-Book.otf'
-import StolzlBookWoff from './fonts/Stolzl-Book.woff'
-import StolzlBookWoff2 from './fonts/Stolzl-Book.woff2'
+// Aeonik Bold
+import AeonikBoldEot from './fonts/AeonikBold.eot'
+import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
+import AeonikBoldWoff from './fonts/AeonikBold.woff'
+import AeonikBoldOtf from './fonts/AeonikBold.otf'
 
-// Stolzl Medium
-import StolzlMediumEot from './fonts/Stolzl-Medium.eot'
-import StolzlMediumOtf from './fonts/Stolzl-Medium.otf'
-import StolzlMediumWoff from './fonts/Stolzl-Medium.woff'
-import StolzlMediumWoff2 from './fonts/Stolzl-Medium.woff2'
-
-// Stolzl Bold
-import StolzlBoldEot from './fonts/Stolzl-Bold.eot'
-import StolzlBoldOtf from './fonts/Stolzl-Bold.otf'
-import StolzlBoldWoff from './fonts/Stolzl-Bold.woff'
-import StolzlBoldWoff2 from './fonts/Stolzl-Bold.woff2'
+// Aeonik Black
+import AeonikBlackEot from './fonts/AeonikBlack.eot'
+import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
+import AeonikBlackWoff from './fonts/AeonikBlack.woff'
+import AeonikBlackOtf from './fonts/AeonikBlack.otf'
 
 // DM Mono Regular
 import DMMonoRegularEot from './fonts/DMMono-Regular.eot'
@@ -44,66 +38,53 @@ import DMMonoRegularOtf from './fonts/DMMono-Regular.otf'
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Stolzl Light */
+  /* Aeonik Light */
   @font-face {
-    font-family: 'Stolzl';
-    src: url(${StolzlLightEot});
-    src: url(${StolzlLightWoff2}) format('woff2'),
-      url(${StolzlLightWoff}) format('woff'),
-      url(${StolzlLightOtf}) format('opentype'),
-      url(${StolzlLightEot}?#iefix) format('embedded-opentype');
+    font-family: 'Aeonik';
+    src: url(${AeonikLightEot});
+    src: url(${AeonikLightWoff2}) format('woff2'),
+      url(${AeonikLightWoff}) format('woff'),
+      url(${AeonikLightOtf}) format('opentype'),
+      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Stolzl Regular */
+  /* Aeonik Regular */
   @font-face {
-    font-family: 'Stolzl';
-    src: url(${StolzlRegularEot});
-    src: url(${StolzlRegularWoff2}) format('woff2'),
-      url(${StolzlRegularWoff}) format('woff'),
-      url(${StolzlRegularOtf}) format('opentype'),
-      url(${StolzlRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'Aeonik';
+    src: url(${AeonikRegularEot});
+    src: url(${AeonikRegularWoff2}) format('woff2'),
+      url(${AeonikRegularWoff}) format('woff'),
+      url(${AeonikRegularOtf}) format('opentype'),
+      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Stolzl Book */
+  /* Aeonik Bold */
   @font-face {
-    font-family: 'Stolzl';
-    src: url(${StolzlBookEot});
-    src: url(${StolzlBookWoff2}) format('woff2'),
-      url(${StolzlBookWoff}) format('woff'),
-      url(${StolzlBookOtf}) format('opentype'),
-      url(${StolzlBookEot}?#iefix) format('embedded-opentype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-  }
-
-  /* Stolzl Medium */
-  @font-face {
-    font-family: 'Stolzl';
-    src: url(${StolzlMediumEot});
-    src: url(${StolzlMediumWoff2}) format('woff'),
-      url(${StolzlMediumWoff}) format('woff'),
-      url(${StolzlMediumOtf}) format('opentype'),
-      url(${StolzlMediumEot}?#iefix) format('embedded-opentype');
+    font-family: 'Aeonik';
+    src: url(${AeonikBoldEot});
+    src: url(${AeonikBoldWoff2}) format('woff2'),
+      url(${AeonikBoldWoff}) format('woff'),
+      url(${AeonikBoldOtf}) format('opentype'),
+      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Stolzl Bold */
+  /* Aeonik Black */
   @font-face {
-    font-family: 'Stolzl';
-    src: url(${StolzlBoldEot});
-    src: url(${StolzlBoldWoff2}) format('woff2'),
-      url(${StolzlBoldWoff}) format('woff'),
-      url(${StolzlBoldOtf}) format('opentype'),
-      url(${StolzlBoldEot}?#iefix) format('embedded-opentype');
+    font-family: 'Aeonik';
+    src: url(${AeonikBlackEot});
+    src: url(${AeonikBlackWoff2}) format('woff2'),
+      url(${AeonikBlackWoff}) format('woff'),
+      url(${AeonikBlackOtf}) format('opentype'),
+      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -244,7 +225,7 @@ const Typography = css`
 
   p,
   .text--base {
-    font-size: ${theme.fontSizes[2]};
+    font-size: ${theme.fontSizes[3]};
     line-height: ${theme.root.font.bodyLineHeight};
 
     &:last-child {

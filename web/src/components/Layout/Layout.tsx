@@ -7,10 +7,12 @@ import React, { useRef } from 'react'
 // Components
 import Header from '../Header'
 import Footer from '../Footer'
+import FreshBakin from '../FreshBakin'
 
 // Styles + Theme
 import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
+import { Box } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -32,6 +34,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <S.Wrapper>
+      <S.Wordmark>
+        <Box className="wordmark__inner">
+          <FreshBakin />
+        </Box>
+      </S.Wordmark>
       <Header />
       <S.Main ref={mainRef}>{children}</S.Main>
       {/* <Footer /> */}

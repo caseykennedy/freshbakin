@@ -78,7 +78,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['768px', '1024px']
+const breakpoints: string[] = ['800px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -139,6 +139,7 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
+    space: 4,
     vertical: [5],
     axis: [4],
   },
@@ -147,10 +148,9 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Stolzl", Arial, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"Stolzl", Arial, Liberation Mono, Menlo, Courier, monospace`,
-    sans: `"Stolzl", Arial, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"Stolzl", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    body: `"Aeonik", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"Aeonik", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"Aeonik", Arial, Liberation Mono, Menlo, Courier, monospace`,
     mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
@@ -215,10 +215,10 @@ const theme: ThemeShape = {
   // Constants
   // ___________________________________________________________________
 
-  maxWidth: '1440px',
+  maxWidth: '100%',
   siteWidth: '100%',
   logoHeight: '47px',
-  headerHeight: '80px',
+  headerHeight: '300px',
   tickerHeight: '56px',
   iconWidth: '18px',
 

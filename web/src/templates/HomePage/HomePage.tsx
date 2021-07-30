@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <S.Hero>
       <Marquee {...MarqueeProps}>
-        <Text mr={1} className="text--xxl">
+        <Text mr={1} className="text--lg  text--uppercase">
           music — art — entertainment — reno, nv — lake tahoe
         </Text>
       </Marquee>
@@ -47,38 +47,9 @@ const Hero = () => {
 const HomePage: React.FC = () => {
   return (
     <S.HomePage>
-      <Hero />
-
-      <Section border={true}>
-        <Heading as="h1">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
-        <Heading as="h2">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
-        <Heading as="h3">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
-        <Heading as="h4">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
-        <Heading as="h5">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
-        <Heading as="h6">
-          FreshBakin' live music, art and entertainment in Reno / Lake Tahoe.
-        </Heading>
+      <Section bg="black" color="white">
+        shows
       </Section>
-      <Speakers />
-
-      {/* <Section border={true}>
-        <Flex sx={{ justifyContent: 'center' }}>
-          <Box sx={{ flex: 0.75, textAlign: 'center' }}>
-            <Heading as="h3" mb={2}>Stay informed</Heading>
-            <Newsletter />
-          </Box>
-        </Flex>
-      </Section> */}
     </S.HomePage>
   )
 }

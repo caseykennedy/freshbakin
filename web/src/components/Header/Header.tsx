@@ -4,18 +4,15 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import Typist from 'react-typist'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
-import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Text, useColorMode } from 'theme-ui'
+import { Box, Flex, Text } from 'theme-ui'
 
 // Components
-import Symbol from '../Symbol'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
@@ -27,23 +24,27 @@ const Header = () => {
   const toggleMenu = () => setNavOpen(!isNavOpen)
   return (
     <>
-      <S.Header px={theme.gutter.axis}>
-        <Flex className="header-inner">
-          <Link to="/" className="logo" aria-label="dotNFT, back to home">
-            <S.Logo onClick={() => setNavOpen(false)}>
-              <Text className="wordmark" aria-label="dotNFT">
-                FreshBakin'
-              </Text>
-            </S.Logo>
-          </Link>
+      <S.Header>
+        <Flex className="header__billboard">
+          <S.Logo onClick={() => setNavOpen(false)}>
+            <Link
+              to="/"
+              className="logo"
+              aria-label="Fresh Bakin', back to home"
+            >
+              FreshBakin'
+            </Link>
+          </S.Logo>
 
-          <S.Menu>
-            <Navigation />
+          <Text as="span" sx={{ fontWeight: 600 }}>
+            Fresh Bakin’ evolves art,
+            <br />
+            music, community and culture… nicely.
+          </Text>
+        </Flex>
 
-            {/* <Box className="symbol">
-              <Symbol />
-            </Box> */}
-          </S.Menu>
+        <Flex className="header__menu">
+          <Navigation />
         </Flex>
       </S.Header>
 
@@ -55,11 +56,3 @@ const Header = () => {
 }
 
 export default Header
-
-// const cursorProps = {
-//   show: false,
-//   blink: true,
-//   element: '|',
-//   hideWhenDone: true,
-//   hideWhenDoneDelay: 1000,
-// }

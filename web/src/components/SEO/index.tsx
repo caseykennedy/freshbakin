@@ -16,9 +16,13 @@ import Twitter from './twitter'
 
 type Props = {
   banner?: string
-  price?: number
-  productName?: string
-  sku?: string
+  eventName?: string
+  eventCity?: string
+  eventState?: string
+  eventAddress?: string
+  eventTicketUrl?: string
+  eventStartDate?: string
+  eventPrice?: string
 } & typeof defaultProps
 
 const defaultProps = {
@@ -27,23 +31,27 @@ const defaultProps = {
   pathname: '',
   node: {
     modifiedTime: '',
-    birthTime: ''
+    birthTime: '',
   },
   article: false,
-  product: false
+  event: false,
 }
 
 const SEO = ({
   banner,
   desc,
   title,
-  price,
-  product,
-  productName,
-  sku,
+  event,
+  eventName,
+  eventCity,
+  eventState,
+  eventAddress,
+  eventTicketUrl,
+  eventStartDate,
+  eventPrice,
   pathname,
   node,
-  article
+  article,
 }: Props) => {
   const { site } = useStaticQuery(query)
   const settings = useSiteSettings()
@@ -54,40 +62,40 @@ const SEO = ({
     title: `${title}` || settings.titleAlt,
     description: desc || settings.description,
     image: `${banner || settings.banner.asset.url}`,
-    url: `${settings.url}${pathname || ''}`
+    url: `${settings.url}${pathname || ''}`,
   }
 
   // schema.org in JSONLD format
   // https://developers.google.com/search/docs/guides/intro-structured-data
   // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
 
-  const schemaOrgProduct = {
+  const schemaOrgEvent = {
     '@context': 'http://schema.org/',
-    '@type': 'Product',
-    brand: settings.siteName,
-    name: productName,
-    image: seo.image,
-    description: seo.description,
-    review: '',
-    sku: `${sku}`,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '5'
+    '@type': 'Event',
+    location: {
+      '@type': 'Place',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: eventCity,
+        addressRegion: eventState,
+        postalCode: '',
+        streetAddress: eventAddress,
+      },
+      name: 'The Hi-Dive',
     },
+    name: eventName,
     offers: {
       '@type': 'Offer',
+      price: eventPrice ? eventPrice : '',
       priceCurrency: 'USD',
-      price: `${price}`,
-      priceValidUntil: '',
-      url: seo.url,
-      availability: 'http://schema.org/InStock'
-    }
+      url: eventTicketUrl,
+    },
+    startDate: eventStartDate,
   }
 
   const schemaOrgWebPage = {
     '@context': 'http://schema.org',
-    '@type': !product ? 'WebPage' : 'Product',
+    '@type': !event ? 'WebPage' : 'Event',
     url: settings.url,
     headline: settings.headline,
     inLanguage: settings.language,
@@ -96,27 +104,27 @@ const SEO = ({
     name: settings.title,
     author: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     copyrightHolder: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     copyrightYear: '2019',
     creator: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     publisher: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     datePublished: '2019-03-10T10:30:00+01:00',
     dateModified: buildTime,
     image: {
       '@type': 'ImageObject',
-      url: `${settings.banner}`
-    }
+      url: `${settings.banner}`,
+    },
   }
 
   // Initial breadcrumb list
@@ -126,10 +134,10 @@ const SEO = ({
       '@type': 'ListItem',
       item: {
         '@id': settings.url,
-        name: 'Homepage'
+        name: 'Homepage',
       },
-      position: 1
-    }
+      position: 1,
+    },
   ]
 
   let schemaArticle = null
@@ -140,24 +148,24 @@ const SEO = ({
       '@type': 'Article',
       author: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       copyrightHolder: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       copyrightYear: '2019',
       creator: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       publisher: {
         '@type': 'Organization',
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.banner.asset.url}`
-        }
+          url: `${settings.banner.asset.url}`,
+        },
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',
       dateModified: node ? node.modifiedTime : '2019-03-10T10:30:00+01:00',
@@ -168,18 +176,18 @@ const SEO = ({
       name: seo.title,
       image: {
         '@type': 'ImageObject',
-        url: seo.image
+        url: seo.image,
       },
-      mainEntityOfPage: seo.url
+      mainEntityOfPage: seo.url,
     }
     // Push current blogpost into breadcrumb list
     itemListElement.push({
       '@type': 'ListItem',
       item: {
         '@id': seo.url,
-        name: seo.title
+        name: seo.title,
       },
-      position: 5
+      position: 5,
     })
   }
 
@@ -188,7 +196,7 @@ const SEO = ({
     '@type': 'BreadcrumbList',
     description: 'Breadcrumbs list',
     name: 'Breadcrumbs',
-    itemListElement
+    itemListElement,
   }
 
   return (
@@ -201,9 +209,9 @@ const SEO = ({
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
         {!article && (
           <script type="application/ld+json">
-            {!product
+            {!event
               ? `${JSON.stringify(schemaOrgWebPage)}`
-              : `${JSON.stringify(schemaOrgProduct)}`}
+              : `${JSON.stringify(schemaOrgEvent)}`}
           </script>
         )}
         {article && (

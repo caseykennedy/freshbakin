@@ -4,41 +4,36 @@
 
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex } from 'theme-ui'
+import { Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
-export const Header = styled(Box)`
-  overflow: visible;
-  width: 100%;
-  position: relative;
-  /* z-index: 9999; */
-
-  a {
-    color: ${theme.colors.black};
-  }
-
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    overflow: visible;
-    margin: 0 auto;
-    max-width: ${theme.maxWidth};
-    height: ${theme.headerHeight};
-    width: 100%;
-  }
-`
-
-export const Menu = styled(Flex)`
+export const Header = styled(Flex)`
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 
-  .symbol {
-    margin-left: ${theme.space[5]};
-    
-    
+  overflow: visible;
+  margin: 0 auto;
+  padding: ${theme.space[4]};
+  height: ${theme.headerHeight};
+  width: 100%;
+
+  .header {
+    &__billboard {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &__menu {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
 `
 
