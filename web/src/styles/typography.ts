@@ -200,6 +200,7 @@ const Typography = css`
   h4,
   .text--md {
     font-size: calc(${theme.fontSizes[3]});
+    text-transform: uppercase;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[4]});
@@ -208,7 +209,7 @@ const Typography = css`
 
   h5,
   .text--sm {
-    font-size: calc(${theme.fontSizes[2]});
+    font-size: calc(${theme.fontSizes[3]});
   }
 
   h6,

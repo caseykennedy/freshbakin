@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React, { Fragment } from 'react'
+import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Marquee from 'react-fast-marquee'
 
@@ -16,6 +17,7 @@ import Section from '../../components/Section'
 import Newsletter from './Newsletter'
 
 import useEvent from '../../hooks/useEvent'
+import { ENETDOWN } from 'constants'
 
 // ___________________________________________________________________
 
@@ -24,13 +26,44 @@ const MarqueeProps = {
   speed: 20,
 }
 
-const Speakers = () => {
+const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
+  const events = useEvent()
   return (
-    <S.Speakers>
-      <Section border={true}>
-        <Heading className="text--lg">Section</Heading>
-      </Section>
-    </S.Speakers>
+    <S.Events>
+      {grid ? (
+        <Grid columns={[2, 3]} gap={theme.space[4]} className="events__grid">
+          {events.map(({ node: event }, key) => (
+            <Link
+              to={`/events/${event.slug.current}`}
+              className="grid-event"
+              key={key}
+            >
+              <GatsbyImage
+                image={event.figure.asset.gatsbyImageData}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={event.figure.alt}
+              />
+            </Link>
+          ))}
+        </Grid>
+      ) : (
+        <Box className="events__list">
+          {events.map(({ node: event }, key) => (
+            <Flex className="list-event" key={key}>
+              <Box>
+                <Heading as="h4">{event.title}</Heading>
+              </Box>
+              <Box>
+                <Text color="gray" className="text--sm">
+                  {event.venue}
+                </Text>
+              </Box>
+            </Flex>
+          ))}
+        </Box>
+      )}
+    </S.Events>
   )
 }
 
@@ -47,23 +80,17 @@ const Hero = () => {
 }
 
 const HomePage: React.FC = () => {
-  const events = useEvent()
-  console.log(events)
   return (
     <S.HomePage>
       <Section bg="black" color="white">
-        <Grid columns={3} gap={theme.space[4]}>
-          {events.map(({ node: event }, key) => (
-            <div key={key}>
-              <GatsbyImage
-                image={event.figure.asset.gatsbyImageData}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={event.figure.alt}
-              />
-            </div>
-          ))}
-        </Grid>
+        <Events grid={true} />
+      </Section>
+      <Section bg="black" color="white">
+        <Heading as="h4">Upcoming</Heading>
+        <Events />
+      </Section>
+      <Section pt={8} pb={8}>
+        <Heading as="h1">+shows</Heading>
       </Section>
     </S.HomePage>
   )

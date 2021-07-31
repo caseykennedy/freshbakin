@@ -25,8 +25,8 @@ export default {
       type: 'string'
     },
     {
-      name: 'ageRestriction',
-      title: 'Age Restriction',
+      name: 'ageGroup',
+      title: 'Age Group',
       type: 'string',
       description: 'e.g.: 18+ | 21+'
     },

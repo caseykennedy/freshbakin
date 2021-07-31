@@ -20,7 +20,7 @@ type GatsbyImageDataShape = {
 
 type EventShape = {
   events: {
-    edges: PostEdges[]
+    edges: EventEdges[]
   }
 }
 
@@ -36,7 +36,7 @@ type EventQuery = {
   _rawExcerpt: string
   _rawInfo: string
   address: string
-  ageRestriction: string
+  ageGroup: string
   category: {
     title: string
   }[]
@@ -58,7 +58,7 @@ type EventQuery = {
   subTitle: string
   tags: {
     tag: string
-  }
+  }[]
   ticketUrl: string
   title: string
   venue: string

@@ -18,32 +18,37 @@ export const Hero = styled(Flex)`
   position: relative;
 `
 
-export const Speakers = styled(Box)`
-  background: rgb(52, 255, 221);
-  background: linear-gradient(
-    63deg,
-    rgba(52, 255, 221, 1) 30%,
-    rgba(112, 212, 255, 1) 55%,
-    rgba(0, 255, 0, 1) 83%
-  );
-  background-size: 300% 300%;
-  animation: ${Gradient} 10s ease infinite;
+export const Events = styled(Box)`
+  text-transform: uppercase;
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    background: ${theme.colors.white};
-    border: ${theme.border};
-    padding: ${theme.space[4]};
+  .events {
+    &__grid {
+      .grid-event {
+      }
+    }
 
-    .figure {
-      align-self: flex-end;
-      clip-path: circle();
-      /* filter: grayscale(100); */
-      height: 200px;
-      width: 200px;
-      position: relative;
-      top: calc(${theme.space[4]} * -5);
+    &__list {
+      border-bottom: ${theme.border};
+      border-color: ${theme.colors.white};
+      margin-top: ${theme.space[4]};
+
+      .list-event {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-top: ${theme.border};
+        border-color: ${theme.colors.white};
+        cursor: pointer;
+        padding: ${theme.space[4]} 0;
+        transition: ${theme.transition.all};
+
+        &:hover {
+          /* background: ${theme.colors.white}; */
+          /* color: ${theme.colors.black}; */
+          padding: ${theme.space[4]};
+        }
+      }
     }
   }
 `

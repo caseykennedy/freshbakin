@@ -16,7 +16,7 @@ const useEvent = () => {
             _rawExcerpt
             _rawInfo
             address
-            ageRestriction
+            ageGroup
             category {
               title
             }

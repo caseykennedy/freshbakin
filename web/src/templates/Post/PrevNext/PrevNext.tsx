@@ -19,8 +19,8 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 const path = 'blog'
 
-const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
-  const post = pageContext.post
+const PrevNext: React.FC<EventContextShape> = ({ pageContext }) => {
+  const post = pageContext.event
   const prev = pageContext.prev
   const next = pageContext.next
   // console.log('—————|— Prev / Next —|—————')

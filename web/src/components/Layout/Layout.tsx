@@ -23,7 +23,7 @@ export type LayoutProps = {
   }
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, location }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
 

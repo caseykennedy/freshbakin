@@ -14,17 +14,7 @@ type ThemeShape = {
   useRootStyles?: boolean
   useLocalStorage?: boolean
   colors: {
-    text: string
-    background: string
-    primary: string
-    secondary: string
-    tertiary: string
-    accent: string
-    highlight: string
-    muted: string
-    black: string
-    white: string
-    gray: string
+    [key: string]: string
   }
   space: string[]
   gutter: {
@@ -105,13 +95,11 @@ const theme: ThemeShape = {
     primary: '#22A5E1',
     secondary: '#e52a63',
     tertiary: '#34FFDD',
-    accent: '#70D4FF',
-    highlight: '#fdffd4',
     muted: '#DBDBDB',
 
     black: '#000000',
     white: '#ffffff',
-    gray: '#DBDBDB',
+    gray: '#AEAEAE',
   },
 
   // Space
@@ -137,10 +125,10 @@ const theme: ThemeShape = {
   // Left/Right gutter
   gutter: {
     mobile: 4,
-    tablet: 5,
-    desktop: 5,
+    tablet: 4,
+    desktop: 4,
     space: 4,
-    vertical: [5],
+    vertical: [4],
     axis: [4],
   },
 
@@ -230,8 +218,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.11s ease-in-out 0s',
-    global: '0.11s ease-in-out 0s',
+    all: 'all 0.25s ease-in-out 0s',
+    global: '0.25s ease-in-out 0s',
   },
 
   transform: {

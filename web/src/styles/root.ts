@@ -42,6 +42,7 @@ const RootVariables = css`
 
     @media ${theme.mq.tablet} {
       --text-base-size: 1em;
+      --body-line-height: 1.15;
     }
 
     /* type scale */
