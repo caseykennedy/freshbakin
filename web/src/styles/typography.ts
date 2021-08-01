@@ -210,6 +210,7 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: calc(${theme.fontSizes[3]});
+    text-transform: uppercase;
   }
 
   h6,

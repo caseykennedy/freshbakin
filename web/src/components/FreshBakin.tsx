@@ -12,7 +12,7 @@ const FreshBakin: React.FC<Props> = ({ fill }) => {
   return (
     <SVG
       width="100%"
-      viewBox="0 0 1403 178"
+      viewBox="0 0 1403 145"
       variants={svgVariant}
       initial="hidden"
       animate="visible"

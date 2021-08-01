@@ -206,7 +206,7 @@ const theme: ThemeShape = {
   maxWidth: '100%',
   siteWidth: '100%',
   logoHeight: '47px',
-  headerHeight: '300px',
+  headerHeight: '350px',
   tickerHeight: '56px',
   iconWidth: '18px',
 

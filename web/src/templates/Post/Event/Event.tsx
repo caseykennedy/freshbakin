@@ -48,23 +48,24 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
       <S.Event>
         <Section bg="black" color="white">
           <Flex sx={{ flexDirection: ['column', 'row'], width: '100%' }}>
-            <Flex sx={{ flex: [1, 1.5], pr: [0, 4] }}>
+            <Flex sx={{ flex: [1, 1.25], pr: [0, 4] }}>
               <Box sx={{ flex: 1 }}>
-                <Flex sx={{justifyContent: 'space-between'}}>
-                  <Text as="p" className="text--sm  text--uppercase">
-                    {eventStartDate}
-                  </Text>
+                <Flex sx={{ justifyContent: 'space-between' }}>
+                  <Heading className="text--sm">{eventStartDate}</Heading>
 
-                  <Text as="p" className="text--sm  text--uppercase">
+                  <Heading className="text--sm">
                     {post.city}, {post.state}
-                  </Text>
+                  </Heading>
                 </Flex>
 
-                <Heading as="h1" mb={0} className="text--xxxl">
+                <Heading as="h1" mb={2} className="text--xxxl">
                   {post.title}
                 </Heading>
-                <Heading sx={{ color: 'gray', mb: 2 }} className="text--lg">
+                <Heading className="text--md">
                   {post.subTitle}
+                </Heading>
+                <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
+                  at {post.venue}
                 </Heading>
 
                 <Box mb={7}>
@@ -80,9 +81,9 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
                 </Box>
 
                 <Box>
-                  <Text as="p" mb={3} className="text--lg">
+                  <Heading mb={3} className="text--md">
                     {eventStartTime} ● {post.ageGroup}
-                  </Text>
+                  </Heading>
                   <Text>
                     {post._rawInfo && (
                       <BlockContent blocks={post._rawInfo || []} />
