@@ -27,10 +27,19 @@ import useSiteSettings from '../../../hooks/useSiteSettings'
 const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const post = pageContext.event
   const siteSettings = useSiteSettings()
+  const eventStartDate = format(new Date(post.startDate), 'MMMM io ● yyyy')
+  const eventStartTime = format(new Date(post.startDate), 'haaa')
   return (
     <>
       <SEO
-        article={true}
+        event={true}
+        eventName={post.title}
+        eventCity={post.city}
+        eventState={post.state}
+        eventAddress={post.address}
+        eventTicketUrl={post.ticketUrl}
+        eventStartDate={post.startDate}
+        eventPrice={post.price}
         banner={`${post.figure.asset.url}`}
         title={`${post.title} | ${siteSettings.titleShort}`}
         desc={`${post.title}`}
@@ -38,24 +47,27 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
       />
       <S.Event>
         <Section bg="black" color="white">
-          <Flex sx={{ width: '100%' }}>
-            <Box sx={{ flex: 1, pr: [0, 6] }}>
-              <Text as="p" className="text--small  text--uppercase">
-                {format(new Date(post.startDate), 'MMMM io • yyyy')}
-              </Text>
+          <Flex sx={{ flexDirection: ['column', 'row'], width: '100%' }}>
+            <Flex sx={{ flex: [1, 1.5], pr: [0, 4] }}>
+              <Box sx={{ flex: 1 }}>
+                <Flex sx={{justifyContent: 'space-between'}}>
+                  <Text as="p" className="text--sm  text--uppercase">
+                    {eventStartDate}
+                  </Text>
 
-              <Heading as="h1" mb={4} className="text--xxl">
-                {post.title}
-              </Heading>
+                  <Text as="p" className="text--sm  text--uppercase">
+                    {post.city}, {post.state}
+                  </Text>
+                </Flex>
 
-              <Box>
-                <Text>
-                  {post._rawInfo && (
-                    <BlockContent blocks={post._rawInfo || []} />
-                  )}
-                </Text>
+                <Heading as="h1" mb={0} className="text--xxxl">
+                  {post.title}
+                </Heading>
+                <Heading sx={{ color: 'gray', mb: 2 }} className="text--lg">
+                  {post.subTitle}
+                </Heading>
 
-                <Box mt={6}>
+                <Box mb={7}>
                   {post.tags && (
                     <Flex>
                       {post.tags.map((item, idx) => (
@@ -66,8 +78,23 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
                     </Flex>
                   )}
                 </Box>
+
+                <Box>
+                  <Text as="p" mb={3} className="text--lg">
+                    {eventStartTime} ● {post.ageGroup}
+                  </Text>
+                  <Text>
+                    {post._rawInfo && (
+                      <BlockContent blocks={post._rawInfo || []} />
+                    )}
+                  </Text>
+                  <Text as="p" mt={3} className="text--lg">
+                    ${post.price}
+                  </Text>
+                </Box>
               </Box>
-            </Box>
+            </Flex>
+
             <Box sx={{ flex: 1 }}>
               {post.figure && (
                 <>

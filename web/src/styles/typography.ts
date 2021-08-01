@@ -158,14 +158,14 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: ${theme.fontSizes[5]};
+    font-size: ${theme.fontSizes[6]};
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};
     }
 
     @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[7]};
+      font-size: calc(${theme.fontSizes[7]} * 1.25);
     }
   }
 

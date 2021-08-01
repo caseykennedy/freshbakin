@@ -21,11 +21,15 @@ export const Header = styled(Flex)`
 
   .header {
     &__billboard {
-      flex: 1;
+      flex: 3;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+
+      @media ${theme.mq.tablet} {
+        flex: 1;
+      }
     }
 
     &__menu {

@@ -83,7 +83,6 @@ export default FreshBakin
 
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .letter {
-    fill-rule: evenodd;
     fill: ${(p) => (p.fill ? p.fill : theme.colors.black)};
   }
 `
@@ -91,18 +90,20 @@ const SVG = styled(motion.svg)<{ fill?: string }>`
 const polyVariant = {
   visible: {
     opacity: 1,
+    marginTop: '5px',
     transition: {
-      duration: '0.75s',
+      duration: 1,
+      type: 'spring',
       ease: 'easeOut',
     },
   },
   hidden: {
-    opacity: 1,
+    opacity: 0,
   },
 }
 
 const svgVariant = {
   visible: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.15 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
   },
 }

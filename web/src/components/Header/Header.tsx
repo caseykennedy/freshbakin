@@ -19,7 +19,11 @@ import Modal from '../Modal'
 
 // ___________________________________________________________________
 
-const Header = () => {
+type Props = {
+  isHome: boolean
+}
+
+const Header: React.FC<Props> = ({ isHome }) => {
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => setNavOpen(!isNavOpen)
   return (
@@ -36,11 +40,13 @@ const Header = () => {
             </Link>
           </S.Logo>
 
-          <Text as="span" sx={{ fontWeight: 600 }}>
-            Fresh Bakin’ evolves art,
-            <br />
-            music, community and culture… nicely.
-          </Text>
+          {isHome && (
+            <Text as="span" sx={{ fontWeight: 600 }}>
+              Fresh Bakin’ evolves art,
+              <br />
+              music, community and culture… nicely.
+            </Text>
+          )}
         </Flex>
 
         <Flex className="header__menu">
