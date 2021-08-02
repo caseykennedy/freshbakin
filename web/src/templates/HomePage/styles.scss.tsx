@@ -46,7 +46,7 @@ export const Events = styled(Box)`
         &:hover {
           /* background: ${theme.colors.white}; */
           /* color: ${theme.colors.black}; */
-          padding: ${theme.space[4]};
+          padding-left: ${theme.space[2]};
         }
       }
     }

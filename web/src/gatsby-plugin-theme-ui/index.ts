@@ -124,12 +124,12 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    mobile: 4,
-    tablet: 4,
-    desktop: 4,
-    space: 4,
-    vertical: [4],
-    axis: [4],
+    mobile: 2,
+    tablet: 2,
+    desktop: 2,
+    space: 2,
+    vertical: [2],
+    axis: [2],
   },
 
   // Typography

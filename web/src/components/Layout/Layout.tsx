@@ -14,6 +14,7 @@ import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
 import { Box, Text } from 'theme-ui'
 import Marquee from 'react-fast-marquee'
+import MarqueeMessage from '../MarqueeMessage'
 
 // ___________________________________________________________________
 
@@ -46,13 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
           {isHome ? (
             <FreshBakin />
           ) : (
-            <Marquee {...MarqueeProps}>
-              <Text className="text--sm  text--uppercase">
-                ● PURVEYORS OF FINE TIMES SINCE 2002 ● BAKIN’ UP THE FRESHEST
-                SHOWS IN RENO, TAHOE AND BEYOND ● PURVEYORS OF FINE TIMES SINCE 2002 ● BAKIN’ UP THE FRESHEST
-                SHOWS IN RENO, TAHOE AND BEYOND
-              </Text>
-            </Marquee>
+            <MarqueeMessage />
           )}
         </Box>
       </S.Wordmark>

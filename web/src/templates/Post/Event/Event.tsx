@@ -56,9 +56,9 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
           >
             <Box
               sx={{
-                flex: [1, 1.25],
-                pb: [4, 0],
-                pr: [0, 4],
+                flex: [1],
+                pb: [2, 0],
+                pr: [0, 2],
                 position: 'sticky',
                 top: 0,
               }}

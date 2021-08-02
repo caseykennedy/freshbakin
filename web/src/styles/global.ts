@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
   ${Typography}
 
   ::-webkit-scrollbar {
-    /* width: ${theme.space[6]}; */
+    width: 0;
   }
 
   /* Track */
@@ -52,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
   .img {
     width: 100%;
     height: 100%;
+  }
+
+  .marquee-container {
+    overflow: hidden;
   }
 `
 

@@ -11,20 +11,51 @@ import Section from '../Section'
 // ___________________________________________________________________
 
 export const Footer = styled(Flex)`
-  align-items: flex-end;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
 
-  border-top: ${theme.border};
+  padding: ${theme.space[1]} ${theme.space[2]} ${theme.space[6]};
   position: relative;
 
-  .footer-inner {
-    display: flex;
-    justify-content: space-between;
+  .footer {
+    &__marquee {
+      border-bottom: ${theme.border};
+      padding-bottom: ${theme.space[1]};
+    }
 
-    margin: 0 auto;
-    max-width: ${theme.maxWidth};
-    width: 100%;
+    &__subscribe {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .form {
+        border-right: ${theme.border};
+        flex: 1;
+        margin: ${theme.space[2]} ${theme.space[2]} ${theme.space[2]} 0;
+        padding: ${theme.space[6]} ${theme.space[2]} ${theme.space[6]} 0;
+      }
+
+      .social {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: ${theme.space[7]};
+        }
+      }
+    }
+
+    &__copyright {
+      display: flex;
+      justify-content: space-between;
+
+      border-top: ${theme.border};
+      margin: 0 auto;
+      max-width: ${theme.maxWidth};
+      padding-top: ${theme.space[2]};
+      width: 100%;
+    }
   }
 `

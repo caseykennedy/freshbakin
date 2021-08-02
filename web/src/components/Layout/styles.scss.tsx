@@ -25,12 +25,14 @@ export const Main = styled.main`
 `
 
 export const Wordmark = styled(Flex)`
-  padding: ${theme.space[4]} ${theme.space[4]} 0 ${theme.space[4]};
+  overflow: hidden;
+  padding: ${theme.space[1]} ${theme.space[2]} 0 ${theme.space[2]};
   width: 100%;
 
   .wordmark__inner {
     border-bottom: ${theme.border};
-    padding-bottom: ${theme.space[4]};
+    padding-bottom: ${theme.space[1]};
+    overflow: hidden;
     width: 100%;
   }
 `

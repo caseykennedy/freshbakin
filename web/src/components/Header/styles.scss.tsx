@@ -13,9 +13,7 @@ export const Header = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
-  overflow: visible;
-  margin: 0 auto;
-  padding: ${theme.space[4]};
+  padding: ${theme.space[2]};
   height: 150px;
   width: 100%;
 

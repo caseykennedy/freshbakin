@@ -14,10 +14,9 @@ import { Box, Button, Flex, Heading, Text, Grid } from 'theme-ui'
 
 // Components
 import Section from '../../components/Section'
-import Newsletter from './Newsletter'
+import Newsletter from '../../components/Footer/SubscribeForm'
 
 import useEvent from '../../hooks/useEvent'
-import { ENETDOWN } from 'constants'
 
 // ___________________________________________________________________
 
@@ -31,7 +30,11 @@ const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
   return (
     <S.Events>
       {grid ? (
-        <Grid columns={[2, 3]} gap={theme.space[4]} className="events__grid">
+        <Grid
+          columns={[2, 3]}
+          gap={theme.gutter.space}
+          className="events__grid"
+        >
           {events.map(({ node: event }, key) => (
             <Link
               to={`/events/${event.slug.current}`}
@@ -88,9 +91,6 @@ const HomePage: React.FC = () => {
       <Section bg="black" color="white">
         <Heading as="h4">Upcoming</Heading>
         <Events />
-      </Section>
-      <Section pt={8} pb={8}>
-        <Heading as="h1">+shows</Heading>
       </Section>
     </S.HomePage>
   )
