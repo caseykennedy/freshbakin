@@ -58,7 +58,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       </S.Wordmark>
       <Header isHome={isHome} />
       <S.Main ref={mainRef}>{children}</S.Main>
-      {/* <Footer /> */}
+      <Footer />
     </S.Wrapper>
   )
 }

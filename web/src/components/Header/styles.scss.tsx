@@ -16,8 +16,12 @@ export const Header = styled(Flex)`
   overflow: visible;
   margin: 0 auto;
   padding: ${theme.space[4]};
-  height: ${theme.headerHeight};
+  height: 150px;
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    height: ${theme.headerHeight};
+  }
 
   .header {
     &__billboard {
