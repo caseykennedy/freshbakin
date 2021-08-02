@@ -47,66 +47,69 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
       />
       <S.Event>
         <Section bg="black" color="white">
+          <Flex sx={{ justifyContent: 'space-between' }}>
+            <Heading className="text--md">{eventStartDate}</Heading>
+
+            <Heading className="text--md">
+              {eventStartTime} ● {post.ageGroup}
+            </Heading>
+          </Flex>
+
+          <Heading as="h1" mb={4} className="text--xxxl">
+            {post.title}
+          </Heading>
+
+          <Flex sx={{ flexDirection: ['column', 'row'] }}>
+            <Box sx={{ flex: 1 }}>
+              {post.subTitle && (
+                <Heading className="text--md">{post.subTitle}</Heading>
+              )}
+
+              <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
+                at {post.venue}
+              </Heading>
+
+              <Box>
+                {post.tags && (
+                  <Flex>
+                    {post.tags.map((item, idx) => (
+                      <Pill mb={2} key={idx}>
+                        <span>#{item.tag}</span>
+                      </Pill>
+                    ))}
+                  </Flex>
+                )}
+              </Box>
+            </Box>
+
+            <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
+              <Box className="button">Buy Tickets ● ${post.price}</Box>
+            </Flex>
+          </Flex>
+        </Section>
+
+        <Section bg="gray">
           <Flex
             sx={{
-              flexDirection: ['column', 'row'],
+              flexDirection: ['column-reverse', 'row-reverse'],
               width: '100%',
-              position: 'relative',
             }}
           >
             <Box
               sx={{
                 flex: [1],
-                pb: [2, 0],
-                pr: [0, 2],
-                position: 'sticky',
-                top: 0,
+                pt: [2, 0],
               }}
             >
-              <Box sx={{ flex: 1 }}>
-                <Flex sx={{ justifyContent: 'space-between' }}>
-                  <Heading className="text--md">{eventStartDate}</Heading>
-
-                  <Heading className="text--md">
-                    {eventStartTime} ● {post.ageGroup}
-                  </Heading>
-                </Flex>
-
-                <Heading as="h1" mb={4} className="text--xxxl">
-                  {post.title}
-                </Heading>
-                {post.subTitle && (
-                  <Heading className="text--md">{post.subTitle}</Heading>
-                )}
-                <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
-                  at {post.venue}
-                </Heading>
-
-                <Box mb={7}>
-                  {post.tags && (
-                    <Flex>
-                      {post.tags.map((item, idx) => (
-                        <Pill mb={2} key={idx}>
-                          <span>#{item.tag}</span>
-                        </Pill>
-                      ))}
-                    </Flex>
-                  )}
-                </Box>
-
+              <Box sx={{ flex: 1, position: 'sticky', top: 0 }}>
                 <Flex sx={{ flexDirection: ['column', 'row'] }}>
-                  <Box sx={{ flex: 1 }}>
+                  <Box sx={{ flex: 1, pl: [0, 2] }}>
                     <Text>
                       {post._rawInfo && (
                         <BlockContent blocks={post._rawInfo || []} />
                       )}
                     </Text>
-                    <Heading mt={4} className="text--md">
-                      ${post.price}
-                    </Heading>
                   </Box>
-
-                  <Box sx={{ flex: 1 }} />
                 </Flex>
               </Box>
             </Box>
@@ -130,6 +133,10 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
               )}
             </Box>
           </Flex>
+        </Section>
+
+        <Section bg="black" color="white" pt={6} pb={6}>
+          <Box className="button">Buy Tickets ● ${post.price}</Box>
         </Section>
 
         {/* <PrevNext pageContext={pageContext} /> */}

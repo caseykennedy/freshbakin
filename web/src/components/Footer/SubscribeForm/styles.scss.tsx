@@ -25,9 +25,10 @@ export const SubscribeForm = styled(Box)`
 
     input[type='email'] {
       border: ${theme.border};
-      border-radius: 0;
+      border-radius: ${theme.borderRadius};
       outline: none;
-      padding: ${theme.space[2]} ${theme.space[2]};
+      margin-bottom: -2px;
+      padding: ${theme.space[2]} ${theme.space[4]};
 
       font-size: ${theme.fontSizes[2]};
       line-height: normal;
@@ -35,7 +36,6 @@ export const SubscribeForm = styled(Box)`
 
       &::placeholder {
         color: ${theme.colors.gray};
-        font-weight: 400;
       }
     }
 
@@ -43,14 +43,14 @@ export const SubscribeForm = styled(Box)`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: ${theme.space[2]};
+      padding: ${theme.space[2]} ${theme.space[4]};
 
       color: ${theme.colors.white};
       text-transform: uppercase;
 
       background: ${theme.colors.black};
-      border: none;
-      border-radius: 0;
+      border: ${theme.border};
+      border-radius: ${theme.borderRadius};
       cursor: pointer;
       transition: ${theme.transition.all};
 

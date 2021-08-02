@@ -17,12 +17,13 @@ const Pill = styled(Flex)<PillProps>`
   display: flex;
   align-items: center;
 
-  /* background-color: ${theme.colors.black}; */
-  border: 1px solid ${theme.colors.gray};
+  background-color: ${theme.colors.white};
+  border: 1px solid ${theme.colors.white};
   border-radius: ${theme.borderRadius};
   margin-right: ${theme.space[2]};
   padding: ${theme.space[1]} ${theme.space[2]};
 
+  color: ${theme.colors.black};
   font-size: ${theme.fontSizes[2]};
   white-space: nowrap;
 

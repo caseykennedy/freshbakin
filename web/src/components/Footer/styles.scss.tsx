@@ -30,9 +30,13 @@ export const Footer = styled(Flex)`
 
       .form {
         border-right: ${theme.border};
-        flex: 1;
+        flex: 2;
         margin: ${theme.space[2]} ${theme.space[2]} ${theme.space[2]} 0;
-        padding: ${theme.space[6]} ${theme.space[2]} ${theme.space[6]} 0;
+        padding: ${theme.space[6]} ${theme.space[2]} 0 0;
+
+        @media ${theme.mq.tablet} {
+          flex: 1;
+        }
       }
 
       .social {
@@ -42,7 +46,7 @@ export const Footer = styled(Flex)`
         justify-content: center;
 
         svg {
-          width: ${theme.space[7]};
+          width: ${theme.space[6]};
         }
       }
     }

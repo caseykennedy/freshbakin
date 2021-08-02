@@ -37,8 +37,8 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
 
   // eslint-disable-next-line no-console
   console.log(
-    `%c dWeb Summit | crafted with care | caseykennedy.hns.to `,
-    `background: #5700ff; color: #ffffff`
+    `%c FreshBakin' | crafted with care | caseykennedy.hns.to `,
+    `background: #ffffff; color: #000000`
   )
   return (
     <S.Wrapper>

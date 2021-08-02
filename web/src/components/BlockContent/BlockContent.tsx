@@ -53,7 +53,11 @@ const serializers = {
           return <li>{props.children}</li>
 
         default:
-          return <Text as="p" mb={4}>{props.children}</Text>
+          return (
+            <Text as="p" sx={{ fontSize: 4, mb: 3 }}>
+              {props.children}
+            </Text>
+          )
       }
     },
     figure(props: any) {

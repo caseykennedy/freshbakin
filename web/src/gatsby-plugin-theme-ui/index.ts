@@ -206,7 +206,7 @@ const theme: ThemeShape = {
   maxWidth: '100%',
   siteWidth: '100%',
   logoHeight: '47px',
-  headerHeight: '350px',
+  headerHeight: '300px',
   tickerHeight: '56px',
   iconWidth: '18px',
 
@@ -230,7 +230,7 @@ const theme: ThemeShape = {
   },
 
   border: '2px solid #000000',
-  borderRadius: '4px',
+  borderRadius: '999px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 
   root: {

@@ -165,7 +165,7 @@ const Typography = css`
     }
 
     @media ${theme.mq.desktop} {
-      font-size: calc(${theme.fontSizes[7]} * 1.25);
+      font-size: calc(${theme.fontSizes[7]} * 1.5);
     }
   }
 
