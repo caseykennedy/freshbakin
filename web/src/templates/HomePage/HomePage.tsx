@@ -30,7 +30,7 @@ const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
           gap={theme.gutter.space}
           className="events__grid"
         >
-          {events.map(({ node: event }, key) => (
+          {events.slice(0, 6).map(({ node: event }, key) => (
             <Link
               to={`/events/${event.slug.current}`}
               className="grid-event"
@@ -47,7 +47,7 @@ const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
         </Grid>
       ) : (
         <Box className="events__list">
-          {events.map(({ node: event }, key) => (
+          {events.slice(6, 20).map(({ node: event }, key) => (
             <Link
               to={`/events/${event.slug.current}`}
               className="list-event"

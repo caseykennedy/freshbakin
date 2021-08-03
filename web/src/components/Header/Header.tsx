@@ -16,6 +16,7 @@ import { Box, Flex, Text } from 'theme-ui'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
+import Symbol from '../Symbol'
 
 // ___________________________________________________________________
 
@@ -36,7 +37,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
               className="logo"
               aria-label="Fresh Bakin', back to home"
             >
-              FreshBakin'
+              <Symbol />
             </Link>
           </S.Logo>
 

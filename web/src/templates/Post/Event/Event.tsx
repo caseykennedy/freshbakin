@@ -29,6 +29,12 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const siteSettings = useSiteSettings()
   const eventStartDate = format(new Date(post.startDate), 'MMM. io ● yyyy')
   const eventStartTime = format(new Date(post.startDate), 'haaa')
+
+  const BuyButton = () => (
+    <a href={post.ticketUrl} target="_blank" className="button">
+      <Box py={[5]}>Buy Tickets{post.price && `● $${post.price}`}</Box>
+    </a>
+  )
   return (
     <>
       <SEO
@@ -96,9 +102,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
             </Flex>
 
             <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
-              <a href={post.ticketUrl} target="_blank" className="button">
-                <Box py={[5]}>Buy Tickets ● ${post.price}</Box>
-              </a>
+              <BuyButton />
             </Flex>
           </Flex>
         </Section>
@@ -147,9 +151,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section bg="black" color="white">
-          <a href={post.ticketUrl} target="_blank" className="button">
-            <Box py={[5]}>Buy Tickets ● ${post.price}</Box>
-          </a>
+          <BuyButton />
         </Section>
 
         {/* <PrevNext pageContext={pageContext} /> */}
