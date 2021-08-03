@@ -31,7 +31,6 @@ const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
       variants={itemVariants}
       whileTap={{ scale: 0.95 }}
       onClick={handleExitOnClick}
-      isDark={isDark}
     >
       <Link to={item.link}>{item.name}</Link>
     </S.NavLink>
@@ -60,28 +59,14 @@ export default MobileNav
 
 const data = [
   {
-    name: 'Home',
+    name: 'shows',
     link: '/',
+    span: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
   },
   {
-    name: 'Incubator',
-    link: '/incubator',
-  },
-  {
-    name: 'About',
-    link: '/about',
-  },
-  {
-    name: 'Donate',
-    link: '/donate',
-  },
-  {
-    name: 'Grants',
-    link: '/grants',
-  },
-  {
-    name: 'Blog',
-    link: '/blog',
+    name: 'news',
+    link: '/news',
+    span: 'Never miss a beat. Stay in tune with Reno events.',
   },
 ]
 

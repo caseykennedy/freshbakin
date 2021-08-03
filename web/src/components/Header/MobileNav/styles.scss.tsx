@@ -17,7 +17,6 @@ export const MobileNav = styled(motion.ul)`
   flex-wrap: wrap;
 
   margin: 0;
-  padding: ${theme.headerHeight} 0 0 0;
   height: 100%;
   width: 100%;
 `
@@ -31,8 +30,8 @@ export const NavLink = styled(motion.li)`
 
   a {
     color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[3]};
-    text-decoration: none;
+    font-size: ${theme.fontSizes[5]};
+    text-decoration: uppercase;
     width: 100%;
 
     &:hover {

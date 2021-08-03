@@ -55,7 +55,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
             </Heading>
           </Flex>
 
-          <Heading as="h1" mb={2} className="text--xxxl">
+          <Heading as="h1" mb={[4, 2]} className="text--xxxl">
             {post.title}
           </Heading>
 

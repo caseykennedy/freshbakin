@@ -30,7 +30,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
     <>
       <S.Header>
         <Flex className="header__billboard">
-          <S.Logo onClick={() => setNavOpen(false)}>
+          <S.Logo sx={{ mb: 5 }} onClick={() => setNavOpen(false)}>
             <Link
               to="/"
               className="logo"
@@ -41,7 +41,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
           </S.Logo>
 
           {isHome && (
-            <Text as="span" sx={{ fontWeight: 600 }}>
+            <Text as="span" sx={{ fontWeight: 600, mt: 6 }}>
               Fresh Bakin’ evolves art,
               <br />
               music, community and culture… nicely.
@@ -51,12 +51,25 @@ const Header: React.FC<Props> = ({ isHome }) => {
 
         <Flex className="header__menu">
           <Navigation />
+          <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
+            <HamburgerMenu
+              isOpen={!isNavOpen ? false : true}
+              menuClicked={toggleMenu}
+              width={44}
+              height={14}
+              strokeWidth={2}
+              rotate={0}
+              color={theme.colors.black}
+              borderRadius={0}
+              animationDuration={0.333}
+            />
+          </S.Toggle>
         </Flex>
       </S.Header>
 
-      {/* <Modal open={isNavOpen} close={toggleMenu}>
+      <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal> */}
+      </Modal>
     </>
   )
 }

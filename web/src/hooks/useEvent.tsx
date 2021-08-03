@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useEvent = () => {
   const data = useStaticQuery<EventShape>(graphql`
     query EventQuery {
-      events: allSanityEvent(sort: { order: DESC, fields: startDate }) {
+      events: allSanityEvent(sort: { order: ASC, fields: startDate }) {
         edges {
           node {
             _rawExcerpt

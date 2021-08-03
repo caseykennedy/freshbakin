@@ -4,17 +4,15 @@
 
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Flex } from 'theme-ui'
+import { Box, Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
 export const Header = styled(Flex)`
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   padding: ${theme.space[2]};
-  height: 150px;
   width: 100%;
 
   @media ${theme.mq.tablet} {
@@ -37,7 +35,8 @@ export const Header = styled(Flex)`
     &__menu {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
       height: 100%;
     }
   }
@@ -46,4 +45,22 @@ export const Header = styled(Flex)`
 export const Logo = styled(Flex)`
   display: flex;
   flex-direction: column;
+`
+
+export const Toggle = styled.div`
+  display: flex;
+  align-items: flex-end;
+  box-sizing: content-box;
+
+  color: ${theme.colors.text};
+  font-size: calc(${theme.fontSizes[2]});
+  font-weight: 400;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 9999;
+
+  @media ${theme.mq.tablet} {
+    display: none;
+  }
 `

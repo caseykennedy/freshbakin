@@ -209,20 +209,18 @@ const Typography = css`
 
   h5,
   .text--sm {
-    font-size: calc(${theme.fontSizes[3]});
+    font-size: calc(${theme.fontSizes[2]});
     text-transform: uppercase;
+
+    @media ${theme.mq.tablet} {
+      font-size: ${theme.fontSizes[3]};
+    }
   }
 
   h6,
   .text--xs {
-    font-size: calc(${theme.fontSizes[1]} * 1.15);
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: ${theme.fontSizes[2]};
     text-transform: uppercase;
-
-    @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[1]};
-    }
   }
 
   p,

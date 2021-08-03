@@ -5,7 +5,7 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import Marquee from 'react-fast-marquee'
+import { format } from 'date-fns'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -19,11 +19,6 @@ import Newsletter from '../../components/Footer/SubscribeForm'
 import useEvent from '../../hooks/useEvent'
 
 // ___________________________________________________________________
-
-const MarqueeProps = {
-  gradient: false,
-  speed: 20,
-}
 
 const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
   const events = useEvent()
@@ -55,36 +50,20 @@ const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
           {events.map(({ node: event }, key) => (
             <Link
               to={`/events/${event.slug.current}`}
-              className="grid-event"
+              className="list-event"
               key={key}
             >
-              <Flex className="list-event">
-                <Box>
-                  <Heading as="h4">{event.title}</Heading>
-                </Box>
-                <Box>
-                  <Text color="gray" className="text--sm">
-                    {event.venue}
-                  </Text>
-                </Box>
-              </Flex>
+              <Box sx={{ flex: 1 }}>
+                <Heading as="h4">{event.title}</Heading>
+              </Box>
+              <Heading className="text--md">
+                {format(new Date(event.startDate), 'MMM. io')}
+              </Heading>
             </Link>
           ))}
         </Box>
       )}
     </S.Events>
-  )
-}
-
-const Hero = () => {
-  return (
-    <S.Hero>
-      <Marquee {...MarqueeProps}>
-        <Text mr={1} className="text--lg  text--uppercase">
-          music — art — entertainment — reno, nv — lake tahoe
-        </Text>
-      </Marquee>
-    </S.Hero>
   )
 }
 
