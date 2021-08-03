@@ -292,7 +292,7 @@ const Typography = css`
     /* text-decoration-thickness: 1.5px; */
 
     position: relative;
-    transition: ${theme.transition.all};
+    /* transition: ${theme.transition.all}; */
 
     /* &:hover,
     &:focus {

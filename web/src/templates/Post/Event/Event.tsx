@@ -55,40 +55,55 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
             </Heading>
           </Flex>
 
-          <Heading as="h1" mb={4} className="text--xxxl">
+          <Heading as="h1" mb={2} className="text--xxxl">
             {post.title}
           </Heading>
 
           <Flex sx={{ flexDirection: ['column', 'row'] }}>
-            <Box sx={{ flex: 1 }}>
-              {post.subTitle && (
-                <Heading className="text--md">{post.subTitle}</Heading>
-              )}
-
-              <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
-                at {post.venue}
-              </Heading>
-
+            <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
               <Box>
-                {post.tags && (
-                  <Flex>
-                    {post.tags.map((item, idx) => (
-                      <Pill mb={2} key={idx}>
-                        <span>#{item.tag}</span>
-                      </Pill>
-                    ))}
-                  </Flex>
+                {post.subTitle && (
+                  <Heading className="text--md">{post.subTitle}</Heading>
                 )}
+
+                <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
+                  at {post.venue}
+                </Heading>
+
+                <Box sx={{ width: '100%' }}>
+                  <Flex>
+                    {post.tags && (
+                      <>
+                        {post.tags.map((item, idx) => (
+                          <Pill mb={2} key={idx}>
+                            <span>#{item.tag}</span>
+                          </Pill>
+                        ))}
+                      </>
+                    )}
+                    {post.category && (
+                      <>
+                        {post.category.map((item, key) => (
+                          <Pill mb={2} key={key}>
+                            <span>#{item.title}</span>
+                          </Pill>
+                        ))}
+                      </>
+                    )}
+                  </Flex>
+                </Box>
               </Box>
-            </Box>
+            </Flex>
 
             <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
-              <Box className="button">Buy Tickets ● ${post.price}</Box>
+              <a href={post.ticketUrl} target="_blank" className="button">
+                <Box py={[5]}>Buy Tickets ● ${post.price}</Box>
+              </a>
             </Flex>
           </Flex>
         </Section>
 
-        <Section bg="gray">
+        <Section>
           <Flex
             sx={{
               flexDirection: ['column-reverse', 'row-reverse'],
@@ -102,15 +117,11 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
               }}
             >
               <Box sx={{ flex: 1, position: 'sticky', top: 0 }}>
-                <Flex sx={{ flexDirection: ['column', 'row'] }}>
-                  <Box sx={{ flex: 1, pl: [0, 2] }}>
-                    <Text>
-                      {post._rawInfo && (
-                        <BlockContent blocks={post._rawInfo || []} />
-                      )}
-                    </Text>
-                  </Box>
-                </Flex>
+                <Box sx={{ flex: 1, pl: [0, 2] }}>
+                  {post._rawInfo && (
+                    <BlockContent blocks={post._rawInfo || []} />
+                  )}
+                </Box>
               </Box>
             </Box>
 
@@ -135,8 +146,10 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
           </Flex>
         </Section>
 
-        <Section bg="black" color="white" pt={6} pb={6}>
-          <Box className="button">Buy Tickets ● ${post.price}</Box>
+        <Section bg="black" color="white">
+          <a href={post.ticketUrl} target="_blank" className="button">
+            <Box py={[5]}>Buy Tickets ● ${post.price}</Box>
+          </a>
         </Section>
 
         {/* <PrevNext pageContext={pageContext} /> */}

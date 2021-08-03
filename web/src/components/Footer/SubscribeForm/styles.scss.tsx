@@ -52,7 +52,6 @@ export const SubscribeForm = styled(Box)`
       border: ${theme.border};
       border-radius: ${theme.borderRadius};
       cursor: pointer;
-      transition: ${theme.transition.all};
 
       svg {
         fill: ${theme.colors.white};
@@ -61,7 +60,8 @@ export const SubscribeForm = styled(Box)`
       }
 
       &:hover {
-        background: ${theme.colors.gray};
+        background: ${theme.colors.primary};
+        border-color: ${theme.colors.primary};
         color: ${theme.colors.black};
         
         svg {

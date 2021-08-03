@@ -53,16 +53,22 @@ const Events: React.FC<{ grid?: boolean }> = ({ grid }) => {
       ) : (
         <Box className="events__list">
           {events.map(({ node: event }, key) => (
-            <Flex className="list-event" key={key}>
-              <Box>
-                <Heading as="h4">{event.title}</Heading>
-              </Box>
-              <Box>
-                <Text color="gray" className="text--sm">
-                  {event.venue}
-                </Text>
-              </Box>
-            </Flex>
+            <Link
+              to={`/events/${event.slug.current}`}
+              className="grid-event"
+              key={key}
+            >
+              <Flex className="list-event">
+                <Box>
+                  <Heading as="h4">{event.title}</Heading>
+                </Box>
+                <Box>
+                  <Text color="gray" className="text--sm">
+                    {event.venue}
+                  </Text>
+                </Box>
+              </Flex>
+            </Link>
           ))}
         </Box>
       )}
@@ -89,7 +95,9 @@ const HomePage: React.FC = () => {
         <Events grid={true} />
       </Section>
       <Section bg="black" color="white">
-        <Heading as="h4">Upcoming</Heading>
+        <Heading as="h4" color="gray">
+          Upcoming
+        </Heading>
         <Events />
       </Section>
     </S.HomePage>

@@ -24,15 +24,17 @@ const Pill = styled(Flex)<PillProps>`
   padding: ${theme.space[1]} ${theme.space[2]};
 
   color: ${theme.colors.black};
-  font-size: ${theme.fontSizes[2]};
+  font-size: ${theme.fontSizes[1]};
   white-space: nowrap;
-
-  transition: all ${theme.transition.global};
 
   &:hover {
     background-color: ${theme.colors.primary};
     border-color: ${theme.colors.primary};
     color: ${theme.colors.black};
+  }
+
+  @media ${theme.mq.tablet} {
+    font-size: ${theme.fontSizes[2]};
   }
 `
 

@@ -92,7 +92,7 @@ const theme: ThemeShape = {
     text: '#000000',
     background: '#ffffff',
 
-    primary: '#22A5E1',
+    primary: '#4d91ae',
     secondary: '#e52a63',
     tertiary: '#34FFDD',
     muted: '#DBDBDB',

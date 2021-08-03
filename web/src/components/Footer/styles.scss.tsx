@@ -47,6 +47,9 @@ export const Footer = styled(Flex)`
 
         svg {
           width: ${theme.space[6]};
+          &:hover {
+            transform: scale(1.25);
+          }
         }
       }
     }
