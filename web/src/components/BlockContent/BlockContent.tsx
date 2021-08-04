@@ -54,7 +54,7 @@ const serializers = {
 
         default:
           return (
-            <Text as="p" sx={{ fontSize: 4, mb: 3 }}>
+            <Text as="p" sx={{ fontSize: [3, 4], mb: 3 }}>
               {props.children}
             </Text>
           )

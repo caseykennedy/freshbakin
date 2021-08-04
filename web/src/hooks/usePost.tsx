@@ -26,6 +26,8 @@ const usePost = () => {
               tag
             }
             figure {
+              alt
+              caption
               asset {
                 gatsbyImageData(
                   fit: FILLMAX
@@ -54,10 +56,6 @@ const usePost = () => {
                   url
                 }
               }
-            }
-            sources {
-              title
-              url
             }
           }
           previous {

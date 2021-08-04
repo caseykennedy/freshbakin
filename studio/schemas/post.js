@@ -73,16 +73,6 @@ export default {
       title: 'Body',
       type: 'blockContent',
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'sources',
-      title: 'Sources',
-      type: 'array',
-      of: [
-        {
-          type: 'source'
-        }
-      ]
     }
   ],
   orderings: [

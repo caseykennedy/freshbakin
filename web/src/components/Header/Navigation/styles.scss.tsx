@@ -38,6 +38,12 @@ export const Nav = styled.nav`
       max-width: 250px;
     }
 
+    &.active {
+      .orb {
+        opacity: 1 !important;
+      }
+    }
+
     /* &.active,
     &:hover {
       color: ${theme.colors.primary};

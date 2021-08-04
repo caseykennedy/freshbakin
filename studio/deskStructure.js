@@ -18,6 +18,14 @@ export default () =>
         )
         .icon(MdSettings),
 
+      // People
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('People')
+        .schemaType('person')
+        .child(S.documentTypeList('person').title('People')),
+
       // Post Category
       // _________________________________________________________________
 

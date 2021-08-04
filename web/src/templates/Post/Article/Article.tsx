@@ -38,9 +38,9 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
       <S.Article>
         <Section>
           <Box width={[1, 2 / 3]} mb={0}>
-            <Text as="p" className="text--small  text--uppercase">
+            <Heading className="text--md  text--uppercase">
               {post.publishedAt}
-            </Text>
+            </Heading>
 
             <Heading as="h1" mb={4} className="text--xxl">
               {post.title}
@@ -87,7 +87,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                   )}
                 </Text>
 
-                <Box mt={6}>
+                {/* <Box mt={6}>
                   {post.tags && (
                     <Flex flexWrap="wrap" mb={4} width={1}>
                       {post.tags.map((item, idx) => (
@@ -97,13 +97,11 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                       ))}
                     </Flex>
                   )}
-                </Box>
+                </Box> */}
               </Box>
             </Flex>
           </Flex>
         </Section>
-
-        <PrevNext pageContext={pageContext} />
       </S.Article>
     </>
   )

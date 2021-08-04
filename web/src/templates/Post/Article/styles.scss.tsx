@@ -8,13 +8,8 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Article = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-
-  .swiper-container {
-    overflow: visible;
-    padding-bottom: ${theme.space[7]};
-  }
+  background: ${theme.colors.black};
+  color: ${theme.colors.white};
 
   a {
     /* These are technically the same, but use both */
@@ -30,12 +25,5 @@ export const Article = styled.div`
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-  }
-
-  .utilities {
-    @media ${theme.mq.tablet} {
-      position: sticky;
-      top: ${theme.space[5]};
-    }
   }
 `
