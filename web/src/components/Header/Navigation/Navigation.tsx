@@ -54,9 +54,9 @@ const orbMotion = {
     opacity: 1,
     marginTop: '0px',
     transition: {
-      duration: 1,
       type: 'spring',
-      ease: 'easeIn',
+      stiffness: 200,
+      damping: 10,
     },
   },
 }

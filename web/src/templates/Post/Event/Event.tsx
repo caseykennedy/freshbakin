@@ -32,7 +32,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
 
   const BuyButton = () => (
     <a href={post.ticketUrl} target="_blank" className="button">
-      <Box py={[5]}>Buy Tickets{post.price && `● $${post.price}`}</Box>
+      <Box py={[5]}>Buy Tickets {post.price && `● $${post.price}`}</Box>
     </a>
   )
   return (
