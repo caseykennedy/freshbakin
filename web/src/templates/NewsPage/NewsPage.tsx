@@ -13,6 +13,7 @@ import * as S from './styles.scss'
 import { Box, Flex, Grid, Heading, Text } from 'theme-ui'
 
 // Components
+import Icon from '../../components/Icons'
 import Section from '../../components/Section'
 import BlockContent from '../../components/BlockContent'
 
@@ -26,7 +27,7 @@ const NewsPage: React.FC = () => {
   return (
     <S.NewsPage>
       <Section bg="black" color="white">
-        <Grid columns={[1, 3]} gap={2}>
+        <Grid columns={[1, 2, 3]} gap={2}>
           {posts.slice(0, 8).map(({ node: post }, key) => (
             <Link to={`/news/${post.slug.current}`} className="card" key={key}>
               <Flex sx={{ flex: 1, justifyContent: 'space-between', mb: 4 }}>
@@ -35,9 +36,22 @@ const NewsPage: React.FC = () => {
                   {format(new Date(post.publishedAt), 'MMM. io')}
                 </Heading>
               </Flex>
+              <Flex>
+                <Box sx={{ flex: 0.5, mb: 6, ml: 'auto' }}>
+                  <GatsbyImage
+                    image={post.figure.asset.gatsbyImageData}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt={post.figure.alt}
+                  />
+                </Box>
+              </Flex>
               <Box sx={{ flex: 1, fontSize: 1 }}>
-                {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
+                {post._rawExcerpt && (
+                  <BlockContent blocks={post._rawExcerpt || []} />
+                )}
               </Box>
+              <Text sx={{ mt: 6 }}><Icon name="arrow" color="white" /></Text>
             </Link>
           ))}
         </Grid>

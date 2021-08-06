@@ -73,7 +73,6 @@ export const GridMotion = styled(motion.div)`
 
 export const HoverMotion = styled(motion.div)`
   background: ${theme.colors.black};
-  border-bottom: ${theme.border};
   border-color: ${theme.colors.white};
   bottom: 0%;
   left: 0%;

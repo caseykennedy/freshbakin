@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         <Text>&copy;{getYear()}</Text>
         <Text>
           <a href="https://caseykennedy.hns.to" target="_blank">
-            groovy
+            groovy site
           </a>
         </Text>
       </Flex>
