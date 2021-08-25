@@ -59,7 +59,7 @@ const SEO = ({
   const { buildTime } = site
 
   const seo = {
-    title: `${title}` || settings.titleAlt,
+    title: `${title}` || settings.title,
     description: desc || settings.description,
     image: `${banner || settings.banner.asset.url}`,
     url: `${settings.url}${pathname || ''}`,
