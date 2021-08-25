@@ -15,10 +15,10 @@ export default {
         title: 'My Netlify deploys',
         sites: [
           {
-            title: 'dWeb Foundation',
-            apiId: '0ba0a0e1-042b-46e1-81e5-4b3f3442df2b',
-            buildHookId: '603b1856379495d918798aa9',
-            name: 'decentralizedinternet'
+            title: 'FreshBakin.com',
+            apiId: '5697a8c2-8ee0-4ec9-98cf-9222e540c319',
+            buildHookId: '611acf1eabf1242664243d88',
+            name: 'freshbakin'
           }
         ]
       }
