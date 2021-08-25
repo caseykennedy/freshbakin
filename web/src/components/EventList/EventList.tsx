@@ -52,7 +52,7 @@ const EventList: React.FC<Props> = ({ grid }) => {
                 <Flex sx={{ justifyContent: 'space-between' }}>
                   <Heading className="text--sm">{event.title} </Heading>
                   <Heading className="text--sm">
-                    {format(new Date(event.startDate), 'MMM. io')}
+                    {format(new Date(event.startDate), 'MMM. do')}
                   </Heading>
                 </Flex>
                 <Text sx={{ color: 'gray' }}>
@@ -74,7 +74,7 @@ const EventList: React.FC<Props> = ({ grid }) => {
                 <Heading as="h4">{event.title}</Heading>
               </Box>
               <Heading className="text--md">
-                {format(new Date(event.startDate), 'MMM. io')}
+                {format(new Date(event.startDate), 'MMM. do')}
               </Heading>
             </Link>
           ))}

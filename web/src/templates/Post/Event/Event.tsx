@@ -27,7 +27,7 @@ import useSiteSettings from '../../../hooks/useSiteSettings'
 const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const post = pageContext.event
   const siteSettings = useSiteSettings()
-  const eventStartDate = format(new Date(post.startDate), 'MMM. io ● yyyy')
+  const eventStartDate = format(new Date(post.startDate), 'MMM. do ● yyyy')
   const eventStartTime = format(new Date(post.startDate), 'haaa')
 
   const BuyButton = () => (

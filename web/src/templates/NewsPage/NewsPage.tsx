@@ -33,7 +33,7 @@ const NewsPage: React.FC = () => {
               <Flex sx={{ flex: 1, justifyContent: 'space-between', mb: 4 }}>
                 <Heading as="h4">{post.title}</Heading>
                 <Heading className="text--md">
-                  {format(new Date(post.publishedAt), 'MMM. io')}
+                  {format(new Date(post.publishedAt), 'MMM. do')}
                 </Heading>
               </Flex>
               <Flex>
