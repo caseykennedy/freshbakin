@@ -22,6 +22,10 @@ type Props = {
 
 const EventList: React.FC<Props> = ({ grid }) => {
   const events = useEvent()
+  const filteredDates = events.filter(
+    (event) => new Date(event.node.startDate) - new Date() > 0
+  )
+  console.log(filteredDates)
   return (
     <S.EventList>
       {grid ? (
@@ -30,7 +34,7 @@ const EventList: React.FC<Props> = ({ grid }) => {
           gap={theme.gutter.space}
           className="events__grid"
         >
-          {events.slice(0, 8).map(({ node: event }, key) => (
+          {filteredDates.slice(0, 8).map(({ node: event }, key) => (
             <S.GridMotion
               initial={false}
               whileHover="hover"
@@ -55,16 +59,14 @@ const EventList: React.FC<Props> = ({ grid }) => {
                     {format(new Date(event.startDate), 'MMM. do')}
                   </Heading>
                 </Flex>
-                <Text sx={{ color: 'gray' }}>
-                  at {event.venue}
-                </Text>
+                <Text sx={{ color: 'gray' }}>at {event.venue}</Text>
               </S.HoverMotion>
             </S.GridMotion>
           ))}
         </Grid>
       ) : (
         <Box className="events__list">
-          {events.slice(6, 20).map(({ node: event }, key) => (
+          {filteredDates.slice(6, 30).map(({ node: event }, key) => (
             <Link
               to={`/events/${event.slug.current}`}
               className="list-event"

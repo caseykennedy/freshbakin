@@ -11,7 +11,7 @@ export default {
         Rule.required()
           .min(10)
           .max(72)
-          .warning(`A title shouldn't exceed 72 characters.`)
+          .warning("A title shouldn't exceed 72 characters.")
     },
     {
       name: 'subTitle',
