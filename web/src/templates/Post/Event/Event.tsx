@@ -45,7 +45,6 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
         eventAddress={post.address}
         eventTicketUrl={post.ticketUrl}
         eventStartDate={post.startDate}
-        eventPrice={post.price}
         banner={`${post.figure.asset.url}`}
         title={`${post.title} | ${siteSettings.titleShort}`}
         desc={`${post.title}`}

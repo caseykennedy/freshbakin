@@ -131,7 +131,7 @@ export default {
       publishedAt: 'startDate',
       image: 'figure'
     },
-    prepare({ title = 'No title', publishedAt, image }) {
+    prepare ({ title = 'No title', publishedAt, image }) {
       return {
         title,
         subtitle: publishedAt
