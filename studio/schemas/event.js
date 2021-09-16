@@ -41,17 +41,11 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Event name + date + year — e.g.: EVENT-NAME-OCTOBER-2022',
+      description: 'Event name + city + year — e.g.: EVENT-RENO-OCTOBER-2022',
       options: {
         source: 'title'
       },
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'price',
-      title: 'Price',
-      type: 'string',
-      description: 'Price only, no $ signs.'
     },
     {
       name: 'ticketUrl',

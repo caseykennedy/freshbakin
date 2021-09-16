@@ -39,7 +39,6 @@ async function createEventPostPages(graphql, actions) {
             }
             caption
           }
-          price
           slug {
             current
           }

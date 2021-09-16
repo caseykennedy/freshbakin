@@ -49,7 +49,6 @@ type EventQuery = {
     }
     caption: string
   }
-  price: string
   slug: {
     current: string
   }

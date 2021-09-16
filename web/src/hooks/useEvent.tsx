@@ -33,7 +33,6 @@ const useEvent = () => {
                 url
               }
             }
-            price
             slug {
               current
             }
