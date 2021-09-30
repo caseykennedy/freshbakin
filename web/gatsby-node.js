@@ -64,9 +64,10 @@ async function createEventPostPages(graphql, actions) {
     // Loop through the category nodes, but don't return anything
     .forEach((node) => {
       // Desctructure the id and slug fields for each category
-      const { id, slug = {} } = node
+      const { id, figure, slug = {} } = node
       // If there isn't a slug, we want to do nothing
       if (!slug) return
+      if (!figure.asset) return
       // Make the URL with the current slug
       const path = `/events/${slug.current}`
       // Create the page using the URL path and the template file, and pass down the id
