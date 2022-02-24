@@ -64,9 +64,9 @@ const data = [
     link: '/',
     span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
   },
-  // {
-  //   name: 'news',
-  //   link: '/news',
-  //   span: 'Never miss a beat. Stay in tune with Reno events.',
-  // },
+  {
+    name: 'news',
+    link: '/news',
+    span: 'Never miss a beat. Stay in tune with Reno events.',
+  },
 ]
