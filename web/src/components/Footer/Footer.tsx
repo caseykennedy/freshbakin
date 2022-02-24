@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import { Link } from 'gatsby'
 
 // Theme + UI
 import * as S from './styles.scss'
@@ -40,8 +39,8 @@ const Footer: React.FC = () => {
       <Flex className="footer__copyright">
         <Text>&copy;{getYear()}</Text>
         <Text>
-          <a href="https://caseykennedy.hns.to" target="_blank">
-            groovy site
+          <a href="https://caseykennedy.me" target="_blank">
+            groovy website
           </a>
         </Text>
       </Flex>
