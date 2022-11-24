@@ -34,6 +34,23 @@ const Navigation = () => {
           </S.LinkMotion>
         </Link>
       ))}
+      <a
+          to="https://www.sacredstatedesign.com/fresh-bakin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <S.LinkMotion initial="rest" whileHover="hover" animate="rest">
+            <Heading className="text--md">shop</Heading>
+
+            <S.Orb variants={orbMotion} className="orb">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" />
+              </svg>
+            </S.Orb>
+
+            <Text as="span">Snag some swag.</Text>
+          </S.LinkMotion>
+        </Link>
     </S.Nav>
   )
 }
@@ -63,10 +80,10 @@ const data = [
     name: 'shows',
     link: '/',
     span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
-  },
-  {
-    name: 'news',
-    link: '/news',
-    span: 'Never miss a beat. Stay in tune with Reno events.',
-  },
+  }
+//   {
+//     name: 'news',
+//     link: '/news',
+//     span: 'Never miss a beat. Stay in tune with Reno events.',
+//   },
 ]
