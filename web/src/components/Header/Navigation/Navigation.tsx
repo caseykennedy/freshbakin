@@ -35,7 +35,7 @@ const Navigation = () => {
         </Link>
       ))}
       <a
-          to="https://www.sacredstatedesign.com/fresh-bakin"
+          href="https://www.sacredstatedesign.com/fresh-bakin"
           target="_blank"
           rel="noreferrer"
         >
