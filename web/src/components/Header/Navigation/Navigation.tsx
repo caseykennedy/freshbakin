@@ -50,7 +50,7 @@ const Navigation = () => {
 
             <Text as="span">Snag some swag.</Text>
           </S.LinkMotion>
-        </Link>
+        </a>
     </S.Nav>
   )
 }
