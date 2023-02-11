@@ -1,10 +1,5 @@
 // gatsby-node.js
 
-// Log out information after a build is done
-exports.onPostBuild = ({ reporter }) => {
-  reporter.info(`Your Gatsby site has been built!`)
-}
-
 // Event Post Pages
 // ___________________________________________________________________
 async function createEventPostPages(graphql, actions) {
