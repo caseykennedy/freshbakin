@@ -1,9 +1,7 @@
 // Pill Styles:
-
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Flex } from '.'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
@@ -13,28 +11,23 @@ type PillProps = {
   color?: string
 }
 
-const Pill = styled(Flex)<PillProps>`
+const Pill = styled.div<PillProps>`
   display: flex;
   align-items: center;
 
   background-color: ${theme.colors.white};
-  border: 1px solid ${theme.colors.white};
+  border: 1px solid ${theme.colors.black};
   border-radius: ${theme.borderRadius};
-  margin-right: ${theme.space[2]};
-  padding: ${theme.space[1]} ${theme.space[2]};
+  padding: ${theme.space[2]} ${theme.space[4]};
 
   color: ${theme.colors.black};
-  font-size: ${theme.fontSizes[1]};
+  font-size: ${theme.fontSizes[2]};
   white-space: nowrap;
 
   &:hover {
     background-color: ${theme.colors.primary};
     border-color: ${theme.colors.primary};
     color: ${theme.colors.black};
-  }
-
-  @media ${theme.mq.tablet} {
-    font-size: ${theme.fontSizes[2]};
   }
 `
 

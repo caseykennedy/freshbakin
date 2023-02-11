@@ -90,9 +90,9 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000000',
-    background: '#ffffff',
+    background: '#eee',
 
-    primary: '#4d91ae',
+    primary: '#8C7746',
     secondary: '#e52a63',
     tertiary: '#34FFDD',
     muted: '#DBDBDB',
@@ -206,7 +206,7 @@ const theme: ThemeShape = {
   maxWidth: '100%',
   siteWidth: '100%',
   logoHeight: '47px',
-  headerHeight: '300px',
+  headerHeight: '240px',
   tickerHeight: '56px',
   iconWidth: '18px',
 

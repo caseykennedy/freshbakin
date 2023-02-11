@@ -20,7 +20,7 @@ type Props = {
 
 const MarqueeProps = {
   gradient: false,
-  speed: 20,
+  speed: 40,
 }
 
 const MarqueeMessage: React.FC<Props> = ({ message }) => {

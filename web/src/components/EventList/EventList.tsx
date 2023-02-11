@@ -22,10 +22,12 @@ type Props = {
 
 const EventList: React.FC<Props> = ({ grid }) => {
   const events = useEvent()
-  const filteredDates = events.filter(
-    (event) => new Date(event.node.startDate) - new Date() > 0
-  )
-  console.log(filteredDates)
+  const filteredDates = events.filter((event) => {
+    const startDate = new Date(event.node.startDate)
+    const currentDate = new Date()
+    return startDate > currentDate
+  })
+  // console.log('filteredDates', filteredDates)
   return (
     <S.EventList>
       {grid ? (

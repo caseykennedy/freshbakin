@@ -7,8 +7,6 @@ import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import { motion } from 'framer-motion'
 
-import Section from '../Section'
-
 // ___________________________________________________________________
 
 export const EventList = styled(Box)`

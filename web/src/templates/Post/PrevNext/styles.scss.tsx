@@ -1,15 +1,14 @@
-// Staff Styles:
+// PrevNext Styles:
 
 // ___________________________________________________________________
 
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Flex } from '../../../components/ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const PrevNext = styled(Flex)`
+export const PrevNext = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

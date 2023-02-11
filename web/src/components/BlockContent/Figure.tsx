@@ -1,16 +1,10 @@
 import React from 'react'
 import Image from 'gatsby-plugin-sanity-image'
-import { Box } from '../ui'
+import { Box } from 'theme-ui'
 
 const Figure = (props: any) => {
   return (
-    <Box
-      as="figure"
-      my={6}
-      mx="auto"
-      width="auto"
-      style={{ maxWidth: '600px' }}
-    >
+    <Box as="figure" my={6} mx="auto" style={{ maxWidth: '600px' }}>
       {props.asset && (
         <Image
           {...props}

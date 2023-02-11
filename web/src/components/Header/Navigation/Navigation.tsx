@@ -1,15 +1,46 @@
 // Navigation
-
 // ___________________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
 import { Text, Heading } from 'theme-ui'
-import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { motion } from 'framer-motion'
 
 // ___________________________________________________________________
+
+const orbMotion = {
+  rest: {
+    opacity: 0,
+    marginTop: '50px',
+  },
+  hover: {
+    opacity: 1,
+    marginTop: '0px',
+    transition: {
+      type: 'spring',
+      stiffness: 200,
+      damping: 10,
+    },
+  },
+}
+
+const data = [
+  {
+    name: 'shows',
+    link: '/',
+    span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
+  },
+  // {
+  //   name: 'experiential',
+  //   link: '/interactive',
+  //   span: 'Elevating events with immersive experiences.',
+  // },
+  //   {
+  //     name: 'news',
+  //     link: '/news',
+  //     span: 'Never miss a beat. Stay in tune with Reno events.',
+  //   },
+]
 
 const Navigation = () => {
   return (
@@ -35,55 +66,24 @@ const Navigation = () => {
         </Link>
       ))}
       <a
-          href="https://www.sacredstatedesign.com/fresh-bakin"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <S.LinkMotion initial="rest" whileHover="hover" animate="rest">
-            <Heading className="text--md">shop</Heading>
+        href="https://www.sacredstatedesign.com/fresh-bakin"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <S.LinkMotion initial="rest" whileHover="hover" animate="rest">
+          <Heading className="text--md">shop</Heading>
 
-            <S.Orb variants={orbMotion} className="orb">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" />
-              </svg>
-            </S.Orb>
+          <S.Orb variants={orbMotion} className="orb">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="50" />
+            </svg>
+          </S.Orb>
 
-            <Text as="span">Snag some swag.</Text>
-          </S.LinkMotion>
-        </a>
+          <Text as="span">Snag some swag.</Text>
+        </S.LinkMotion>
+      </a>
     </S.Nav>
   )
 }
 
 export default Navigation
-
-// ___________________________________________________________________
-
-const orbMotion = {
-  rest: {
-    opacity: 0,
-    marginTop: '50px',
-  },
-  hover: {
-    opacity: 1,
-    marginTop: '0px',
-    transition: {
-      type: 'spring',
-      stiffness: 200,
-      damping: 10,
-    },
-  },
-}
-
-const data = [
-  {
-    name: 'shows',
-    link: '/',
-    span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
-  }
-//   {
-//     name: 'news',
-//     link: '/news',
-//     span: 'Never miss a beat. Stay in tune with Reno events.',
-//   },
-]

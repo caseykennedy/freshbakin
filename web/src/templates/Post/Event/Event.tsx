@@ -1,25 +1,21 @@
 // Event template
-
 // ___________________________________________________________________
 
 // Libraries
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { format } from 'date-fns'
-
-// Theme + UI
-import * as S from './styles.scss'
-import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
-// Components
-import Pill from '../../../components/ui/Pill'
+import * as S from './styles.scss'
+import theme from '../../../gatsby-plugin-theme-ui'
+
+import Pill from '../../../components/Pill'
 import SEO from '../../../components/SEO'
 import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
 import PrevNext from '../PrevNext'
 
-// Data
 import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
@@ -35,11 +31,13 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
       <Box py={[5]}>Buy Tickets {!post.ticketUrl && 'Soon'}</Box>
     </a>
   )
+
   return (
     <>
       <SEO
         event={true}
         eventName={post.title}
+        eventVenue={post.venue}
         eventCity={post.city}
         eventState={post.state}
         eventAddress={post.address}
@@ -76,11 +74,15 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
                 </Heading>
 
                 <Box sx={{ width: '100%' }}>
-                  <Flex>
+                  <Flex
+                    sx={{
+                      flexWrap: 'wrap',
+                    }}
+                  >
                     {post.tags && (
                       <>
                         {post.tags.map((item, idx) => (
-                          <Pill mb={2} key={idx}>
+                          <Pill key={idx}>
                             <span>#{item.tag}</span>
                           </Pill>
                         ))}
@@ -89,7 +91,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
                     {post.category && (
                       <>
                         {post.category.map((item, key) => (
-                          <Pill mb={2} key={key}>
+                          <Pill key={key}>
                             <span>#{item.title}</span>
                           </Pill>
                         ))}

@@ -62,7 +62,7 @@ export const LinkMotion = styled(motion.div)`
 
 export const Orb = styled(motion.div)`
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0;
   opacity: 0;
 

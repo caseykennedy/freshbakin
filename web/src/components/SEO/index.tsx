@@ -17,6 +17,7 @@ import Twitter from './twitter'
 type Props = {
   banner?: string
   eventName?: string
+  eventVenue?: string
   eventCity?: string
   eventState?: string
   eventAddress?: string
@@ -43,6 +44,7 @@ const SEO = ({
   title,
   event,
   eventName,
+  eventVenue,
   eventCity,
   eventState,
   eventAddress,
@@ -81,7 +83,7 @@ const SEO = ({
         postalCode: '',
         streetAddress: eventAddress,
       },
-      name: 'The Hi-Dive',
+      name: eventVenue,
     },
     name: eventName,
     offers: {

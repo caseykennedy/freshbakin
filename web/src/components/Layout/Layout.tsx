@@ -1,20 +1,16 @@
 // Layout:
-
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
+import { Box, Text } from 'theme-ui'
 
-// Components
-import Header from '../Header'
 import Footer from '../Footer'
 import FreshBakin from '../FreshBakin'
+import Header from '../Header'
+import MarqueeMessage from '../MarqueeMessage'
 
-// Styles + Theme
 import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
-import { Box, Text } from 'theme-ui'
-import Marquee from 'react-fast-marquee'
-import MarqueeMessage from '../MarqueeMessage'
 
 // ___________________________________________________________________
 
@@ -44,11 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
     <S.Wrapper>
       <S.Wordmark>
         <Box className="wordmark__inner">
-          {isHome ? (
-            <FreshBakin />
-          ) : (
-            <MarqueeMessage />
-          )}
+          {isHome ? <FreshBakin /> : <MarqueeMessage />}
         </Box>
       </S.Wordmark>
       <Header isHome={isHome} />

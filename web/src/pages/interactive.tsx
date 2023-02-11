@@ -1,27 +1,25 @@
-// News page
-
+// Interactive page
 // ___________________________________________________________________
 
-// Libraries
 import React from 'react'
 
-// Components
 import SEO from '../components/SEO'
-import NewsPage from '../views/NewsPage'
-
-// Data
+import InteractivePage from '../views/InteractivePage'
 import useSiteSettings from '../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
-const News = () => {
+const Interactive = () => {
   const site = useSiteSettings()
   return (
     <>
-      <SEO pathname={`/news`} title={`News | ${site.titleShort}`} />
-      <NewsPage />
+      <SEO
+        pathname={`/interactive`}
+        title={`Interactive | ${site.titleShort}`}
+      />
+      <InteractivePage />
     </>
   )
 }
 
-export default News
+export default Interactive

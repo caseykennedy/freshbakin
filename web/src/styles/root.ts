@@ -1,11 +1,7 @@
 // Root variables
-
 // ___________________________________________________________________
 
-// Core
 import { css } from 'styled-components'
-
-// Theme
 import theme from '../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
@@ -27,7 +23,6 @@ const RootVariables = css`
     /* -------------------------------- 
     Typography System
     -------------------------------- */
-
     /* set base values */
     --text-base-size: 1em;
     --text-scale-ratio: 1.414;
@@ -46,9 +41,7 @@ const RootVariables = css`
     }
 
     /* type scale */
-    --text-xs: calc(
-      1em / (var(--text-scale-ratio) * var(--text-scale-ratio))
-    );
+    --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
     --text-sm: calc(1em / var(--text-scale-ratio));
     --text-md: calc(1em * var(--text-scale-ratio));
     --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));

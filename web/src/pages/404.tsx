@@ -1,15 +1,8 @@
 // 404 Page
-
 // ___________________________________________________________________
 
-// Libraries
 import React from 'react'
-
-// Elements
-import { Box } from '../components/ui'
-
-// Theme
-import theme from '../gatsby-plugin-theme-ui'
+import { Box } from 'theme-ui'
 
 // ___________________________________________________________________
 

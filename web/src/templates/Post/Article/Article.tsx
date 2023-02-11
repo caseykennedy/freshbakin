@@ -9,7 +9,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 // Theme + UI
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex, Text, Heading } from '../../../components/ui'
+import { Box, Flex, Text, Heading } from 'theme-ui'
 
 // Components
 import Pill from '../../../components/ui/Pill'
@@ -37,7 +37,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
       />
       <S.Article>
         <Section>
-          <Box width={[1, 2 / 3]} mb={0}>
+          <Box sx={{ width: ['100%', '100%'] }} mb={0}>
             <Heading className="text--md  text--uppercase">
               {post.publishedAt}
             </Heading>
@@ -46,8 +46,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               {post.title}
             </Heading>
 
-            <Flex flexDirection={[`column`, `row`]}>
-              <Box flex={[1, 2]}>
+            <Flex sx={{ flexDirection: [`column`, `row`] }}>
+              <Box sx={{ flex: [1, 2] }}>
                 {post._rawExcerpt && (
                   <BlockContent blocks={post._rawExcerpt || []} />
                 )}
@@ -57,7 +57,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section>
-          <Box width={1} maxWidth={800} ml="auto">
+          <Box sx={{ width: '100%', maxWidth: 800 }} ml="auto">
             {post.figure && (
               <>
                 <GatsbyImage
@@ -68,7 +68,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 />
 
                 {post.figure.caption && (
-                  <Text as="figcaption" fontSize={0} py={4} px={[4, 0]}>
+                  <Text as="figcaption" sx={{ fontSize: 0 }} py={4} px={[4, 0]}>
                     {post.figure.caption}
                   </Text>
                 )}
@@ -76,11 +76,12 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             )}
           </Box>
         </Section>
-
         <Section>
-          <Flex width={[1, 2 / 3]} flexDirection="column">
-            <Flex flexDirection={[`column`, `row`]} position="relative">
-              <Box flex={[1, 2]} width={1}>
+          <Flex sx={{ flexDirection: 'column', width: ['100%', '100%'] }}>
+            <Flex
+              sx={{ flexDirection: [`column`, `row`], position: 'relative' }}
+            >
+              <Box sx={{ flex: [2, 3], width: '100%' }}>
                 <Text>
                   {post._rawBody && (
                     <BlockContent blocks={post._rawBody || []} />
