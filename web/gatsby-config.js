@@ -11,7 +11,6 @@ const {
 } = requireConfig('../studio/sanity.json')
 
 module.exports = {
-  flags: { FAST_DEV: true },
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
