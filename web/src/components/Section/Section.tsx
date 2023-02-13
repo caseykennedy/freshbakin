@@ -50,6 +50,7 @@ const Section: React.FC<Props> = ({
     className={className}
     sx={{
       borderTop: border ? theme.border : `none`,
+      borderColor: `white`,
       overflow: overflow ? overflow : `visible`,
       position: `relative`,
       width: `100%`,

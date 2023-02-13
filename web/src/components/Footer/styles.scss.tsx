@@ -17,6 +17,8 @@ export const Footer = styled(Flex)`
   padding: ${theme.space[1]} ${theme.space[2]} ${theme.space[6]};
   position: relative;
 
+  border-top: ${theme.border};
+
   .footer {
     &__marquee {
       border-bottom: ${theme.border};

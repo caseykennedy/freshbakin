@@ -8,18 +8,18 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Theme + UI
 import * as S from './styles.scss'
-import theme from '../../../gatsby-plugin-theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
 // Components
-import Pill from '../../../components/ui/Pill'
-import SEO from '../../../components/SEO'
-import Section from '../../../components/Section'
-import BlockContent from '../../../components/BlockContent'
-import PrevNext from '../PrevNext'
+import Pill from '../../components/Pill'
+import SEO from '../../components/SEO'
+import Section from '../../components/Section'
+import BlockContent from '../../components/BlockContent'
+import PrevNext from '../../components/PrevNext'
 
 // Data
-import useSiteSettings from '../../../hooks/useSiteSettings'
+import useSiteSettings from '../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 

@@ -7,7 +7,7 @@ import React from 'react'
 
 // Components
 import SEO from '../components/SEO'
-import HomePage from '../templates/HomePage'
+import HomePage from '../views/HomePage'
 
 // ___________________________________________________________________
 

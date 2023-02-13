@@ -8,15 +8,16 @@ import { format } from 'date-fns'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
 import * as S from './styles.scss'
-import theme from '../../../gatsby-plugin-theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 
-import Pill from '../../../components/Pill'
-import SEO from '../../../components/SEO'
-import Section from '../../../components/Section'
-import BlockContent from '../../../components/BlockContent'
-import PrevNext from '../PrevNext'
+import Pill from '../../components/Pill'
+import SEO from '../../components/SEO'
+import Section from '../../components/Section'
+import BlockContent from '../../components/BlockContent'
+import PrevNext from '../../components/PrevNext'
+import EventList from '../../components/EventList'
 
-import useSiteSettings from '../../../hooks/useSiteSettings'
+import useSiteSettings from '../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
@@ -155,7 +156,13 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
           <BuyButton />
         </Section>
 
-        {/* <PrevNext pageContext={pageContext} /> */}
+        <Section bg="black" color="white">
+          {/* <PrevNext pageContext={pageContext} /> */}
+          <Heading as="h4" color="gray" pt={1}>
+            Upcoming
+          </Heading>
+          <EventList grid={false} listSliceStart={0} listSliceEnd={6} />
+        </Section>
       </S.Event>
     </>
   )

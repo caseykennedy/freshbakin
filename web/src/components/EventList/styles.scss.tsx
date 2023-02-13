@@ -3,13 +3,12 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import { motion } from 'framer-motion'
 
 // ___________________________________________________________________
 
-export const EventList = styled(Box)`
+export const EventList = styled.div<{ inverted?: boolean }>`
   .events {
     &__grid {
       .grid-event {
@@ -18,8 +17,8 @@ export const EventList = styled(Box)`
     }
 
     &__list {
-      /* border-bottom: ${theme.border}; */
-      border-color: ${theme.colors.white};
+      border-color: ${(p) =>
+        p.inverted ? theme.colors.black : theme.colors.white};
       margin-top: ${theme.space[4]};
       text-transform: uppercase;
 
@@ -30,7 +29,8 @@ export const EventList = styled(Box)`
         position: relative;
 
         border-top: ${theme.border};
-        border-color: ${theme.colors.white};
+        border-color: ${(p) =>
+          p.inverted ? theme.colors.black : theme.colors.white};
         cursor: pointer;
         padding: ${theme.space[4]} ${theme.space[2]} ${theme.space[4]} 0;
         z-index: 1;
@@ -45,7 +45,6 @@ export const EventList = styled(Box)`
           height: 0%;
           width: 100%;
           transition: ${theme.transition.all};
-          /* transform: perspective(75em) rotateX(50deg); */
           z-index: -1;
         }
 

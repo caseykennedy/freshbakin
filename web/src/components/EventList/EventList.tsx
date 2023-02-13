@@ -18,9 +18,19 @@ import useEvent from '../../hooks/useEvent'
 
 type Props = {
   grid?: boolean
+  inverted?: boolean
+  gridSlice?: number
+  listSliceStart?: number
+  listSliceEnd?: number
 }
 
-const EventList: React.FC<Props> = ({ grid }) => {
+const EventList: React.FC<Props> = ({
+  grid,
+  inverted,
+  gridSlice = 8,
+  listSliceStart = 8,
+  listSliceEnd = 30,
+}) => {
   const events = useEvent()
   const filteredDates = events.filter((event) => {
     const startDate = new Date(event.node.startDate)
@@ -29,14 +39,14 @@ const EventList: React.FC<Props> = ({ grid }) => {
   })
   // console.log('filteredDates', filteredDates)
   return (
-    <S.EventList>
+    <S.EventList inverted={inverted}>
       {grid ? (
         <Grid
           columns={[2, 3, 4]}
           gap={theme.gutter.space}
           className="events__grid"
         >
-          {filteredDates.slice(0, 8).map(({ node: event }, key) => (
+          {filteredDates.slice(0, gridSlice).map(({ node: event }, key) => (
             <S.GridMotion
               initial={false}
               whileHover="hover"
@@ -67,22 +77,24 @@ const EventList: React.FC<Props> = ({ grid }) => {
           ))}
         </Grid>
       ) : (
-        <Box className="events__list">
-          {filteredDates.slice(6, 30).map(({ node: event }, key) => (
-            <Link
-              to={`/events/${event.slug.current}`}
-              className="list-event"
-              key={key}
-            >
-              <Box sx={{ flex: 1 }}>
-                <Heading as="h4">{event.title}</Heading>
-              </Box>
-              <Heading className="text--md">
-                {format(new Date(event.startDate), 'MMM. do')}
-              </Heading>
-            </Link>
-          ))}
-        </Box>
+        <div className="events__list">
+          {filteredDates
+            .slice(listSliceStart, listSliceEnd)
+            .map(({ node: event }, key) => (
+              <Link
+                to={`/events/${event.slug.current}`}
+                className="list-event"
+                key={key}
+              >
+                <Box sx={{ flex: 1 }}>
+                  <Heading as="h4">{event.title}</Heading>
+                </Box>
+                <Heading className="text--md">
+                  {format(new Date(event.startDate), 'MMM. do')}
+                </Heading>
+              </Link>
+            ))}
+        </div>
       )}
     </S.EventList>
   )

@@ -27,7 +27,6 @@ export const SubscribeForm = styled(Box)`
       border: ${theme.border};
       border-radius: ${theme.borderRadius};
       outline: none;
-      margin-bottom: -2px;
       padding: ${theme.space[2]} ${theme.space[4]};
 
       font-size: ${theme.fontSizes[2]};
@@ -46,6 +45,7 @@ export const SubscribeForm = styled(Box)`
       padding: ${theme.space[2]} ${theme.space[4]};
 
       color: ${theme.colors.white};
+      font-weight: 500;
       text-transform: uppercase;
 
       background: ${theme.colors.black};

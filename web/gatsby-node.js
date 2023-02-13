@@ -5,7 +5,7 @@
 async function createEventPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
-  const EventTemplate = require.resolve('./src/templates/Post/Event/index.tsx')
+  const EventTemplate = require.resolve('./src/templates/Event/index.tsx')
 
   // Query Gatsby‘s GraphAPI for all the categories that come from Sanity
   // You can query this API on http://localhost:8000/___graphql
@@ -82,7 +82,7 @@ async function createEventPostPages(graphql, actions) {
 async function createNewsPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
-  const PostTemplate = require.resolve('./src/templates/Post/Article/index.tsx')
+  const PostTemplate = require.resolve('./src/templates/Article/index.tsx')
 
   // Query Gatsby‘s GraphAPI for all the categories that come from Sanity
   // You can query this API on http://localhost:8000/___graphql

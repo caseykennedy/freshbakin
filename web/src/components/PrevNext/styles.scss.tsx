@@ -4,7 +4,7 @@
 
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import theme from '../../../gatsby-plugin-theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
@@ -12,7 +12,6 @@ export const PrevNext = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border-top: ${theme.border};
 
   @media ${theme.mq.tablet} {
     flex-direction: row;
