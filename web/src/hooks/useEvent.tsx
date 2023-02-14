@@ -28,7 +28,7 @@ const useEvent = () => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  # aspectRatio: 9 / 16
+                  aspectRatio: 0.65
                 )
                 url
               }
