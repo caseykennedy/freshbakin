@@ -4,6 +4,7 @@
 
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
+import { textCrop } from './mixins'
 
 // Aeonik Regular
 import AeonikRegularEot from './fonts/AeonikRegular.eot'
@@ -150,6 +151,8 @@ const Typography = css`
   h4,
   h5,
   h6 {
+    ${textCrop(1, 0.05, -0.05)}
+
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
@@ -161,7 +164,7 @@ const Typography = css`
     font-size: ${theme.fontSizes[6]};
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[6]};
+      font-size: ${theme.fontSizes[7]};
     }
 
     @media ${theme.mq.desktop} {
@@ -316,39 +319,13 @@ const Typography = css`
   }
 
   ul {
-    margin: 0 0 ${theme.space[6]} ${theme.space[4]};
-    /* list-style-position: inside; */
-    list-style-type: square;
+    /* margin: 0 0 ${theme.space[6]} ${theme.space[4]}; */
+    list-style-position: inside;
+    list-style-type: circle;
+    font-size: ${theme.fontSizes[4]};
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 ${theme.space[6]} ${theme.space[4]};
-    }
-
-    li {
-      font-size: ${theme.fontSizes[2]};
-      margin: 0 0 ${theme.space[4]};
-
-      @media ${theme.mq.tablet} {
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      a {
-        text-decoration: underline;
-        color: ${theme.colors.primary};
-
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          color: ${theme.colors.primary};
-        }
-      }
-
-      strong {
-      }
+      font-size: ${theme.fontSizes[3]};
     }
   }
 `

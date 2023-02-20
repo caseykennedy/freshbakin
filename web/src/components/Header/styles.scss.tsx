@@ -33,7 +33,7 @@ export const Header = styled(Flex)`
     }
 
     &__menu {
-      flex: 1;
+      flex: 2;
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;

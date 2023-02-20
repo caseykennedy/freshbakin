@@ -1,5 +1,110 @@
 // gatsby-node.js
 
+// Experience Post Pages
+// ___________________________________________________________________
+async function createExperiencePostPages(graphql, actions) {
+  // Get Gatsby‘s method for creating new pages
+  const { createPage } = actions
+  const ExperienceTemplate = require.resolve(
+    './src/templates/Experience/index.tsx'
+  )
+
+  // Query Gatsby‘s GraphAPI for all the categories that come from Sanity
+  // You can query this API on http://localhost:8000/___graphql
+  const result = await graphql(`
+    {
+      allSanityExperience(sort: { order: DESC, fields: title }) {
+        edges {
+          node {
+            _rawExcerpt
+            _rawInfo
+            ageGroup
+            category {
+              title
+            }
+            figure {
+              asset {
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1.777
+                )
+                url
+              }
+            }
+            poster {
+              asset {
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 0.65
+                )
+                url
+              }
+            }
+            slug {
+              current
+            }
+            subTitle
+            tags {
+              tag
+            }
+            title
+            website
+            instagram
+            facebook
+          }
+          previous {
+            slug {
+              current
+            }
+            title
+            _rawExcerpt
+          }
+          next {
+            slug {
+              current
+            }
+            title
+            _rawExcerpt
+          }
+        }
+      }
+    }
+  `)
+  // If there are any errors in the query, cancel the build and tell us
+  if (result.errors) throw result.errors
+  // Let‘s gracefully handle if allSanityExperience is null
+  const postEdges = (result.data.allSanityExperience || {}).edges || []
+
+  postEdges
+    // Loop through the category nodes, but don't return anything
+    .forEach((edge) => {
+      // Desctructure the id and slug fields for each category
+      const { id, figure, slug = {} } = edge.node
+      // If there isn't a slug, we want to do nothing
+      if (!slug) return
+      if (!figure.asset) return
+      // Make the URL with the current slug
+      const path = `/experiential/${slug.current}`
+      // Create the page using the URL path and the template file, and pass down the id
+      // that we can use to query for the right category in the template file
+      createPage({
+        path,
+        component: ExperienceTemplate,
+        context: {
+          experience: edge.node,
+          prev: edge.previous,
+          next: edge.next,
+        },
+      })
+    })
+}
+
 // Event Post Pages
 // ___________________________________________________________________
 async function createEventPostPages(graphql, actions) {
@@ -52,7 +157,7 @@ async function createEventPostPages(graphql, actions) {
   `)
   // If there are any errors in the query, cancel the build and tell us
   if (result.errors) throw result.errors
-  // Let‘s gracefully handle if allSanityCatgogy is null
+  // Let‘s gracefully handle if allSanityEvent is null
   const postNodes = (result.data.allSanityEvent || {}).nodes || []
 
   postNodes
@@ -62,7 +167,7 @@ async function createEventPostPages(graphql, actions) {
       const { id, figure, slug = {} } = node
       // If there isn't a slug, we want to do nothing
       if (!slug) return
-      if (!figure.asset) return
+      // if (!figure.asset) return
       // Make the URL with the current slug
       const path = `/events/${slug.current}`
       // Create the page using the URL path and the template file, and pass down the id
@@ -154,6 +259,7 @@ async function createNewsPostPages(graphql, actions) {
 // Create Pages
 // ___________________________________________________________________
 exports.createPages = async ({ graphql, actions }) => {
+  await createExperiencePostPages(graphql, actions)
   await createEventPostPages(graphql, actions)
   await createNewsPostPages(graphql, actions)
 }

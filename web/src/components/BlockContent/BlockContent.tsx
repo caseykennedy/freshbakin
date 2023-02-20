@@ -47,10 +47,14 @@ const serializers = {
           )
 
         case 'ul':
-          return <ul>{props.children}</ul>
+          return <Text as="ul">{props.children}</Text>
 
         case 'li':
-          return <li>{props.children}</li>
+          return (
+            <Text as="li">
+              {props.children}
+            </Text>
+          )
 
         default:
           return (

@@ -66,7 +66,9 @@ const EventList: React.FC<Props> = ({
                 variants={hoverMotion}
               >
                 <Flex sx={{ justifyContent: 'space-between' }}>
-                  <Heading className="text--sm">{event.title} </Heading>
+                  <Heading className="text--md" sx={{ maxWidth: '12ch' }}>
+                    {event.title}{' '}
+                  </Heading>
                   <Heading className="text--sm">
                     {format(new Date(event.startDate), 'MMM. do')}
                   </Heading>
@@ -111,7 +113,7 @@ const hoverMotion = {
   },
   hover: {
     opacity: 1,
-    height: 'inherit',
+    height: '25%',
   },
 }
 

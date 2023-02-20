@@ -1,6 +1,11 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdStop, MdSettings, MdLibraryMusic } from 'react-icons/md'
-import { GoFile } from 'react-icons/go'
+import {
+  MdArticle,
+  MdCategory,
+  MdSettings,
+  MdLibraryMusic,
+  MdVideogameAsset
+} from 'react-icons/md'
 
 export default () =>
   S.list()
@@ -34,7 +39,7 @@ export default () =>
         .schemaType('postCategory')
         .child(S.documentTypeList('postCategory').title('Post Category'))
 
-        .icon(MdStop),
+        .icon(MdCategory),
 
       // Post
       // _________________________________________________________________
@@ -44,7 +49,7 @@ export default () =>
         .schemaType('post')
         .child(S.documentTypeList('post').title('Post'))
 
-        .icon(GoFile),
+        .icon(MdArticle),
 
       // Event
       // _________________________________________________________________
@@ -54,7 +59,17 @@ export default () =>
         .schemaType('event')
         .child(S.documentTypeList('event').title('Events'))
 
-        .icon(MdLibraryMusic)
+        .icon(MdLibraryMusic),
+
+      // Event
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Experiential')
+        .schemaType('experience')
+        .child(S.documentTypeList('experience').title('Experiential'))
+
+        .icon(MdVideogameAsset)
 
       // End
       // _________________________________________________________________

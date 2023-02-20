@@ -59,16 +59,14 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
             </Heading>
           </Flex>
 
-          <Heading as="h1" mb={[4, 2]} className="text--xxxl">
+          <Heading as="h1" mt={1} mb={[4, 2]} className="text--xxxl">
             {post.title}
           </Heading>
 
           <Flex sx={{ flexDirection: ['column', 'row'] }}>
             <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
               <Box>
-                {post.subTitle && (
-                  <Heading className="text--md">{post.subTitle}</Heading>
-                )}
+                <Heading className="text--md">{post.subTitle}</Heading>
 
                 <Heading sx={{ color: 'gray', mb: 1 }} className="text--md">
                   at {post.venue}
@@ -103,7 +101,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
               </Box>
             </Flex>
 
-            <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
+            <Flex sx={{ flex: 1, alignItems: 'flex-end', mt: 1 }}>
               <BuyButton />
             </Flex>
           </Flex>

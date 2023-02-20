@@ -15,6 +15,79 @@ type GatsbyImageDataShape = {
   width: number
 }
 
+// Experience shape
+// ___________________________________________________________________
+
+type ExperienceShape = {
+  experiences: {
+    edges: ExperienceEdges[]
+  }
+}
+
+type ExperienceEdges = {
+  node: ExperienceQuery
+}
+
+type ExperienceData = {
+  experience: ExperienceQuery
+}
+
+type ExperienceQuery = {
+  _rawExcerpt: string
+  _rawInfo: string
+  ageGroup: string
+  category: {
+    title: string
+  }[]
+  figure: {
+    alt: string
+    asset: {
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+    caption: string
+  }
+  poster: {
+    alt: string
+    asset: {
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+    caption: string
+  }
+  slug: {
+    current: string
+  }
+  subTitle: string
+  tags: {
+    tag: string
+  }[]
+  title: string
+  website: string
+  instagram: string
+  facebook: string
+}
+
+type ExperienceContextShape = {
+  pageContext: {
+    experience: ExperienceQuery
+    prev: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+    next: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+  }
+}
+
 // Event shape
 // ___________________________________________________________________
 

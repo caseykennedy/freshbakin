@@ -28,7 +28,7 @@ export default {
       name: 'ageGroup',
       title: 'Age Group',
       type: 'string',
-      description: 'e.g.: 18+ | 21+'
+      description: 'e.g.: 18+ | 21+ | all ages'
     },
     {
       name: 'startDate',

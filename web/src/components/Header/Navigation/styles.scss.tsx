@@ -30,8 +30,8 @@ export const Nav = styled.nav`
     color: ${theme.colors.text};
     text-decoration: none;
 
-    padding-right: ${theme.space[4]};
-    padding-left: ${theme.space[4]};
+    padding-right: ${theme.space[2]};
+    padding-left: ${theme.space[2]};
     height: 100%;
 
     span {

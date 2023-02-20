@@ -26,11 +26,11 @@ export const NavLink = styled(motion.li)`
   flex-direction: column;
   margin: 0;
   width: 100%;
-  padding: ${theme.space[1]} ${theme.space[4]};
+  padding: ${theme.space[2]} ${theme.space[2]};
 
   a {
     color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[5]};
+    font-size: ${theme.fontSizes[3]};
     text-decoration: uppercase;
     width: 100%;
 

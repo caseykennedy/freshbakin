@@ -48,10 +48,7 @@ const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
             item={item}
           />
         ))}
-        <S.NavLink
-          variants={itemVariants}
-          whileTap={{ scale: 0.95 }}
-        >
+        <S.NavLink variants={itemVariants} whileTap={{ scale: 0.95 }}>
           <a
             href="https://www.sacredstatedesign.com/fresh-bakin"
             target="_blank"
@@ -74,12 +71,17 @@ const data = [
     name: 'shows',
     link: '/',
     span: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
-  }
-//   {
-//     name: 'news',
-//     link: '/news',
-//     span: 'Never miss a beat. Stay in tune with Reno events.',
-//   },
+  },
+  {
+    name: 'experiential',
+    link: '/experiential',
+    span: 'Elevating events with immersive experiences.',
+  },
+  //   {
+  //     name: 'news',
+  //     link: '/news',
+  //     span: 'Never miss a beat. Stay in tune with Reno events.',
+  //   },
 ]
 
 const itemVariants = {
