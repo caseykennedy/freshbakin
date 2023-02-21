@@ -23,6 +23,8 @@ async function createExperiencePostPages(graphql, actions) {
               title
             }
             figure {
+              alt
+              caption
               asset {
                 gatsbyImageData(
                   fit: FILLMAX
@@ -35,6 +37,8 @@ async function createExperiencePostPages(graphql, actions) {
               }
             }
             poster {
+              alt
+              caption
               asset {
                 gatsbyImageData(
                   fit: FILLMAX

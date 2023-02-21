@@ -14,8 +14,8 @@ const Interactive = () => {
   return (
     <>
       <SEO
-        pathname={`/interactive`}
-        title={`Interactive | ${site.titleShort}`}
+        pathname={`/experiential`}
+        title={`Experiential, immersive events | ${site.titleShort}`}
       />
       <InteractivePage />
     </>

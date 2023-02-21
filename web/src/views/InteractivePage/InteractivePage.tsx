@@ -42,6 +42,8 @@ const features = [
 const InteractivePage: React.FC = () => {
   const experiences = useExperience()
 
+  console.log(experiences)
+
   return (
     <S.InteractivePage>
       <Section>
@@ -112,7 +114,7 @@ const InteractivePage: React.FC = () => {
           {experiences.map(({ node: item }, idx) => (
             <div className="experiences__item" key={idx}>
               <div className="experiences__item__details">
-                <Text sx={{ fontSize: 5, mb: 4 }}>01</Text>
+                <Text sx={{ fontSize: 5, mb: 4 }}>0{idx + 1}</Text>
                 <div>
                   <Heading
                     as="h2"

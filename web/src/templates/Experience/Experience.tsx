@@ -32,29 +32,19 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
       target="_blank"
       rel="noreferer nofollow"
     >
-      <Box py={[5]}>Book Now</Box>
+      <Box py={[5]}>Inquire Now</Box>
     </a>
   )
 
-  const linkList = []
-  if (post.website) {
-    linkList.push({
-      label: 'website',
-      url: `//www.${post.website}`,
-    })
+  const linkList: any[] = []
+  const addLinkIfPresent = (label: string, url: string) => {
+    if (url) {
+      linkList.push({ label, url: `//www.${url}` })
+    }
   }
-  if (post.instagram) {
-    linkList.push({
-      label: 'instagram',
-      url: `//www.${post.instagram}`,
-    })
-  }
-  if (post.facebook) {
-    linkList.push({
-      label: 'facebook',
-      url: `//www.${post.facebook}`,
-    })
-  }
+  addLinkIfPresent('website', post.website)
+  addLinkIfPresent('instagram', post.instagram)
+  addLinkIfPresent('facebook', post.facebook)
 
   return (
     <>
@@ -69,9 +59,16 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
       <S.Experience>
         <Section bg="black" color="white">
           <Flex sx={{ justifyContent: 'space-between' }}>
-            <Heading className="text--md">{post.subTitle}</Heading>
+            <Heading sx={{ color: 'gray' }} className="text--md">
+              {post.subTitle}
+            </Heading>
 
-            <Heading sx={{textAlign: 'right'}} className="text--md">● {post.ageGroup}</Heading>
+            <Heading
+              sx={{ color: 'gray', textAlign: 'right' }}
+              className="text--md"
+            >
+              {post.ageGroup}
+            </Heading>
           </Flex>
 
           <Heading as="h1" mt={1} mb={[4, 2]} className="text--xxxl">
@@ -101,24 +98,11 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
                       flexWrap: 'wrap',
                     }}
                   >
-                    {post.tags && (
-                      <>
-                        {post.tags.map((item, idx) => (
-                          <Pill key={idx}>
-                            <span>#{item.tag}</span>
-                          </Pill>
-                        ))}
-                      </>
-                    )}
-                    {post.category && (
-                      <>
-                        {post.category.map((item, key) => (
-                          <Pill key={key}>
-                            <span>#{item.title}</span>
-                          </Pill>
-                        ))}
-                      </>
-                    )}
+                    {post.tags.map((item, idx) => (
+                      <Pill key={idx}>
+                        <span>#{item.tag}</span>
+                      </Pill>
+                    ))}
                   </Flex>
                 </Box>
               </Box>
@@ -145,30 +129,18 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             >
               <Box sx={{ flex: 1, position: 'sticky', top: 0 }}>
                 <Box sx={{ flex: 1, pl: [0, 2] }}>
-                  {post._rawInfo && (
-                    <BlockContent blocks={post._rawInfo || []} />
-                  )}
+                  <BlockContent blocks={post._rawInfo || []} />
                 </Box>
               </Box>
             </Box>
 
             <Box sx={{ flex: 1 }}>
-              {post.poster && (
-                <>
-                  <GatsbyImage
-                    image={post.poster.asset.gatsbyImageData}
-                    objectFit="cover"
-                    objectPosition="50% 50%"
-                    alt={post.figure.alt}
-                  />
-
-                  {post.poster.caption && (
-                    <Text as="figcaption" py={4} px={[4, 0]}>
-                      {post.poster.caption}
-                    </Text>
-                  )}
-                </>
-              )}
+              <GatsbyImage
+                image={post.poster.asset.gatsbyImageData}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.poster.alt}
+              />
             </Box>
           </Flex>
         </Section>
