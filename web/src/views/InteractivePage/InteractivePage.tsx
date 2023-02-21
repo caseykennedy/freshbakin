@@ -77,17 +77,7 @@ const InteractivePage: React.FC = () => {
 
       <Section pt={7} pb={7}>
         <div className="intro">
-          <Heading
-            as="h1"
-            sx={{
-              mb: 2,
-              mx: 'auto',
-              fontSize: 5,
-              textAlign: 'center',
-              textTransform: 'uppercase',
-              maxWidth: '35ch',
-            }}
-          >
+          <Heading as="h1" className="text--xl">
             Bring excitement and energy to your event with interactive and
             immersive entertainment experiences
           </Heading>

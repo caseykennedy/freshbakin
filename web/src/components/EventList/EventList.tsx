@@ -65,15 +65,34 @@ const EventList: React.FC<Props> = ({
                 transition={hoverTransitions}
                 variants={hoverMotion}
               >
-                <Flex sx={{ justifyContent: 'space-between' }}>
-                  <Heading className="text--md" sx={{ maxWidth: '12ch' }}>
-                    {event.title}{' '}
-                  </Heading>
-                  <Heading className="text--sm">
-                    {format(new Date(event.startDate), 'MMM. do')}
-                  </Heading>
-                </Flex>
-                <Text sx={{ color: 'gray' }}>at {event.venue}</Text>
+                <Link
+                  to={`/events/${event.slug.current}`}
+                  className="grid-event"
+                >
+                  <Flex
+                    sx={{
+                      flexFlow: 'column nowrap',
+                      justifyContent: 'space-between',
+                      height: '100%',
+                    }}
+                  >
+                    <div>
+                      <Flex sx={{ justifyContent: 'space-between' }}>
+                        <Heading className="text--md" sx={{ maxWidth: '12ch' }}>
+                          {event.title}{' '}
+                        </Heading>
+                        <Heading className="text--sm">
+                          {format(new Date(event.startDate), 'MMM. do')}
+                        </Heading>
+                      </Flex>
+                      <Text sx={{ color: 'gray' }}>at {event.venue}</Text>
+                    </div>
+                    <Flex sx={{ justifyContent: 'space-between' }}>
+                      Details
+                      <span>→</span>
+                    </Flex>
+                  </Flex>
+                </Link>
               </S.HoverMotion>
             </S.GridMotion>
           ))}
@@ -113,7 +132,7 @@ const hoverMotion = {
   },
   hover: {
     opacity: 1,
-    height: '25%',
+    height: '24%',
   },
 }
 

@@ -4,18 +4,15 @@
 // Libraries
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { format } from 'date-fns'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
 import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
 
 import Pill from '../../components/Pill'
 import SEO from '../../components/SEO'
 import Section from '../../components/Section'
 import BlockContent from '../../components/BlockContent'
-import PrevNext from '../../components/PrevNext'
-import EventList from '../../components/EventList'
+import ExperienceList from '../../components/ExperienceList'
 
 import useSiteSettings from '../../hooks/useSiteSettings'
 
@@ -149,12 +146,12 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
           <BuyButton />
         </Section>
 
-        {/* <Section bg="black" color="white">
+        <Section bg="black" color="white">
           <Heading as="h4" color="gray" pt={1}>
-            Upcoming
+            Experiences
           </Heading>
-          <EventList grid={false} listSliceStart={0} listSliceEnd={6} />
-        </Section> */}
+          <ExperienceList />
+        </Section>
       </S.Experience>
     </>
   )

@@ -44,6 +44,13 @@ export const InteractivePage = styled.div`
   .intro {
     max-width: 1024px;
     margin: 0 auto;
+
+    h1 {
+      margin: 0 auto ${theme.space[2]};
+      text-align: center;
+      text-transform: uppercase;
+      max-width: 35ch;
+    }
   }
 
   .features {
