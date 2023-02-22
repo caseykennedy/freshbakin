@@ -14,7 +14,12 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type LinkProps = {
-  item: any
+  item: {
+    name: string
+    link: string
+    detail?: string
+    type?: string
+  }
   handleExitOnClick: () => any
 }
 
@@ -29,17 +34,34 @@ const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
   return (
     <S.NavLink
       variants={itemVariants}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{
+        backgroundColor: theme.colors.primary,
+        color: theme.colors.black,
+      }}
       onClick={handleExitOnClick}
     >
-      <Link to={item.link}>{item.name}</Link>
+      {item.type === 'external' ? (
+        <a href={item.link} target="_blank" rel="noreferrer">
+          {item.name}
+          <span>{item.detail}</span>
+        </a>
+      ) : (
+        <Link to={item.link}>
+          {item.name}
+          <span>{item.detail}</span>
+        </Link>
+      )}
     </S.NavLink>
   )
 }
 
 const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
   return (
-    <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
+    <motion.div
+      initial="closed"
+      animate={isOpen ? 'open' : 'closed'}
+      style={{ display: 'flex', flexFlow: 'column nowrap', height: 'inherit' }}
+    >
       <S.MobileNav variants={listVariants}>
         {data.map((item, idx) => (
           <NavLink
@@ -48,15 +70,6 @@ const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
             item={item}
           />
         ))}
-        <S.NavLink variants={itemVariants} whileTap={{ scale: 0.95 }}>
-          <a
-            href="https://www.sacredstatedesign.com/fresh-bakin"
-            target="_blank"
-            rel="noreferrer"
-          >
-            shop
-          </a>
-        </S.NavLink>
       </S.MobileNav>
     </motion.div>
   )
@@ -70,18 +83,19 @@ const data = [
   {
     name: 'shows',
     link: '/',
-    span: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
+    detail: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
   },
   {
     name: 'experiential',
     link: '/experiential',
-    span: 'Elevating events with immersive experiences.',
+    detail: 'Elevating events with immersive experiences.',
   },
-  //   {
-  //     name: 'news',
-  //     link: '/news',
-  //     span: 'Never miss a beat. Stay in tune with Reno events.',
-  //   },
+  {
+    name: 'shop',
+    link: 'https://www.sacredstatedesign.com/fresh-bakin',
+    detail: 'Snag some swag.',
+    type: 'external',
+  },
 ]
 
 const itemVariants = {
@@ -89,23 +103,24 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -1000 },
+      duration: 0.5,
+      stiffness: 100,
+      velocity: -100,
     },
   },
   closed: {
     y: 25,
     opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
+    transition: {},
   },
 }
 
 const listVariants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.25 },
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    opacity: 0,
   },
 }

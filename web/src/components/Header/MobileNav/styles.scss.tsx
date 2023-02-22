@@ -1,42 +1,56 @@
 // Mobile Navigation Styles:
-
 // ___________________________________________________________________
 
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-
-// Theme
 import theme from '../../../gatsby-plugin-theme-ui'
-
-// Begin Styles
-// ___________________________________________________________________
 
 export const MobileNav = styled(motion.ul)`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
 
   margin: 0;
   height: 100%;
   width: 100%;
+
+  background: ${theme.colors.background};
 `
 
 export const NavLink = styled(motion.li)`
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+
   margin: 0;
   width: 100%;
-  padding: ${theme.space[2]} ${theme.space[2]};
+  padding: ${theme.space[2]};
+
+  &:not(:last-child) {
+    border-bottom: ${theme.border};
+  }
 
   a {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 100%;
+
     color: ${theme.colors.text};
     font-size: ${theme.fontSizes[3]};
     text-decoration: uppercase;
-    width: 100%;
+    text-transform: uppercase;
 
     &:hover {
       color: inherit;
-      text-decoration: underline;
+      text-decoration: none;
+    }
+
+    span {
+      font-size: 16px;
+      text-transform: none;
+      max-width: 33ch;
     }
   }
 `

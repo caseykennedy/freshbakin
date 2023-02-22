@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from 'react'
+import React, { useEffect } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
@@ -18,20 +18,20 @@ import useSiteSettings from '../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
+const BuyButton = () => (
+  <a
+    href="mailto:steve@freshbakin.com?subject=Experiential Event Booking Inquiry"
+    className="button"
+    target="_blank"
+    rel="noreferer nofollow"
+  >
+    <Box py={5}>Inquire Now</Box>
+  </a>
+)
+
 const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
   const post = pageContext.experience
   const siteSettings = useSiteSettings()
-
-  const BuyButton = () => (
-    <a
-      href="mailto:steve@freshbakin.com?subject=Experiential Event Booking Inquiry"
-      className="button"
-      target="_blank"
-      rel="noreferer nofollow"
-    >
-      <Box py={[5]}>Inquire Now</Box>
-    </a>
-  )
 
   const linkList: any[] = []
   const addLinkIfPresent = (label: string, url: string) => {
@@ -39,9 +39,11 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
       linkList.push({ label, url: `//www.${url}` })
     }
   }
-  addLinkIfPresent('website', post.website)
-  addLinkIfPresent('instagram', post.instagram)
-  addLinkIfPresent('facebook', post.facebook)
+  useEffect(() => {
+    addLinkIfPresent('website', post.website)
+    addLinkIfPresent('instagram', post.instagram)
+    addLinkIfPresent('facebook', post.facebook)
+  }, [post])
 
   return (
     <>

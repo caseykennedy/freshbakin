@@ -61,7 +61,7 @@ const Navigation = () => {
               </svg>
             </S.Orb>
 
-            <Text as="span">{item.span}</Text>
+            <span>{item.span}</span>
           </S.LinkMotion>
         </Link>
       ))}
@@ -79,7 +79,7 @@ const Navigation = () => {
             </svg>
           </S.Orb>
 
-          <Text as="span">Snag some swag.</Text>
+          <span>Snag some swag.</span>
         </S.LinkMotion>
       </a>
     </S.Nav>

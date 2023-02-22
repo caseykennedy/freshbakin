@@ -22,6 +22,8 @@ const useEvent = () => {
             }
             city
             figure {
+              alt
+              caption
               asset {
                 gatsbyImageData(
                   fit: FILLMAX
