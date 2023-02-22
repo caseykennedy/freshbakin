@@ -49,8 +49,8 @@ const InteractivePage: React.FC = () => {
       <Section>
         <div className="hero">
           <div className="hero__tags">
-            <div>Fresh</div>
-            <div>Bakin'</div>
+            <div className="text--md">Fresh</div>
+            <div className="text--md">Bakin'</div>
           </div>
           {/* <h1>Immersive Entertainment</h1> */}
           <div className="hero__statement">

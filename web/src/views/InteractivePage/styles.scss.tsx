@@ -22,9 +22,6 @@ export const InteractivePage = styled.div`
       flex-flow: row nowrap;
       justify-content: space-between;
       margin-bottom: ${theme.space[1]};
-
-      font-size: ${theme.fontSizes[4]};
-      text-transform: uppercase;
     }
 
     &__statement {
