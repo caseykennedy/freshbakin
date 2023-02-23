@@ -8,7 +8,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const InteractivePage = styled.div`
+export const ExperientialPage = styled.div`
   background: ${theme.colors.black};
   color: ${theme.colors.white};
 

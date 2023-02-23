@@ -18,16 +18,19 @@ import useSiteSettings from '../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
-const BuyButton = () => (
-  <a
-    href="mailto:steve@freshbakin.com?subject=Experiential Event Booking Inquiry"
-    className="button"
-    target="_blank"
-    rel="noreferer nofollow"
-  >
-    <Box py={5}>Inquire Now</Box>
-  </a>
-)
+const BuyButton = (props: { contactEmail: string; eventTitle: string }) => {
+  const { contactEmail, eventTitle } = props
+  return (
+    <a
+      href={`mailto:${contactEmail}?subject=${eventTitle} Experiential Event Booking Inquiry`}
+      className="button"
+      target="_blank"
+      rel="noreferer nofollow"
+    >
+      <Box py={5}>Inquire Now</Box>
+    </a>
+  )
+}
 
 const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
   const post = pageContext.experience
@@ -108,7 +111,10 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             </Flex>
 
             <Flex sx={{ flex: 1, alignItems: 'flex-end', mt: 1 }}>
-              <BuyButton />
+              <BuyButton
+                contactEmail={post.contactEmail}
+                eventTitle={post.title}
+              />
             </Flex>
           </Flex>
         </Section>
@@ -145,7 +151,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section bg="black" color="white">
-          <BuyButton />
+          <BuyButton contactEmail={post.contactEmail} eventTitle={post.title} />
         </Section>
 
         <Section bg="black" color="white">

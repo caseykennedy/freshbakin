@@ -49,6 +49,7 @@ const useExperience = () => {
               tag
             }
             title
+            contactEmail
             website
             instagram
             facebook

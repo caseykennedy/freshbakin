@@ -58,6 +58,7 @@ async function createExperiencePostPages(graphql, actions) {
               tag
             }
             title
+            contactEmail
             website
             instagram
             facebook

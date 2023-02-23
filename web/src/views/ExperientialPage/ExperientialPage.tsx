@@ -1,4 +1,4 @@
-// NewsPage:
+// Experiential Page:
 
 // ___________________________________________________________________
 
@@ -39,13 +39,13 @@ const features = [
   },
 ]
 
-const InteractivePage: React.FC = () => {
+const ExperientialPage: React.FC = () => {
   const experiences = useExperience()
 
   console.log(experiences)
 
   return (
-    <S.InteractivePage>
+    <S.ExperientialPage>
       <Section>
         <div className="hero">
           <div className="hero__tags">
@@ -142,26 +142,8 @@ const InteractivePage: React.FC = () => {
           ))}
         </div>
       </Section>
-
-      {/* <h1>Fresh Bakin' Experiential</h1>
-        <h2>Immersive Entertainment</h2>
-        <h2>Elevate Your Next Event</h2>
-        <h3>
-          We create memorable experiences through direct human connection.
-        </h3>
-        <p>
-          At Fresh Bakin' Experiential, we understand that a great event
-          requires more than just good food and drinks. That's why we offer a
-          wide range of interactive and immersive entertainment options to bring
-          excitement and energy to your guests.
-        </p>
-        <p>
-          From live music and DJs to interactive games and activities, we have
-          everything you need to create an unforgettable event. Let us bring the
-          magic of immersive entertainment to your next gathering.
-        </p> */}
-    </S.InteractivePage>
+    </S.ExperientialPage>
   )
 }
 
-export default InteractivePage
+export default ExperientialPage

@@ -78,6 +78,13 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'contactEmail',
+      title: 'Contact Email',
+      type: 'string',
+      description: 'e.g.: info@freshbakin.com',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'website',
       title: 'Website URL',
       type: 'string',

@@ -63,6 +63,7 @@ type ExperienceQuery = {
     tag: string
   }[]
   title: string
+  contactEmail: string
   website: string
   instagram: string
   facebook: string
