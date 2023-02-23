@@ -41,6 +41,7 @@ const useExperience = () => {
                 url
               }
             }
+            videoUrl
             slug {
               current
             }

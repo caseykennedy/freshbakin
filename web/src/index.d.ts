@@ -55,6 +55,7 @@ type ExperienceQuery = {
     }
     caption: string
   }
+  videoUrl: string
   slug: {
     current: string
   }

@@ -50,6 +50,7 @@ async function createExperiencePostPages(graphql, actions) {
                 url
               }
             }
+            videoUrl
             slug {
               current
             }

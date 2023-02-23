@@ -66,6 +66,13 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'videoUrl',
+      title: 'Video URL',
+      type: 'url',
+      description:
+        'MUST use the embed URL (click share > embed > copy URL from code snippet). Use the full URL e.g.: http://www.youtube.com/embed/o-YBDTqX_ZU'
+    },
+    {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'blockText',
@@ -88,19 +95,19 @@ export default {
       name: 'website',
       title: 'Website URL',
       type: 'string',
-      description: 'thegreatbingorevival.com (no http:// or www)'
+      description: 'e.g.: thegreatbingorevival.com (no http:// or www)'
     },
     {
       name: 'instagram',
       title: 'Instagram URL',
       type: 'string',
-      description: 'instagram.com/bingo (no http:// or www)'
+      description: 'e.g.: instagram.com/bingo (no http:// or www)'
     },
     {
       name: 'facebook',
       title: 'Facebook URL',
       type: 'string',
-      description: 'facebook.com/bingo (no http:// or www)'
+      description: 'e.g.: facebook.com/bingo (no http:// or www)'
     }
   ],
   orderings: [

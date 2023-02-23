@@ -4,6 +4,7 @@
 // Libraries
 import React, { useEffect } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import ResponsiveEmbed from 'react-responsive-embed'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
 import * as S from './styles.scss'
@@ -140,6 +141,11 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             </Box>
 
             <Box sx={{ flex: 1 }}>
+              {post.videoUrl && (
+                <Box sx={{ mb: 2, width: '100%' }}>
+                  <ResponsiveEmbed src={post.videoUrl} allowFullScreen={true} />
+                </Box>
+              )}
               <GatsbyImage
                 image={post.poster.asset.gatsbyImageData}
                 objectFit="cover"
@@ -149,6 +155,14 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             </Box>
           </Flex>
         </Section>
+
+        {/* {post.videoUrl && (
+          <Section bg="black">
+            <Box sx={{ mx: 'auto', maxWidth: '1440px', width: '100%' }}>
+              <ResponsiveEmbed src={post.videoUrl} allowFullScreen={true} />
+            </Box>
+          </Section>
+        )} */}
 
         <Section bg="black" color="white">
           <BuyButton contactEmail={post.contactEmail} eventTitle={post.title} />
