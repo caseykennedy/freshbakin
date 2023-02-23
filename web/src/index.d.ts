@@ -65,9 +65,10 @@ type ExperienceQuery = {
   }[]
   title: string
   contactEmail: string
-  website: string
-  instagram: string
-  facebook: string
+  socialLinks: {
+    label: string
+    url: string
+  }[]
 }
 
 type ExperienceContextShape = {

@@ -60,9 +60,10 @@ async function createExperiencePostPages(graphql, actions) {
             }
             title
             contactEmail
-            website
-            instagram
-            facebook
+            socialLinks {
+              label
+              url
+            }
           }
           previous {
             slug {

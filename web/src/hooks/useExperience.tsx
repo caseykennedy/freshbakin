@@ -50,10 +50,10 @@ const useExperience = () => {
               tag
             }
             title
-            contactEmail
-            website
-            instagram
-            facebook
+            socialLinks {
+              label
+              url
+            }
           }
           previous {
             slug {

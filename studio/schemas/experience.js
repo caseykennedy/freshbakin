@@ -92,22 +92,10 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'website',
-      title: 'Website URL',
-      type: 'string',
-      description: 'e.g.: thegreatbingorevival.com (no http:// or www)'
-    },
-    {
-      name: 'instagram',
-      title: 'Instagram URL',
-      type: 'string',
-      description: 'e.g.: instagram.com/bingo (no http:// or www)'
-    },
-    {
-      name: 'facebook',
-      title: 'Facebook URL',
-      type: 'string',
-      description: 'e.g.: facebook.com/bingo (no http:// or www)'
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [{ type: 'socialLink' }]
     }
   ],
   orderings: [

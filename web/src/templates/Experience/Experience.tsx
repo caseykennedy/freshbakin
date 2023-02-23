@@ -2,7 +2,7 @@
 // ___________________________________________________________________
 
 // Libraries
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import ResponsiveEmbed from 'react-responsive-embed'
 import { Box, Flex, Text, Heading } from 'theme-ui'
@@ -37,18 +37,6 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
   const post = pageContext.experience
   const siteSettings = useSiteSettings()
 
-  const linkList: any[] = []
-  const addLinkIfPresent = (label: string, url: string) => {
-    if (url) {
-      linkList.push({ label, url: `//www.${url}` })
-    }
-  }
-  useEffect(() => {
-    addLinkIfPresent('website', post.website)
-    addLinkIfPresent('instagram', post.instagram)
-    addLinkIfPresent('facebook', post.facebook)
-  }, [post])
-
   return (
     <>
       <SEO
@@ -82,7 +70,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             <Flex sx={{ flex: 1, alignItems: 'flex-end' }}>
               <Box>
                 <Flex sx={{ flexFlow: 'column nowrap', mb: 2 }}>
-                  {linkList.map((item, idx) => (
+                  {post.socialLinks.map((item, idx) => (
                     <a
                       href={item.url}
                       target="_blank"
