@@ -85,11 +85,11 @@ const data = [
     link: '/',
     detail: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
   },
-  {
-    name: 'experiential',
-    link: '/experiential',
-    detail: 'Elevating events with immersive experiences.',
-  },
+  // {
+  //   name: 'experiential',
+  //   link: '/experiential',
+  //   detail: 'Elevating events with immersive experiences.',
+  // },
   {
     name: 'shop',
     link: 'https://www.sacredstatedesign.com/fresh-bakin',

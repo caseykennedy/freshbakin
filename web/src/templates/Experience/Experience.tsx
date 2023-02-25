@@ -23,7 +23,7 @@ const BuyButton = (props: { contactEmail: string; eventTitle: string }) => {
   const { contactEmail, eventTitle } = props
   return (
     <a
-      href={`mailto:${contactEmail}?subject=${eventTitle} Experiential Event Booking Inquiry`}
+      href={`mailto:${contactEmail}?subject=${eventTitle} Event Booking Inquiry`}
       className="button"
       target="_blank"
       rel="noreferer nofollow"
