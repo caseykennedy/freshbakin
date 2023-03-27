@@ -18,6 +18,7 @@ const useExperience = () => {
               title
             }
             figure {
+              alt
               asset {
                 gatsbyImageData(
                   fit: FILLMAX
@@ -30,6 +31,7 @@ const useExperience = () => {
               }
             }
             poster {
+              alt
               asset {
                 gatsbyImageData(
                   fit: FILLMAX

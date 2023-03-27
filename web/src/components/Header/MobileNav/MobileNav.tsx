@@ -86,8 +86,8 @@ const data = [
     detail: "Bakin' up the freshest shows in Reno, Tahoe &amp; beyond.",
   },
   // {
-  //   name: 'experiential',
-  //   link: '/experiential',
+  //   name: 'interactive',
+  //   link: '/interactive',
   //   detail: 'Elevating events with immersive experiences.',
   // },
   {

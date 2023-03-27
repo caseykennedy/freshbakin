@@ -8,7 +8,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const ExperientialPage = styled.div`
+export const InteractivePage = styled.div`
   background: ${theme.colors.black};
   color: ${theme.colors.white};
 
@@ -60,6 +60,7 @@ export const ExperientialPage = styled.div`
       border: ${theme.border};
       border-color: ${theme.colors.white};
       border-radius: ${theme.borderRadius};
+      margin: 0 ${theme.space[2]};
       padding: ${theme.space[3]} ${theme.space[5]};
 
       font-size: ${theme.fontSizes[4]};

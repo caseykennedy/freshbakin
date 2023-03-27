@@ -42,7 +42,7 @@ const EventList: React.FC<Props> = ({
     <S.EventList inverted={inverted}>
       {grid ? (
         <Grid
-          columns={[2, 3, 4]}
+          columns={[2, 2, 4]}
           gap={theme.gutter.space}
           className="events__grid"
         >

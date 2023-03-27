@@ -4,7 +4,7 @@
 import React from 'react'
 
 import SEO from '../components/SEO'
-import ExperientialPage from '../views/ExperientialPage'
+import InteractivePage from '../views/InteractivePage'
 import useSiteSettings from '../hooks/useSiteSettings'
 
 // ___________________________________________________________________
@@ -15,9 +15,9 @@ const Interactive = () => {
     <>
       <SEO
         pathname={`/experiential`}
-        title={`Expressive, immersive experiences for your event, show or festival | ${site.titleShort}`}
+        title={`Expressive, interactive, immersive entertainment for your corporate event, show or festival | ${site.titleShort}`}
       />
-      <ExperientialPage />
+      <InteractivePage />
     </>
   )
 }

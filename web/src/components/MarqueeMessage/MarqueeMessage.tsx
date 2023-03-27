@@ -16,14 +16,14 @@ import Marquee from 'react-fast-marquee'
 
 type Props = {
   message?: string
+  speed?: number
 }
 
-const MarqueeProps = {
-  gradient: false,
-  speed: 40,
-}
-
-const MarqueeMessage: React.FC<Props> = ({ message }) => {
+const MarqueeMessage: React.FC<Props> = ({ message, speed = 55 }) => {
+  const MarqueeProps = {
+    gradient: false,
+    speed,
+  }
   return (
     <Marquee {...MarqueeProps}>
       <Text className="text--sm  text--uppercase">{message}</Text>
