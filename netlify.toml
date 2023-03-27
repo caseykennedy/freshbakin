@@ -2,3 +2,20 @@
   base = "web/"
   command = "npm run build"
   publish = "public/"
+
+[[redirects]]
+  from = "freshbakininteractive.com"
+  to = "freshbakin.com/interactive"
+  status = 301
+[[redirects]]
+  from = "www.freshbakininteractive.com"
+  to = "www.freshbakin.com/interactive"
+  status = 301
+[[redirects]]
+  from = "freshbakininteractive.com/*"
+  to = "freshbakin.com/:splat"
+  status = 301
+[[redirects]]
+  from = "www.freshbakininteractive.com/*"
+  to = "www.freshbakin.com/:splat"
+  status = 301
