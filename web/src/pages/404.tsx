@@ -2,12 +2,16 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Box } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 
 // ___________________________________________________________________
 
 const PageNotFound = () => {
-  return <Box>404</Box>
+  return (
+    <Box>
+      <Text as="h1">404</Text>
+    </Box>
+  )
 }
 
 export default PageNotFound

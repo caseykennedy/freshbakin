@@ -30,11 +30,11 @@ const data = [
     link: '/',
     span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
   },
-  // {
-  //   name: 'interactive',
-  //   link: '/interactive',
-  //   span: 'Elevating events with immersive experiences.',
-  // },
+  {
+    name: 'interactive',
+    link: '/interactive',
+    span: 'Elevating events with immersive experiences.',
+  },
   //   {
   //     name: 'news',
   //     link: '/news',
