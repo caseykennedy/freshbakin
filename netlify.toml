@@ -3,14 +3,16 @@
   command = "npm run build"
   publish = "public/"
 
-# [[redirects]]
-#   from = "freshbakininteractive.com"
-#   to = "/interactive"
-#   status = 301
-# [[redirects]]
-#   from = "www.freshbakininteractive.com"
-#   to = "/interactive"
-#   status = 301
+[[redirects]]
+  from = "freshbakininteractive.com"
+  to = "/interactive"
+  force = true
+  status = 200
+[[redirects]]
+  from = "www.freshbakininteractive.com"
+  to = "/interactive"
+  force = true
+  status = 200
 [[redirects]]
   from = "freshbakininteractive.com/*"
   to = "freshbakin.com/:splat"
