@@ -9,8 +9,8 @@
 #   force = true
 #   status = 200
 [[redirects]]
-  from = "www.freshbakininteractive.com"
-  to = "www.freshbakin.com/interactive"
+  from = "https://www.freshbakininteractive.com"
+  to = "https://www.freshbakin.com/interactive"
   status = 301
   force = true
 # [[redirects]]
