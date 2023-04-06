@@ -3,6 +3,7 @@
   command = "npm run build"
   publish = "public/"
 
+# Redirects: freshbakinInteractive.com
 [[redirects]]
   from = "https://freshbakininteractive.com"
   to = "https://freshbakin.com/interactive"
@@ -20,6 +21,28 @@
   force = true
 [[redirects]]
   from = "https://www.freshbakininteractive.com/*"
+  to = "https://www.freshbakin.com/:splat"
+  status = 301
+  force = true
+
+# Redirects: freshbakinExperience.com
+[[redirects]]
+  from = "https://freshbakinexperience.com"
+  to = "https://freshbakin.com/interactive"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.freshbakinexperience.com"
+  to = "https://www.freshbakin.com/interactive"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://freshbakinexperience.com/*"
+  to = "https://freshbakin.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.freshbakinexperience.com/*"
   to = "https://www.freshbakin.com/:splat"
   status = 301
   force = true
