@@ -1,7 +1,5 @@
 // Article template
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -20,8 +18,6 @@ import PrevNext from '../../components/PrevNext'
 
 // Data
 import useSiteSettings from '../../hooks/useSiteSettings'
-
-// ___________________________________________________________________
 
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
@@ -109,5 +105,3 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
 }
 
 export default Article
-
-// ___________________________________________________________________

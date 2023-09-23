@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 import { useColorMode } from 'theme-ui'
 
-// ___________________________________________________________________
-
 type Props = { fill?: string }
 
 const FreshBakin: React.FC<Props> = ({ fill }) => {
@@ -78,8 +76,6 @@ const FreshBakin: React.FC<Props> = ({ fill }) => {
 }
 
 export default FreshBakin
-
-// ___________________________________________________________________
 
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .letter {

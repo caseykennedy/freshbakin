@@ -1,11 +1,7 @@
 // Experience Post Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 export const Experience = styled.div`
   .button {
@@ -24,6 +20,8 @@ export const Experience = styled.div`
     font-size: ${theme.fontSizes[4]};
     text-align: center;
     text-transform: uppercase;
+
+    transition: all 0.2s ease-in-out;
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[4]};

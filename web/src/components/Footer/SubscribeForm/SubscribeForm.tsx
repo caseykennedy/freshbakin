@@ -1,7 +1,5 @@
 // Subscribe Form Component:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Theme + ui
@@ -12,8 +10,6 @@ import { Box, Flex, Heading, Text, Input } from 'theme-ui'
 // Components
 import Section from '../../Section'
 import Icon from '../../Icons'
-
-// ___________________________________________________________________
 
 const SubscribeForm = () => {
   return (

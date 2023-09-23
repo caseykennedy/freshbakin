@@ -1,14 +1,10 @@
 // Subscribe Form Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { lighten } from 'polished'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box } from 'theme-ui'
-
-// ___________________________________________________________________
 
 export const SubscribeForm = styled(Box)`
   width: 100%;
@@ -63,7 +59,7 @@ export const SubscribeForm = styled(Box)`
         background: ${theme.colors.primary};
         border-color: ${theme.colors.primary};
         color: ${theme.colors.black};
-        
+
         svg {
           fill: ${theme.colors.black};
         }

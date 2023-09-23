@@ -5,8 +5,6 @@
 import React from 'react'
 import theme from '../../../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
-
 const Carat = () => (
   <svg width="18px" viewBox="0 0 35.46 111.79">
     <polyline

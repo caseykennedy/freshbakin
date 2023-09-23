@@ -1,12 +1,8 @@
 // Navigation
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { Text, Heading } from 'theme-ui'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 const orbMotion = {
   rest: {

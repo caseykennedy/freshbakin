@@ -1,10 +1,6 @@
 // Root variables
-// ___________________________________________________________________
-
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 const RootVariables = css`
   :root {
@@ -62,5 +58,3 @@ const RootVariables = css`
 `
 
 export default RootVariables
-
-// ___________________________________________________________________

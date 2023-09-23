@@ -1,7 +1,5 @@
 // News page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -11,8 +9,6 @@ import NewsPage from '../views/NewsPage'
 
 // Data
 import useSiteSettings from '../hooks/useSiteSettings'
-
-// ___________________________________________________________________
 
 const News = () => {
   const site = useSiteSettings()

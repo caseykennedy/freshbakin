@@ -1,7 +1,5 @@
 // HomePage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -18,8 +16,6 @@ import Newsletter from '../../components/Footer/SubscribeForm'
 import EventList from '../../components/EventList'
 
 import useEvent from '../../hooks/useEvent'
-
-// ___________________________________________________________________
 
 const HomePage: React.FC = () => {
   return (

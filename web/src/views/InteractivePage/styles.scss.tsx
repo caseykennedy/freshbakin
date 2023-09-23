@@ -1,12 +1,8 @@
 // InteractivePage Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { Box, Flex } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 export const InteractivePage = styled.div`
   background: ${theme.colors.black};

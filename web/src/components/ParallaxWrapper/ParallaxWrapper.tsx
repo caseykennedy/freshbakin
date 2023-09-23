@@ -1,7 +1,5 @@
 // Post Meta
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
@@ -9,8 +7,6 @@ import { motion } from 'framer-motion'
 import theme from '../../gatsby-plugin-theme-ui'
 
 import useParallaxEffect from '../../hooks/useParallaxEffect'
-
-// ___________________________________________________________________
 
 type Props = {
   children: React.ReactNode

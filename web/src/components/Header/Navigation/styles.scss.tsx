@@ -1,12 +1,8 @@
 // Navigation Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { motion } from 'framer-motion'
-
-// ___________________________________________________________________
 
 export const Nav = styled.nav`
   display: none;

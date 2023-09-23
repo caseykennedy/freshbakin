@@ -1,11 +1,7 @@
 // useEvent hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const useEvent = () => {
   const data = useStaticQuery<EventShape>(graphql`

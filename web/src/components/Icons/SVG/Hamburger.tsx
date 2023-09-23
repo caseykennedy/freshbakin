@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Hamburger = () => (
   <svg version="1.1" width="100%" viewBox="0 0 36.18 17.25">
     <line

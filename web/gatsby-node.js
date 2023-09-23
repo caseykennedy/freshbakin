@@ -1,7 +1,6 @@
 // gatsby-node.js
 
 // Experience Post Pages
-// ___________________________________________________________________
 async function createExperiencePostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
@@ -113,7 +112,6 @@ async function createExperiencePostPages(graphql, actions) {
 }
 
 // Event Post Pages
-// ___________________________________________________________________
 async function createEventPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
@@ -190,7 +188,6 @@ async function createEventPostPages(graphql, actions) {
 }
 
 // News Post Pages
-// ___________________________________________________________________
 async function createNewsPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
@@ -263,8 +260,6 @@ async function createNewsPostPages(graphql, actions) {
     })
 }
 
-// Create Pages
-// ___________________________________________________________________
 exports.createPages = async ({ graphql, actions }) => {
   await createExperiencePostPages(graphql, actions)
   await createEventPostPages(graphql, actions)

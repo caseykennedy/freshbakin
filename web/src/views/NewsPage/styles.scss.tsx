@@ -1,13 +1,9 @@
 // NewsPage Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { Box, Flex } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Gradient } from '../../styles/transitions'
-
-// ___________________________________________________________________
 
 export const NewsPage = styled(Box)`
   .card {

@@ -1,6 +1,4 @@
 // Layout:
-// ___________________________________________________________________
-
 import React, { useRef } from 'react'
 import { Box, Text } from 'theme-ui'
 
@@ -11,8 +9,6 @@ import MarqueeMessage from '../MarqueeMessage'
 
 import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
-
-// ___________________________________________________________________
 
 export type LayoutProps = {
   children: React.ReactNode

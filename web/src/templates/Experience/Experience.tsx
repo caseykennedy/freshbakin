@@ -1,6 +1,4 @@
 // Experience template
-// ___________________________________________________________________
-
 // Libraries
 import React, { useEffect, useState } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -17,9 +15,7 @@ import ExperienceList from '../../components/ExperienceList'
 
 import useSiteSettings from '../../hooks/useSiteSettings'
 
-// ___________________________________________________________________
-
-const BuyButton = (props: { contactEmail: string; eventTitle: string }) => {
+const InquireButton = (props: { contactEmail: string; eventTitle: string }) => {
   const { contactEmail, eventTitle } = props
   return (
     <a
@@ -100,7 +96,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             </Flex>
 
             <Flex sx={{ flex: 1, alignItems: 'flex-end', mt: 1 }}>
-              <BuyButton
+              <InquireButton
                 contactEmail={post.contactEmail}
                 eventTitle={post.title}
               />
@@ -153,7 +149,10 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
         )} */}
 
         <Section bg="black" color="white">
-          <BuyButton contactEmail={post.contactEmail} eventTitle={post.title} />
+          <InquireButton
+            contactEmail={post.contactEmail}
+            eventTitle={post.title}
+          />
         </Section>
 
         <Section bg="black" color="white">

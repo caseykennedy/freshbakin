@@ -1,7 +1,5 @@
 // Typography
 
-// ___________________________________________________________________
-
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 import { textCrop } from './mixins'
@@ -35,8 +33,6 @@ import DMMonoRegularEot from './fonts/DMMono-Regular.eot'
 import DMMonoRegularWoff2 from './fonts/DMMono-Regular.woff2'
 import DMMonoRegularWoff from './fonts/DMMono-Regular.woff'
 import DMMonoRegularOtf from './fonts/DMMono-Regular.otf'
-
-// ___________________________________________________________________
 
 const Typography = css`
   /* Aeonik Light */
@@ -331,5 +327,3 @@ const Typography = css`
 `
 
 export default Typography
-
-// ___________________________________________________________________

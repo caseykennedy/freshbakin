@@ -1,8 +1,6 @@
 // Header:
 // Site Header with logo
 
-// ___________________________________________________________________
-
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
@@ -17,8 +15,6 @@ import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
 import Symbol from '../Symbol'
-
-// ___________________________________________________________________
 
 type Props = {
   isHome: boolean

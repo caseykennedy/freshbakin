@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
-// ___________________________________________________________________
-
 const Symbol = () => (
   <SVG height="60px" viewBox="0 0 1126 900" fill="none">
     <path
@@ -43,7 +41,5 @@ const Symbol = () => (
 )
 
 export default Symbol
-
-// ___________________________________________________________________
 
 const SVG = styled(motion.svg)``

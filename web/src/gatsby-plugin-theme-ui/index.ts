@@ -1,8 +1,6 @@
 // Theme / Design system:
 
 // Types
-// ___________________________________________________________________
-
 type ThemeShape = {
   breakpoints: string[]
   mq: {
@@ -66,8 +64,6 @@ type ThemeShape = {
 }
 
 // Begin theme
-// ___________________________________________________________________
-
 const breakpoints: string[] = ['800px', '1280px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];

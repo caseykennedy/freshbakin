@@ -1,15 +1,11 @@
 // Section:
 // Global Section component
 
-// ___________________________________________________________________
-
 // Core
 import * as React from 'react'
 import styled from 'styled-components'
 import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 type Props = {
   bg?: string
@@ -71,8 +67,6 @@ const Section: React.FC<Props> = ({
 )
 
 export default Section
-
-// ___________________________________________________________________
 
 const defaultProps = {
   pt: theme.gutter.space,

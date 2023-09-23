@@ -1,11 +1,7 @@
 // Event Post Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 export const Event = styled.div`
   .button {
@@ -16,7 +12,7 @@ export const Event = styled.div`
     border: ${theme.border};
     border-color: ${theme.colors.white};
     border-radius: ${theme.borderRadius};
-    
+
     padding: ${theme.space[6]} ${theme.space[2]};
     height: 100%;
     width: 100%;

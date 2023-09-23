@@ -1,11 +1,12 @@
 // Experiential Page:
 
-// ___________________________________________________________________
-
 import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
-import type { IGatsbyImageData } from 'gatsby-plugin-image'
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+import {
+  StaticImage,
+  GatsbyImage,
+  type IGatsbyImageData,
+} from 'gatsby-plugin-image'
 import Marquee from 'react-fast-marquee'
 import HoverEffect from 'hover-effect'
 
@@ -25,8 +26,6 @@ import MarqueeMessage from '../../components/MarqueeMessage'
 import useExperience from '../../hooks/useExperience'
 
 import distortion from '../../images/4.png'
-
-// ___________________________________________________________________
 
 const marqueeProps = {
   message:

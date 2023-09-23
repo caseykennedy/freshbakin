@@ -1,7 +1,5 @@
 // Global reset
 
-// ___________________________________________________________________
-
 // Core
 import { css } from 'styled-components'
 import { normalize } from 'styled-normalize'

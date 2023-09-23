@@ -1,7 +1,5 @@
 // NewsPage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -18,8 +16,6 @@ import Section from '../../components/Section'
 import BlockContent from '../../components/BlockContent'
 
 import usePost from '../../hooks/usePost'
-
-// ___________________________________________________________________
 
 const NewsPage: React.FC = () => {
   const posts = usePost()
@@ -51,7 +47,9 @@ const NewsPage: React.FC = () => {
                   <BlockContent blocks={post._rawExcerpt || []} />
                 )}
               </Box>
-              <Text sx={{ mt: 6 }}><Icon name="arrow" color="white" /></Text>
+              <Text sx={{ mt: 6 }}>
+                <Icon name="arrow" color="white" />
+              </Text>
             </Link>
           ))}
         </Grid>

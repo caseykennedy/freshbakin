@@ -1,12 +1,8 @@
 // ExperienceList styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 import { motion } from 'framer-motion'
-
-// ___________________________________________________________________
 
 export const ExperienceList = styled.div<{ inverted?: boolean }>`
   .experience {

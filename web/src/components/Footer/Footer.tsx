@@ -1,7 +1,5 @@
 // Footer:
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 
 // Theme + UI
@@ -13,8 +11,6 @@ import { Box, Flex, Text } from 'theme-ui'
 import MarqueeMessage from '../MarqueeMessage'
 import SubscribeForm from './SubscribeForm'
 import Icon from '../Icons'
-
-// ___________________________________________________________________
 
 const getYear = () => new Date().getFullYear()
 

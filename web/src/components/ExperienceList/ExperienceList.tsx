@@ -1,6 +1,4 @@
 // ExperienceList List:
-// ___________________________________________________________________
-
 import * as React from 'react'
 import { Link } from 'gatsby'
 
@@ -9,8 +7,6 @@ import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 
 import useExperience from '../../hooks/useExperience'
-
-// ___________________________________________________________________
 
 type Props = {
   inverted?: boolean

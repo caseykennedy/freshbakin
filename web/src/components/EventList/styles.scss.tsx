@@ -1,12 +1,8 @@
 // EventList styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 import { motion } from 'framer-motion'
-
-// ___________________________________________________________________
 
 export const EventList = styled.div<{ inverted?: boolean }>`
   .events {

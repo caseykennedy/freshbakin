@@ -1,8 +1,6 @@
 // MobileNav:
 // Mobile Navigation links
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
@@ -10,8 +8,6 @@ import { motion } from 'framer-motion'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { useColorMode } from 'theme-ui'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 type LinkProps = {
   item: {
@@ -76,8 +72,6 @@ const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
 }
 
 export default MobileNav
-
-// ___________________________________________________________________
 
 const data = [
   {

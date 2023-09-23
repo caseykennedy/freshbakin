@@ -1,7 +1,5 @@
 // Icon Component Styles:
 
-// ___________________________________________________________________
-
 // Core
 import styled from 'styled-components'
 
@@ -9,8 +7,6 @@ import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // Begin Styles
-// ___________________________________________________________________
-
 const IconStyle = styled.span`
   font-size: 1rem;
   line-height: 0;
@@ -19,10 +15,10 @@ const IconStyle = styled.span`
   justify-content: center;
   padding: 0;
   margin: 0;
-  color: ${props => (props.color ? props.color : theme.colors.black)};
+  color: ${(props) => (props.color ? props.color : theme.colors.black)};
 
   svg {
-    fill: ${props => (props.color ? props.color : theme.colors.black)};
+    fill: ${(props) => (props.color ? props.color : theme.colors.black)};
     transition: ${theme.transition.all};
   }
 `

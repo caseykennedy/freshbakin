@@ -1,9 +1,5 @@
 // useExperience hook
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const useExperience = () => {
   const data = useStaticQuery<ExperienceShape>(graphql`

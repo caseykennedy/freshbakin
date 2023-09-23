@@ -1,10 +1,6 @@
 // Pill Styles:
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 type PillProps = {
   bg?: string

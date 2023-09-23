@@ -16,8 +16,6 @@ type GatsbyImageDataShape = {
 }
 
 // Experience shape
-// ___________________________________________________________________
-
 type ExperienceShape = {
   experiences: {
     edges: ExperienceEdges[]
@@ -92,8 +90,6 @@ type ExperienceContextShape = {
 }
 
 // Event shape
-// ___________________________________________________________________
-
 type EventShape = {
   events: {
     edges: EventEdges[]
@@ -160,8 +156,6 @@ type EventContextShape = {
 }
 
 // Post shape
-// ___________________________________________________________________
-
 type PostShape = {
   posts: {
     edges: PostEdges[]
@@ -235,8 +229,6 @@ type PostContextShape = {
 }
 
 // Speaker shape
-// ___________________________________________________________________
-
 type SpeakerShape = {
   speakers: {
     edges: SpeakerEdges[]

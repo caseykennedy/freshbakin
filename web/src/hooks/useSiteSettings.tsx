@@ -1,11 +1,7 @@
 // useSiteSettings hook
 // Hook for querying site settings data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 type Props = {
   settings: {

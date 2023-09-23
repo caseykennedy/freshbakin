@@ -1,15 +1,11 @@
 // Modal:
 
-// ___________________________________________________________________
-
 import React, { useState } from 'react'
 import { default as ReactModal } from 'react-responsive-modal'
 import { transparentize } from 'polished'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import { useColorMode } from 'theme-ui'
-
-// ___________________________________________________________________
 
 type ModalProps = {
   children: React.ReactNode
@@ -35,8 +31,6 @@ const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
 }
 
 export default Modal
-
-// ___________________________________________________________________
 
 Modal.defaultProps = defaultProps
 

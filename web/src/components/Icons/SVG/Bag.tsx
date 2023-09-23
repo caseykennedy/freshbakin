@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Bag = () => (
   <svg version="1.1" width="100%" viewBox="0 0 24.46 29.12">
     <path

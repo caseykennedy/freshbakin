@@ -1,8 +1,6 @@
 // SEO Component
 // ref: https://www.
 
-// ___________________________________________________________________
-
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -11,8 +9,6 @@ import useSiteSettings from '../../hooks/useSiteSettings'
 
 import Facebook from './facebook'
 import Twitter from './twitter'
-
-// ___________________________________________________________________
 
 type Props = {
   banner?: string

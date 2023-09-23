@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 import { useColorMode } from 'theme-ui'
 
-// ___________________________________________________________________
-
 type Props = { fill?: string }
 
 const Interactive: React.FC<Props> = ({ fill }) => {
@@ -78,8 +76,6 @@ const Interactive: React.FC<Props> = ({ fill }) => {
 }
 
 export default Interactive
-
-// ___________________________________________________________________
 
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .letter {

@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-// ___________________________________________________________________
-
 const isBrowser = typeof window !== 'undefined'
 
 const useParallaxEffect = (speed = 2) => {

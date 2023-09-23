@@ -61,7 +61,7 @@ export default () =>
 
         .icon(MdLibraryMusic),
 
-      // Event
+      // Experience
       // _________________________________________________________________
 
       S.listItem()

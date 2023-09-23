@@ -1,14 +1,10 @@
 // Transitoin keyframes
 
-// ___________________________________________________________________
-
 // Core
 import { css, keyframes } from 'styled-components'
 
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 // Gradient
 export const Gradient = keyframes`
@@ -89,5 +85,3 @@ export const Rotate = keyframes`
     transform: rotate(359deg);
   }
 `
-
-// ___________________________________________________________________

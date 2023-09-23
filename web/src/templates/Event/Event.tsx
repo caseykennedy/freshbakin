@@ -1,6 +1,4 @@
 // Event template
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -18,8 +16,6 @@ import PrevNext from '../../components/PrevNext'
 import EventList from '../../components/EventList'
 
 import useSiteSettings from '../../hooks/useSiteSettings'
-
-// ___________________________________________________________________
 
 const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const post = pageContext.event
@@ -139,11 +135,11 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
                     alt={post.figure.alt}
                   />
 
-                  {post.figure.caption && (
+                  {/* {post.figure.caption && (
                     <Text as="figcaption" py={4} px={[4, 0]}>
                       {post.figure.caption}
                     </Text>
-                  )}
+                  )} */}
                 </>
               )}
             </Box>
@@ -167,5 +163,3 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
 }
 
 export default Event
-
-// ___________________________________________________________________

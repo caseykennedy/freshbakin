@@ -1,7 +1,5 @@
 // MarqueeMessage:
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 import { Link } from 'gatsby'
 
@@ -11,8 +9,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 import { Text } from 'theme-ui'
 
 import Marquee from 'react-fast-marquee'
-
-// ___________________________________________________________________
 
 type Props = {
   message?: string
@@ -32,8 +28,6 @@ const MarqueeMessage: React.FC<Props> = ({ message, speed = 55 }) => {
 }
 
 export default MarqueeMessage
-
-// ___________________________________________________________________
 
 const defaultProps = {
   message:

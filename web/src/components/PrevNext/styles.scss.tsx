@@ -1,12 +1,8 @@
 // PrevNext Styles:
 
-// ___________________________________________________________________
-
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-
-// ___________________________________________________________________
 
 export const PrevNext = styled.div`
   display: flex;

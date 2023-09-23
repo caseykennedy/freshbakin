@@ -1,8 +1,6 @@
 // List View Icon:
 
-import React from 'react';
-
-// ___________________________________________________________________
+import React from 'react'
 
 const ListView = () => (
   <svg width="20" viewBox="0 0 16 16">

@@ -1,7 +1,5 @@
 // Event List:
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -13,8 +11,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 
 import useEvent from '../../hooks/useEvent'
-
-// ___________________________________________________________________
 
 type Props = {
   grid?: boolean
@@ -122,8 +118,6 @@ const EventList: React.FC<Props> = ({
 }
 
 export default EventList
-
-// ___________________________________________________________________
 
 const hoverMotion = {
   rest: {

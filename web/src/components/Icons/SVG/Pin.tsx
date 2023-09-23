@@ -4,8 +4,6 @@
 // Core
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Pin = () => (
   <svg width="100%" viewBox="0 0 16 20">
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
