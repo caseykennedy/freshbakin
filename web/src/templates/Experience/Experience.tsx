@@ -14,6 +14,7 @@ import BlockContent from '../../components/BlockContent'
 import ExperienceList from '../../components/ExperienceList'
 
 import useSiteSettings from '../../hooks/useSiteSettings'
+import { ExperienceContextShape } from '@/globals'
 
 const InquireButton = (props: { contactEmail: string; eventTitle: string }) => {
   const { contactEmail, eventTitle } = props

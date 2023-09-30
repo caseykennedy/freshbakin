@@ -16,6 +16,7 @@ import PrevNext from '../../components/PrevNext'
 import EventList from '../../components/EventList'
 
 import useSiteSettings from '../../hooks/useSiteSettings'
+import { EventContextShape } from '@/globals'
 
 const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const post = pageContext.event
@@ -41,8 +42,8 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
         eventTicketUrl={post.ticketUrl}
         eventStartDate={post.startDate}
         banner={`${post.figure.asset.url}`}
-        title={`${post.title} | ${siteSettings.titleShort}`}
-        desc={`${post.title}`}
+        title={`${post.title} at ${post.venue} | ${siteSettings.titleShort}`}
+        desc={`${post.title} at ${post.venue} | ${post.address} | ${post.startDate}`}
         pathname={`/events/${post.slug.current}`}
       />
       <S.Event>

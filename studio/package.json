@@ -2,7 +2,7 @@
   "private": false,
   "name": "freshbakin-sanity",
   "version": "1.0.0",
-  "author": "Casey Kennedy <caseykennedy.hns.to>",
+  "author": "Casey Kennedy <www.caseykennedy.me>",
   "scripts": {
     "deploy": "npm run graphql-deploy && npm run sanity-deploy",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
