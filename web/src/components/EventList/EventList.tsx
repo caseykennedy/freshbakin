@@ -12,113 +12,6 @@ import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 
 import useEvent from '../../hooks/useEvent'
 
-type Props = {
-  grid?: boolean
-  inverted?: boolean
-  gridSlice?: number
-  listSliceStart?: number
-  listSliceEnd?: number
-}
-
-const EventList: React.FC<Props> = ({
-  grid,
-  inverted,
-  gridSlice = 8,
-  listSliceStart = 8,
-  listSliceEnd = 30,
-}) => {
-  const events = useEvent()
-  const filteredDates = events.filter((event) => {
-    const startDate = new Date(event.node.startDate)
-    const currentDate = new Date()
-    return startDate > currentDate
-  })
-  // console.log('filteredDates', filteredDates)
-  return (
-    <S.EventList inverted={inverted}>
-      {grid ? (
-        <Grid
-          columns={[2, 2, 4]}
-          gap={theme.gutter.space}
-          className="events__grid"
-        >
-          {filteredDates.slice(0, gridSlice).map(({ node: event }, key) => (
-            <S.GridMotion
-              initial={false}
-              whileHover="hover"
-              animate="rest"
-              key={key}
-            >
-              <Link to={`/events/${event.slug.current}`} className="grid-event">
-                <GatsbyImage
-                  image={event.figure.asset.gatsbyImageData}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={event.figure.alt}
-                />
-              </Link>
-              <S.HoverMotion
-                transition={hoverTransitions}
-                variants={hoverMotion}
-              >
-                <Link
-                  to={`/events/${event.slug.current}`}
-                  className="grid-event"
-                >
-                  <Flex
-                    sx={{
-                      flexFlow: 'column nowrap',
-                      justifyContent: 'space-between',
-                      height: '100%',
-                    }}
-                  >
-                    <div>
-                      <Flex sx={{ justifyContent: 'space-between' }}>
-                        <Heading className="text--md" sx={{ maxWidth: '12ch' }}>
-                          {event.title}{' '}
-                        </Heading>
-                        <Heading className="text--sm">
-                          {format(new Date(event.startDate), 'MMM. do')}
-                        </Heading>
-                      </Flex>
-                      <Text sx={{ color: 'gray' }}>at {event.venue}</Text>
-                    </div>
-                    <Flex sx={{ justifyContent: 'space-between' }}>
-                      Details
-                      <span>→</span>
-                    </Flex>
-                  </Flex>
-                </Link>
-              </S.HoverMotion>
-            </S.GridMotion>
-          ))}
-        </Grid>
-      ) : (
-        <div className="events__list">
-          {filteredDates
-            .slice(listSliceStart, listSliceEnd)
-            .map(({ node: event }, key) => (
-              <Link
-                to={`/events/${event.slug.current}`}
-                className="list-event"
-                key={key}
-              >
-                <Box sx={{ flex: 1 }}>
-                  <Heading as="h4">{event.title}</Heading>
-                </Box>
-                <Heading className="text--md">
-                  {format(new Date(event.startDate), 'MMM. do')}
-                </Heading>
-              </Link>
-            ))}
-        </div>
-      )}
-    </S.EventList>
-  )
-}
-
-export default EventList
-
 const hoverMotion = {
   rest: {
     opacity: 0,
@@ -135,3 +28,78 @@ const hoverTransitions = {
   stiffness: 150,
   damping: 18,
 }
+
+type Props = {
+  grid?: boolean
+  inverted?: boolean
+  gridSlice?: number
+  listSliceStart?: number
+  listSliceEnd?: number
+}
+
+const EventList: React.FC<Props> = ({ grid, inverted, gridSlice = 8, listSliceStart = 8, listSliceEnd = 30 }) => {
+  const events = useEvent()
+  const filteredDates = events.filter((event) => {
+    const startDate = new Date(event.node.startDate)
+    const currentDate = new Date()
+    return startDate > currentDate
+  })
+  return (
+    <S.EventList inverted={inverted}>
+      {grid ? (
+        <Grid columns={[2, 3, 4]} gap={theme.gutter.space}>
+          {filteredDates.slice(0, gridSlice).map(({ node: event }, key) => (
+            <S.GridMotion initial={false} whileHover="hover" animate="rest" key={key}>
+              <Link to={`/events/${event.slug.current}`} style={{ position: 'relative' }}>
+                <GatsbyImage
+                  image={event.figure.asset.gatsbyImageData}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={event.figure.alt}
+                />
+              </Link>
+              <S.HoverMotion transition={hoverTransitions} variants={hoverMotion}>
+                <Link to={`/events/${event.slug.current}`} className="grid-event">
+                  <Flex
+                    sx={{
+                      flexFlow: 'column nowrap',
+                      justifyContent: 'space-between',
+                      height: '100%',
+                    }}
+                  >
+                    <div>
+                      <Flex sx={{ justifyContent: 'space-between' }}>
+                        <Heading className="text--md" sx={{ maxWidth: '12ch' }}>
+                          {event.title}{' '}
+                        </Heading>
+                        <Heading className="text--sm">{format(new Date(event.startDate), 'MMM. do')}</Heading>
+                      </Flex>
+                      <Text sx={{ color: 'gray' }}>at {event.venue}</Text>
+                    </div>
+                    <Flex sx={{ justifyContent: 'space-between' }}>
+                      Details
+                      <span>→</span>
+                    </Flex>
+                  </Flex>
+                </Link>
+              </S.HoverMotion>
+            </S.GridMotion>
+          ))}
+        </Grid>
+      ) : (
+        <div className="events__list">
+          {filteredDates.slice(listSliceStart, listSliceEnd).map(({ node: event }, key) => (
+            <Link to={`/events/${event.slug.current}`} className="list-event" key={key}>
+              <Box sx={{ flex: 1 }}>
+                <Heading as="h4">{event.title}</Heading>
+              </Box>
+              <Heading className="text--md">{format(new Date(event.startDate), 'MMM. do')}</Heading>
+            </Link>
+          ))}
+        </div>
+      )}
+    </S.EventList>
+  )
+}
+
+export default EventList

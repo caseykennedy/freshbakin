@@ -1,6 +1,7 @@
 // usePost hook
 // Hook for querying data
 
+import { PostShape } from '@/globals'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const usePost = () => {
@@ -43,12 +44,7 @@ const usePost = () => {
               role
               avatar {
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }

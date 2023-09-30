@@ -1,7 +1,7 @@
 // Navigation
 import React from 'react'
 import { Link } from 'gatsby'
-import { Text, Heading } from 'theme-ui'
+import { Heading } from 'theme-ui'
 import * as S from './styles.scss'
 
 const orbMotion = {
@@ -61,11 +61,7 @@ const Navigation = () => {
           </S.LinkMotion>
         </Link>
       ))}
-      <a
-        href="https://www.sacredstatedesign.com/fresh-bakin"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="https://www.sacredstatedesign.com/fresh-bakin" target="_blank" rel="noreferrer">
         <S.LinkMotion initial="rest" whileHover="hover" animate="rest">
           <Heading className="text--md">shop</Heading>
 

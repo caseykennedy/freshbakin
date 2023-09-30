@@ -9,16 +9,14 @@
 - [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
 - [x] Framer Motion animations
 - [x] styled-components + theme-ui for styling
-- [x] styled-css-grid for css grid layouts
-- [x] Polished for cool things
-- [x] Google Analytics support
+- [x] Google Analytics
 - [x] SEO
   - [x] Sitemap
   - [x] Schema.org JSONLD
   - [x] OpenGraph Tags
   - [x] Twitter Tags
 - [x] Offline Support
-- [x] WebApp Manifest Support
+- [x] WebApp Manifest
 - [x] Responsive Images
   - [x] Right image sizes
   - [x] Blurred loading animation

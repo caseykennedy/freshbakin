@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 // Theme + UI
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
+import { Box, Heading } from 'theme-ui'
 
 import useExperience from '../../hooks/useExperience'
 
@@ -23,18 +23,11 @@ const ExperienceList: React.FC<Props> = ({ inverted }) => {
     <S.ExperienceList inverted={inverted}>
       <div className="experience__list">
         {experiential.slice(0, 8).map(({ node: event }, key) => (
-          <Link
-            to={`/experiential/${event.slug.current}`}
-            className="list-event"
-            key={key}
-          >
+          <Link to={`/experiential/${event.slug.current}`} className="list-event" key={key}>
             <Box sx={{ flex: 1 }}>
               <Heading as="h4">{event.title}</Heading>
             </Box>
-            <Heading
-              sx={{ color: 'grey', display: ['none', 'initial'] }}
-              className="text--sm"
-            >
+            <Heading sx={{ color: 'grey', display: ['none', 'initial'] }} className="text--sm">
               {event.subTitle}
             </Heading>
           </Link>

@@ -2,40 +2,10 @@
 // Hook for querying site settings data
 
 import { graphql, useStaticQuery } from 'gatsby'
-
-type Props = {
-  settings: {
-    edges: {
-      node: {
-        author: string
-        backgroundColor: string
-        banner: {
-          asset: {
-            gatsbyImageData: any
-            url: string
-          }
-        }
-        description: string
-        googleAnalyticsID: string
-        headline: string
-        language: string
-        logo: string
-        ogLanguage: string
-        ogSiteName: string
-        siteName: string
-        themeColor: string
-        title: string
-        titleAlt: string
-        titleShort: string
-        url: string
-        userTwitter: string
-      }
-    }[]
-  }
-}
+import { SettingsShape } from '@/globals'
 
 const useSiteSettings = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<SettingsShape>(graphql`
     query SiteSettingsQuery {
       settings: allSanitySiteSettings {
         edges {

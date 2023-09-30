@@ -2,6 +2,7 @@
 // Hook for querying data
 
 import { graphql, useStaticQuery } from 'gatsby'
+import { EventShape } from '@/globals'
 
 const useEvent = () => {
   const data = useStaticQuery<EventShape>(graphql`
@@ -22,11 +23,12 @@ const useEvent = () => {
               caption
               asset {
                 gatsbyImageData(
+                  aspectRatio: 0.65
                   fit: FILLMAX
+                  formats: [AUTO, AVIF, WEBP]
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
-                  aspectRatio: 0.65
+                  sizes: "(max-width: 800px) 40vw, 25vw"
                 )
                 url
               }

@@ -2,20 +2,12 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
-import { useColorMode } from 'theme-ui'
 
 type Props = { fill?: string }
 
 const FreshBakin: React.FC<Props> = ({ fill }) => {
   return (
-    <SVG
-      width="100%"
-      viewBox="0 0 1403 145"
-      variants={svgVariant}
-      initial="hidden"
-      animate="visible"
-      fill={fill}
-    >
+    <SVG width="100%" viewBox="0 0 1403 145" variants={svgVariant} initial="hidden" animate="visible" fill={fill}>
       <motion.path
         variants={polyVariant}
         d="M0 1.74754H108.168V21.7195H21.6336V80.1374H93.2482V100.109H21.6336V176.502H0V1.74754Z"
@@ -56,11 +48,7 @@ const FreshBakin: React.FC<Props> = ({ fill }) => {
         d="M1028.49 1.74754H1050.12V100.858L1137.9 1.74754H1164.26L1100.6 75.3941L1169.23 176.502H1143.37L1084.69 91.871L1050.12 131.066V176.502H1028.49V1.74754Z"
         className="letter"
       />
-      <motion.path
-        variants={polyVariant}
-        d="M1175.87 1.74754H1197.5V176.502H1175.87V1.74754Z"
-        className="letter"
-      />
+      <motion.path variants={polyVariant} d="M1175.87 1.74754H1197.5V176.502H1175.87V1.74754Z" className="letter" />
       <motion.path
         variants={polyVariant}
         d="M1220.05 176.502V1.74754H1239.94L1333.43 136.558V1.74754H1354.57V176.502H1334.68L1241.18 41.6914V176.502H1220.05Z"

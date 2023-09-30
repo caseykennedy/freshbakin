@@ -1,11 +1,9 @@
 // Modal:
 
-import React, { useState } from 'react'
+import React from 'react'
 import { default as ReactModal } from 'react-responsive-modal'
-import { transparentize } from 'polished'
 
 import theme from '../../gatsby-plugin-theme-ui'
-import { useColorMode } from 'theme-ui'
 
 type ModalProps = {
   children: React.ReactNode

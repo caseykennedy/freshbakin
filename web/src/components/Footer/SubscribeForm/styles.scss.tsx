@@ -1,7 +1,6 @@
 // Subscribe Form Styles:
 
 import styled from 'styled-components'
-import { lighten } from 'polished'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box } from 'theme-ui'

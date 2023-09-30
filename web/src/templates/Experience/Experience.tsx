@@ -1,6 +1,6 @@
 // Experience template
 // Libraries
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import ResponsiveEmbed from 'react-responsive-embed'
 import { Box, Flex, Text, Heading } from 'theme-ui'
@@ -50,10 +50,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
               {post.subTitle}
             </Heading>
 
-            <Heading
-              sx={{ color: 'gray', textAlign: 'right' }}
-              className="text--md"
-            >
+            <Heading sx={{ color: 'gray', textAlign: 'right' }} className="text--md">
               {post.ageGroup}
             </Heading>
           </Flex>
@@ -67,13 +64,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
               <Box>
                 <Flex sx={{ flexFlow: 'column nowrap', mb: 2 }}>
                   {post.socialLinks.map((item, idx) => (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferer nofollow"
-                      key={idx}
-                      className="link"
-                    >
+                    <a href={item.url} target="_blank" rel="noreferer nofollow" key={idx} className="link">
                       {item.label}
                     </a>
                   ))}
@@ -96,10 +87,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
             </Flex>
 
             <Flex sx={{ flex: 1, alignItems: 'flex-end', mt: 1 }}>
-              <InquireButton
-                contactEmail={post.contactEmail}
-                eventTitle={post.title}
-              />
+              <InquireButton contactEmail={post.contactEmail} eventTitle={post.title} />
             </Flex>
           </Flex>
         </Section>
@@ -149,10 +137,7 @@ const Experience: React.FC<ExperienceContextShape> = ({ pageContext }) => {
         )} */}
 
         <Section bg="black" color="white">
-          <InquireButton
-            contactEmail={post.contactEmail}
-            eventTitle={post.title}
-          />
+          <InquireButton contactEmail={post.contactEmail} eventTitle={post.title} />
         </Section>
 
         <Section bg="black" color="white">

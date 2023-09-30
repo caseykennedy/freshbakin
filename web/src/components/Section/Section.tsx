@@ -3,7 +3,6 @@
 
 // Core
 import * as React from 'react'
-import styled from 'styled-components'
 import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 

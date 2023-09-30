@@ -45,6 +45,7 @@ async function createExperiencePostPages(graphql, actions) {
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 0.65
+                  sizes: "(max-width: 800px) 40vw, 25vw"
                 )
                 url
               }
@@ -135,10 +136,12 @@ async function createEventPostPages(graphql, actions) {
             alt
             asset {
               gatsbyImageData(
-                fit: FILLMAX
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                formats: [AUTO, AVIF, WEBP]
+                aspectRatio: 0.65
+                  fit: FILLMAX
+                  formats: [AUTO, AVIF, WEBP]
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  sizes: "(max-width: 800px) 40vw, 25vw"
               )
               url
             }
