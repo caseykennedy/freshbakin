@@ -117,11 +117,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
               }}
             >
               <Box sx={{ flex: 1, position: 'sticky', top: 0 }}>
-                <Box sx={{ flex: 1, pl: [0, 2] }}>
-                  {post._rawInfo && (
-                    <BlockContent blocks={post._rawInfo || []} />
-                  )}
-                </Box>
+                <Box sx={{ flex: 1, pl: [0, 2] }}>{post._rawInfo && <BlockContent blocks={post._rawInfo || []} />}</Box>
               </Box>
             </Box>
 

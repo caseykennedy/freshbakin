@@ -2,11 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
-import {
-  StaticImage,
-  GatsbyImage,
-  type IGatsbyImageData,
-} from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage, type IGatsbyImageData } from 'gatsby-plugin-image'
 import Marquee from 'react-fast-marquee'
 import HoverEffect from 'hover-effect'
 
@@ -102,11 +98,7 @@ const Experience = ({ item, id }: ExperienceProps) => {
           >
             {item.title}
           </Heading>
-          <Box sx={{ fontSize: 1 }}>
-            {item._rawExcerpt && (
-              <BlockContent blocks={item._rawExcerpt || []} />
-            )}
-          </Box>
+          <Box sx={{ fontSize: 1 }}>{item._rawExcerpt && <BlockContent blocks={item._rawExcerpt || []} />}</Box>
           <Link to={`/experiential/${item.slug.current}`}>
             details
             <span>→</span>
@@ -177,13 +169,11 @@ const ExperientialPage: React.FC = () => {
       <Section pt={7} pb={7}>
         <div className="intro">
           <Heading as="h1" className="text--xl">
-            Bring excitement and energy to your event with interactive and
-            immersive entertainment experiences
+            Bring excitement and energy to your event with interactive and immersive entertainment experiences
           </Heading>
           <Text as="p" sx={{ fontSize: 4, textAlign: 'center' }}>
-            From live music and DJs to interactive games and activities, we have
-            everything you need to create an unforgettable event. Let us bring
-            the magic of immersive entertainment to your next gathering.
+            From live music and DJs to interactive games and activities, we have everything you need to create an
+            unforgettable event. Let us bring the magic of immersive entertainment to your next gathering.
           </Text>
         </div>
       </Section>

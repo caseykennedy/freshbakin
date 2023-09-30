@@ -28,9 +28,7 @@ const NewsPage: React.FC = () => {
             <Link to={`/news/${post.slug.current}`} className="card" key={key}>
               <Flex sx={{ flex: 1, justifyContent: 'space-between', mb: 4 }}>
                 <Heading as="h4">{post.title}</Heading>
-                <Heading className="text--md">
-                  {format(new Date(post.publishedAt), 'MMM. do')}
-                </Heading>
+                <Heading className="text--md">{format(new Date(post.publishedAt), 'MMM. do')}</Heading>
               </Flex>
               <Flex>
                 <Box sx={{ flex: 0.5, mb: 6, ml: 'auto' }}>
@@ -43,9 +41,7 @@ const NewsPage: React.FC = () => {
                 </Box>
               </Flex>
               <Box sx={{ flex: 1, fontSize: 1 }}>
-                {post._rawExcerpt && (
-                  <BlockContent blocks={post._rawExcerpt || []} />
-                )}
+                {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
               </Box>
               <Text sx={{ mt: 6 }}>
                 <Icon name="arrow" color="white" />

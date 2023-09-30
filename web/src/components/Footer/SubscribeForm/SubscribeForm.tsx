@@ -17,12 +17,7 @@ const SubscribeForm = () => {
       <Heading as="h4" mb={1}>
         Never miss a beat
       </Heading>
-      <form
-        name="Fresh Bakin' Subscribe"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <form name="Fresh Bakin' Subscribe" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="Fresh Bakin' Subscribe" />
 

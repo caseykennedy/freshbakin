@@ -60,11 +60,7 @@ const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
     >
       <S.MobileNav variants={listVariants}>
         {data.map((item, idx) => (
-          <NavLink
-            key={idx}
-            handleExitOnClick={handleExitOnClick}
-            item={item}
-          />
+          <NavLink key={idx} handleExitOnClick={handleExitOnClick} item={item} />
         ))}
       </S.MobileNav>
     </motion.div>

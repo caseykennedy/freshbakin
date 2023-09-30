@@ -28,16 +28,11 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
   const isHome = location.pathname === '/'
 
   // eslint-disable-next-line no-console
-  console.log(
-    `%c FreshBakin' | crafted with care | caseykennedy.me `,
-    `background: #ffffff; color: #000000`
-  )
+  console.log(`%c FreshBakin' | crafted with care | caseykennedy.me `, `background: #ffffff; color: #000000`)
   return (
     <S.Wrapper>
       <S.Wordmark>
-        <Box className="wordmark__inner">
-          {isHome ? <FreshBakin /> : <MarqueeMessage />}
-        </Box>
+        <Box className="wordmark__inner">{isHome ? <FreshBakin /> : <MarqueeMessage />}</Box>
       </S.Wordmark>
       <Header isHome={isHome} />
       <S.Main ref={mainRef}>{children}</S.Main>

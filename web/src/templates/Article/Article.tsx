@@ -34,20 +34,14 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
       <S.Article>
         <Section>
           <Box sx={{ width: ['100%', '100%'] }} mb={0}>
-            <Heading className="text--md  text--uppercase">
-              {post.publishedAt}
-            </Heading>
+            <Heading className="text--md  text--uppercase">{post.publishedAt}</Heading>
 
             <Heading as="h1" mb={4} className="text--xxl">
               {post.title}
             </Heading>
 
             <Flex sx={{ flexDirection: [`column`, `row`] }}>
-              <Box sx={{ flex: [1, 2] }}>
-                {post._rawExcerpt && (
-                  <BlockContent blocks={post._rawExcerpt || []} />
-                )}
-              </Box>
+              <Box sx={{ flex: [1, 2] }}>{post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}</Box>
             </Flex>
           </Box>
         </Section>
@@ -74,15 +68,9 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
         <Section>
           <Flex sx={{ flexDirection: 'column', width: ['100%', '100%'] }}>
-            <Flex
-              sx={{ flexDirection: [`column`, `row`], position: 'relative' }}
-            >
+            <Flex sx={{ flexDirection: [`column`, `row`], position: 'relative' }}>
               <Box sx={{ flex: [2, 3], width: '100%' }}>
-                <Text>
-                  {post._rawBody && (
-                    <BlockContent blocks={post._rawBody || []} />
-                  )}
-                </Text>
+                <Text>{post._rawBody && <BlockContent blocks={post._rawBody || []} />}</Text>
 
                 {/* <Box mt={6}>
                   {post.tags && (

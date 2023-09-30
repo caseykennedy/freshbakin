@@ -16,10 +16,7 @@ type Props = {
 const PostMeta: React.FC<Props> = ({ children, speed }) => {
   const position = useParallaxEffect(speed)
   return (
-    <motion.div
-      animate={{ x: position.x, y: position.y }}
-      transition={{ type: 'spring', stiffness: 50 }}
-    >
+    <motion.div animate={{ x: position.x, y: position.y }} transition={{ type: 'spring', stiffness: 50 }}>
       {children}
     </motion.div>
   )

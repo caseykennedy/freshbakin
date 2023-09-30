@@ -207,16 +207,10 @@ const SEO = ({
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
         {!article && (
           <script type="application/ld+json">
-            {!event
-              ? `${JSON.stringify(schemaOrgWebPage)}`
-              : `${JSON.stringify(schemaOrgEvent)}`}
+            {!event ? `${JSON.stringify(schemaOrgWebPage)}` : `${JSON.stringify(schemaOrgEvent)}`}
           </script>
         )}
-        {article && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaArticle)}
-          </script>
-        )}
+        {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
       <Facebook
@@ -228,12 +222,7 @@ const SEO = ({
         locale={settings.language}
         name={settings.ogSiteName}
       />
-      <Twitter
-        title={seo.title}
-        image={seo.image}
-        desc={seo.description}
-        username={settings.userTwitter}
-      />
+      <Twitter title={seo.title} image={seo.image} desc={seo.description} username={settings.userTwitter} />
     </>
   )
 }

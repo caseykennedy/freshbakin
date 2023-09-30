@@ -10,8 +10,7 @@ function useScrollWatch(callback: any) {
   let previousScrollTop = 0
 
   function handleDocumentScroll() {
-    const { scrollTop: currentScrollTop } =
-      document.documentElement || document.body
+    const { scrollTop: currentScrollTop } = document.documentElement || document.body
 
     setScrollPosition((previousPosition) => {
       previousScrollTop = previousPosition
@@ -26,8 +25,7 @@ function useScrollWatch(callback: any) {
   useEffect(() => {
     window.addEventListener('scroll', handleDocumentScrollThrottled)
 
-    return () =>
-      window.removeEventListener('scroll', handleDocumentScrollThrottled)
+    return () => window.removeEventListener('scroll', handleDocumentScrollThrottled)
   }, [])
 }
 

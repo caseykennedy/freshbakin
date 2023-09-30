@@ -28,11 +28,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
       <S.Header>
         <Flex className="header__billboard">
           <S.Logo sx={{ mb: 5 }} onClick={() => setNavOpen(false)}>
-            <Link
-              to="/"
-              className="logo"
-              aria-label="Fresh Bakin', back to home"
-            >
+            <Link to="/" className="logo" aria-label="Fresh Bakin', back to home">
               <Symbol />
             </Link>
           </S.Logo>

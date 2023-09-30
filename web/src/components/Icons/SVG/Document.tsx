@@ -11,10 +11,7 @@ const Document = () => (
       </clipPath>
     </defs>
     <g data-width="13" data-height="16" transform="translate(1)">
-      <path
-        clipPath="url(#iconic-size-sm-document-clip-0)"
-        d="M0 0h13v16h-13z"
-      />
+      <path clipPath="url(#iconic-size-sm-document-clip-0)" d="M0 0h13v16h-13z" />
       <path d="M13 4l-4-4v4z" />
     </g>
   </svg>

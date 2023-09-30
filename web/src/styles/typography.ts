@@ -39,10 +39,8 @@ const Typography = css`
   @font-face {
     font-family: 'Aeonik';
     src: url(${AeonikLightEot});
-    src: url(${AeonikLightWoff2}) format('woff2'),
-      url(${AeonikLightWoff}) format('woff'),
-      url(${AeonikLightOtf}) format('opentype'),
-      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
+    src: url(${AeonikLightWoff2}) format('woff2'), url(${AeonikLightWoff}) format('woff'),
+      url(${AeonikLightOtf}) format('opentype'), url(${AeonikLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -52,10 +50,8 @@ const Typography = css`
   @font-face {
     font-family: 'Aeonik';
     src: url(${AeonikRegularEot});
-    src: url(${AeonikRegularWoff2}) format('woff2'),
-      url(${AeonikRegularWoff}) format('woff'),
-      url(${AeonikRegularOtf}) format('opentype'),
-      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    src: url(${AeonikRegularWoff2}) format('woff2'), url(${AeonikRegularWoff}) format('woff'),
+      url(${AeonikRegularOtf}) format('opentype'), url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -65,10 +61,8 @@ const Typography = css`
   @font-face {
     font-family: 'Aeonik';
     src: url(${AeonikBoldEot});
-    src: url(${AeonikBoldWoff2}) format('woff2'),
-      url(${AeonikBoldWoff}) format('woff'),
-      url(${AeonikBoldOtf}) format('opentype'),
-      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
+    src: url(${AeonikBoldWoff2}) format('woff2'), url(${AeonikBoldWoff}) format('woff'),
+      url(${AeonikBoldOtf}) format('opentype'), url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -78,10 +72,8 @@ const Typography = css`
   @font-face {
     font-family: 'Aeonik';
     src: url(${AeonikBlackEot});
-    src: url(${AeonikBlackWoff2}) format('woff2'),
-      url(${AeonikBlackWoff}) format('woff'),
-      url(${AeonikBlackOtf}) format('opentype'),
-      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
+    src: url(${AeonikBlackWoff2}) format('woff2'), url(${AeonikBlackWoff}) format('woff'),
+      url(${AeonikBlackOtf}) format('opentype'), url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -91,10 +83,8 @@ const Typography = css`
   @font-face {
     font-family: 'DMMono';
     src: url(${DMMonoRegularEot});
-    src: url(${DMMonoRegularWoff2}) format('woff2'),
-      url(${DMMonoRegularWoff}) format('woff'),
-      url(${DMMonoRegularOtf}) format('opentype'),
-      url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
+    src: url(${DMMonoRegularWoff2}) format('woff2'), url(${DMMonoRegularWoff}) format('woff'),
+      url(${DMMonoRegularOtf}) format('opentype'), url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;

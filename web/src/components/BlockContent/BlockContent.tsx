@@ -50,11 +50,7 @@ const serializers = {
           return <Text as="ul">{props.children}</Text>
 
         case 'li':
-          return (
-            <Text as="li">
-              {props.children}
-            </Text>
-          )
+          return <Text as="li">{props.children}</Text>
 
         default:
           return (
@@ -71,11 +67,7 @@ const serializers = {
 }
 
 const BlockContent: React.FC<BlockShape> = ({ blocks }) => (
-  <BaseBlockContent
-    blocks={blocks}
-    imageOptions={{ w: 320, h: 240, fit: 'max' }}
-    serializers={serializers}
-  />
+  <BaseBlockContent blocks={blocks} imageOptions={{ w: 320, h: 240, fit: 'max' }} serializers={serializers} />
 )
 
 export default BlockContent

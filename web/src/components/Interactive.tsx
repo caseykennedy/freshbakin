@@ -8,19 +8,8 @@ type Props = { fill?: string }
 
 const Interactive: React.FC<Props> = ({ fill }) => {
   return (
-    <SVG
-      width="100%"
-      viewBox="0 0 1402 185"
-      variants={svgVariant}
-      initial="hidden"
-      animate="visible"
-      fill={fill}
-    >
-      <motion.path
-        variants={polyVariant}
-        d="M0 1.55898H22.6057V183.441H0V1.55898Z"
-        className="letter"
-      />
+    <SVG width="100%" viewBox="0 0 1402 185" variants={svgVariant} initial="hidden" animate="visible" fill={fill}>
+      <motion.path variants={polyVariant} d="M0 1.55898H22.6057V183.441H0V1.55898Z" className="letter" />
       <motion.path
         variants={polyVariant}
         d="M46.1614 183.441V1.55898H66.9483L164.646 141.868V1.55898H186.732V183.441H165.946L68.2475 43.132V183.441H46.1614Z"
@@ -56,11 +45,7 @@ const Interactive: React.FC<Props> = ({ fill }) => {
         d="M932.365 1.55898H1072.94V22.3455H1013.95V183.441H991.348V22.3455H932.365V1.55898Z"
         className="letter"
       />
-      <motion.path
-        variants={polyVariant}
-        d="M1085.36 1.55898H1107.97V183.441H1085.36V1.55898Z"
-        className="letter"
-      />
+      <motion.path variants={polyVariant} d="M1085.36 1.55898H1107.97V183.441H1085.36V1.55898Z" className="letter" />
       <motion.path
         variants={polyVariant}
         d="M1116.19 1.55898H1140.1L1195.7 156.678L1251.05 1.55898H1274.43L1208.95 183.441H1181.67L1116.19 1.55898Z"
