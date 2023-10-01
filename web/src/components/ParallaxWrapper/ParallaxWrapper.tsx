@@ -3,10 +3,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
-// import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
-
-import useParallaxEffect from '../../hooks/useParallaxEffect'
+import useParallaxEffect from '@/hooks/useParallaxEffect'
 
 type Props = {
   children: React.ReactNode

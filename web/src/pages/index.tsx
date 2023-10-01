@@ -4,8 +4,8 @@
 import React from 'react'
 
 // Components
-import SEO from '../components/SEO'
-import HomePage from '../views/HomePage'
+import SEO from '@/components/SEO'
+import HomePage from '@/views/HomePage'
 
 const Index = () => {
   return (

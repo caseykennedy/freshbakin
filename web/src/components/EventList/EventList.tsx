@@ -7,10 +7,10 @@ import { format } from 'date-fns'
 
 // Theme + UI
 import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 
-import useEvent from '../../hooks/useEvent'
+import useEvent from '@/hooks/useEvent'
 
 const hoverMotion = {
   rest: {

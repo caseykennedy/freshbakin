@@ -1,10 +1,9 @@
 // Section:
 // Global Section component
 
-// Core
 import * as React from 'react'
 import { Box } from 'theme-ui'
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 
 type Props = {
   bg?: string

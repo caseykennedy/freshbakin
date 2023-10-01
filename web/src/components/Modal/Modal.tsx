@@ -3,7 +3,7 @@
 import React from 'react'
 import { default as ReactModal } from 'react-responsive-modal'
 
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 
 type ModalProps = {
   children: React.ReactNode

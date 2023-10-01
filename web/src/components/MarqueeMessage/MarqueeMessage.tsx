@@ -1,13 +1,6 @@
 // MarqueeMessage:
 
 import * as React from 'react'
-import { Link } from 'gatsby'
-
-// Theme + UI
-import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
-import { Text } from 'theme-ui'
-
 import Marquee from 'react-fast-marquee'
 
 type Props = {
@@ -22,7 +15,7 @@ const MarqueeMessage: React.FC<Props> = ({ message, speed = 55 }) => {
   }
   return (
     <Marquee {...MarqueeProps}>
-      <Text className="text--sm  text--uppercase">{message}</Text>
+      <div className="text--sm  text--uppercase">{message}</div>
     </Marquee>
   )
 }

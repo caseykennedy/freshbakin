@@ -1,22 +1,20 @@
 // Subscribe Form Styles:
 
 import styled from 'styled-components'
+import theme from '@/gatsby-plugin-theme-ui'
 
-import theme from '../../../gatsby-plugin-theme-ui'
-import { Box } from 'theme-ui'
-
-export const SubscribeForm = styled(Box)`
+export const SubscribeForm = styled.div`
   width: 100%;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: ${theme.space[1]};
+  }
 
   form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
-    @media ${theme.mq.desktop} {
-      /* flex-direction: row; */
-      /* flex-wrap: nowrap; */
-    }
 
     input[type='email'] {
       border: ${theme.border};

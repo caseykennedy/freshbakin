@@ -1,45 +1,40 @@
 // Footer:
 
 import * as React from 'react'
+import MarqueeMessage from '@/components/MarqueeMessage'
+import Icon from '@/components/Icons'
 
-// Theme + UI
-import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Text } from 'theme-ui'
-
-// Components
-import MarqueeMessage from '../MarqueeMessage'
 import SubscribeForm from './SubscribeForm'
-import Icon from '../Icons'
+import * as S from './styles.scss'
 
 const getYear = () => new Date().getFullYear()
 
 const Footer: React.FC = () => {
   return (
     <S.Footer>
-      <Box className="footer__marquee">
+      <div className="footer__marquee">
         <MarqueeMessage />
-      </Box>
+      </div>
 
-      <Flex className="footer__subscribe">
-        <Box className="form">
+      <div className="footer__subscribe">
+        <div className="form">
           <SubscribeForm />
-        </Box>
-        <Flex className="social">
-          <a href="https://twitter.com/freshbakin" target="_blank">
+        </div>
+        <div className="social">
+          <a href="https://twitter.com/freshbakin" target="_blank" rel="noreferrer nofollow">
             <Icon name="twitter" />
           </a>
-        </Flex>
-      </Flex>
+        </div>
+      </div>
 
-      <Flex className="footer__copyright">
-        <Text>&copy;{getYear()}</Text>
-        <Text>
-          <a href="https://caseykennedy.me" target="_blank">
+      <div className="footer__copyright">
+        <div>&copy;{getYear()}</div>
+        <div>
+          <a href="https://caseykennedy.me" target="_blank" rel="noreferrer nofollow">
             groovy website
           </a>
-        </Text>
-      </Flex>
+        </div>
+      </div>
     </S.Footer>
   )
 }

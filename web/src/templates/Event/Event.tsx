@@ -6,7 +6,6 @@ import { format } from 'date-fns'
 import { Box, Flex, Text, Heading } from 'theme-ui'
 
 import * as S from './styles.scss'
-import theme from '../../gatsby-plugin-theme-ui'
 
 import Pill from '../../components/Pill'
 import SEO from '../../components/SEO'

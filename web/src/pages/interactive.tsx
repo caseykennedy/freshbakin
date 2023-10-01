@@ -1,9 +1,9 @@
 // Interactive page
 import React from 'react'
 
-import SEO from '../components/SEO'
-import InteractivePage from '../views/InteractivePage'
-import useSiteSettings from '../hooks/useSiteSettings'
+import SEO from '@/components/SEO'
+import InteractivePage from '@/views/InteractivePage'
+import useSiteSettings from '@/hooks/useSiteSettings'
 
 const Interactive = () => {
   const site = useSiteSettings()

@@ -6,15 +6,16 @@ import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 
 // Theme + ui
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 import { Box, Flex, Text } from 'theme-ui'
 
 // Components
+import Modal from '@/components/Modal'
+import Symbol from '@/components/Symbol'
+
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
-import Modal from '../Modal'
-import Symbol from '../Symbol'
 
 type Props = {
   isHome: boolean
@@ -26,7 +27,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
   return (
     <>
       <S.Header>
-        <Flex className="header__billboard">
+        <div className="header__billboard">
           <S.Logo sx={{ mb: 5 }} onClick={() => setNavOpen(false)}>
             <Link to="/" className="logo" aria-label="Fresh Bakin', back to home">
               <Symbol />
@@ -40,7 +41,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
               music, community and culture… nicely.
             </Text>
           )}
-        </Flex>
+        </div>
 
         <Flex className="header__menu">
           <Navigation />

@@ -3,7 +3,6 @@
 // Add custom icons via 'case'.
 
 import React from 'react'
-
 import IconStyle from './styles.scss'
 
 // Icons

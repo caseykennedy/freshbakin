@@ -1,11 +1,12 @@
 // Previous / Next
 import React from 'react'
 import * as S from './styles.scss'
+import { EventContextShape } from '@/globals'
 
 const path = 'blog'
 
 const PrevNext: React.FC<EventContextShape> = ({ pageContext }) => {
-  const post = pageContext.event
+  // const post = pageContext.event
   const prev = pageContext.prev
   const next = pageContext.next
   return (

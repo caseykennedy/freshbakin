@@ -1,6 +1,5 @@
 // News page
 
-// Libraries
 import React from 'react'
 
 // Components

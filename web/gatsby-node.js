@@ -1,5 +1,17 @@
 // gatsby-node.js
 
+const path = require("path");
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src"),
+      },
+    },
+  });
+};
+
 // Experience Post Pages
 async function createExperiencePostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages

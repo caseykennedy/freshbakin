@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from 'theme-ui'
 
-export const Header = styled(Flex)`
+export const Header = styled.header`
   display: flex;
   justify-content: space-between;
 

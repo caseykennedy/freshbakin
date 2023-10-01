@@ -1,8 +1,7 @@
 // Layout Styles:
 
 import styled from 'styled-components'
-import theme from '../../gatsby-plugin-theme-ui'
-import { Flex } from 'theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -20,7 +19,8 @@ export const Main = styled.main`
   width: 100%;
 `
 
-export const Wordmark = styled(Flex)`
+export const Wordmark = styled.div`
+  display: flex;
   overflow: hidden;
   padding: ${theme.space[1]} ${theme.space[2]} 0 ${theme.space[2]};
   width: 100%;

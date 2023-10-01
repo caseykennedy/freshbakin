@@ -1,13 +1,13 @@
 // Layout:
 import React, { useRef } from 'react'
-import { Box, Text } from 'theme-ui'
 
-import Footer from '../Footer'
-import FreshBakin from '../FreshBakin'
-import Header from '../Header'
-import MarqueeMessage from '../MarqueeMessage'
+import Footer from '@/components/Footer'
+import FreshBakin from '@/components/FreshBakin'
+import Header from '@/components/Header'
+import MarqueeMessage from '@/components/MarqueeMessage'
 
 import * as S from './styles.scss'
+
 import 'react-responsive-modal/styles.css'
 
 export type LayoutProps = {
@@ -15,11 +15,6 @@ export type LayoutProps = {
   location: {
     pathname: string
   }
-}
-
-const MarqueeProps = {
-  gradient: false,
-  speed: 20,
 }
 
 const Layout: React.FC<LayoutProps> = ({ children, location }) => {
@@ -32,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
   return (
     <S.Wrapper>
       <S.Wordmark>
-        <Box className="wordmark__inner">{isHome ? <FreshBakin /> : <MarqueeMessage />}</Box>
+        <div className="wordmark__inner">{isHome ? <FreshBakin /> : <MarqueeMessage />}</div>
       </S.Wordmark>
       <Header isHome={isHome} />
       <S.Main ref={mainRef}>{children}</S.Main>
