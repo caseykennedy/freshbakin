@@ -8,7 +8,7 @@ export const Footer = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
 
-  padding: ${theme.space[1]} ${theme.space[2]} ${theme.space[6]};
+  padding: ${theme.space[1]} ${theme.space[2]} ${theme.space[3]};
   position: relative;
 
   border-top: ${theme.border};

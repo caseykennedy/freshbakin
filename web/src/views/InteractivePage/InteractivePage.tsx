@@ -7,19 +7,17 @@ import Marquee from 'react-fast-marquee'
 import HoverEffect from 'hover-effect'
 
 // Theme + ui
-import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Grid, Heading, Text } from 'theme-ui'
+import { Box, Heading, Text } from 'theme-ui'
 
 // Components
-import Icon from '../../components/Icons'
-import BlockContent from '../../components/BlockContent'
-import Section from '../../components/Section'
-import Experiential from '../../components/Interactive'
-import MarqueeMessage from '../../components/MarqueeMessage'
+import BlockContent from '@/components/BlockContent'
+import Section from '@/components/Section'
+import Experiential from '@/components/Interactive'
+import MarqueeMessage from '@/components/MarqueeMessage'
 
 // Hooks
-import useExperience from '../../hooks/useExperience'
+import useExperience from '@/hooks/useExperience'
 
 import distortion from '../../images/4.png'
 

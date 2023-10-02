@@ -29,7 +29,7 @@ const Footer: React.FC = () => (
       <div>&copy;{getYear()}</div>
       <div>
         <a href="https://caseykennedy.me" target="_blank" rel="noreferrer nofollow">
-          groovy website
+          groovy site
         </a>
       </div>
     </div>
