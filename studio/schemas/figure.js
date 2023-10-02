@@ -10,18 +10,12 @@ export default {
       name: 'alt',
       title: 'Alternative text (for screen readers)',
       type: 'string',
-      options: {
-        isHighlighted: true
-      },
       validation: Rule => Rule.required()
     },
     {
       name: 'caption',
       title: 'Caption',
       type: 'string',
-      options: {
-        isHighlighted: true
-      }
     }
   ]
 }

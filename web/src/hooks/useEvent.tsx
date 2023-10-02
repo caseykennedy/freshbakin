@@ -10,7 +10,6 @@ const useEvent = () => {
       events: allSanityEvent(sort: { order: ASC, fields: startDate }) {
         edges {
           node {
-            _rawExcerpt
             _rawInfo
             address
             ageGroup
@@ -51,14 +50,12 @@ const useEvent = () => {
               current
             }
             title
-            _rawExcerpt
           }
           next {
             slug {
               current
             }
             title
-            _rawExcerpt
           }
         }
       }

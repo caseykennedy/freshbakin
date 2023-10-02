@@ -136,7 +136,6 @@ async function createEventPostPages(graphql, actions) {
     {
       allSanityEvent(sort: { order: DESC, fields: startDate }) {
         nodes {
-          _rawExcerpt
           _rawInfo
           address
           ageGroup

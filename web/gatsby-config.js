@@ -6,9 +6,9 @@ const config = require('./config')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 // Get Sanity config
-const {
-  api: { projectId, dataset },
-} = requireConfig('../studio/sanity.json')
+// const {
+//   api: { projectId, dataset },
+// } = requireConfig('../studio/sanity.json')
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -54,21 +54,21 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId,
-        dataset,
+        projectId: 'r6reilsl',
+        dataset: 'production',
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
-        token: process.env.GATSBY_SANITY_TOKEN,
+        // token: process.env.GATSBY_SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: false,
-      },
+        overlayDrafts: false
+      }
     },
     {
       resolve: 'gatsby-plugin-sanity-image',
       options: {
         // Sanity project info (required)
-        projectId: projectId,
-        dataset: dataset,
+        projectId: 'r6reilsl',
+        dataset: 'production',
       },
     },
     {
@@ -124,18 +124,18 @@ module.exports = {
  * with directions to enter the info manually or in the environment.
  */
 
-function requireConfig(path) {
-  try {
-    return require('../studio/sanity.json')
-  } catch (e) {
-    console.error(
-      'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
-    )
-    return {
-      api: {
-        projectId: process.env.GATSBY_SANITY_PROJECT_ID || '',
-        dataset: process.env.GATSBY_SANITY_DATASET || '',
-      },
-    }
-  }
-}
+// function requireConfig(path) {
+//   try {
+//     return require('../studio/sanity.json')
+//   } catch (e) {
+//     console.error(
+//       'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
+//     )
+//     return {
+//       api: {
+//         projectId: process.env.GATSBY_SANITY_PROJECT_ID || '',
+//         dataset: process.env.GATSBY_SANITY_DATASET || '',
+//       },
+//     }
+//   }
+// }

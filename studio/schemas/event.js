@@ -9,7 +9,7 @@ export default {
       type: 'string',
       validation: Rule =>
         Rule.required()
-          .min(10)
+          .min(2)
           .max(72)
           .warning("A title shouldn't exceed 72 characters.")
     },
@@ -95,12 +95,6 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'blockText',
-      validation: Rule => Rule.required()
-    },
-    {
       name: 'info',
       title: 'Info',
       type: 'blockContent',
@@ -131,7 +125,7 @@ export default {
       publishedAt: 'startDate',
       image: 'figure'
     },
-    prepare ({ title = 'No title', publishedAt, image }) {
+    prepare({ title = 'No title', publishedAt, image }) {
       return {
         title,
         subtitle: publishedAt

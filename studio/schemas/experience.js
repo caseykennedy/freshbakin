@@ -9,7 +9,7 @@ export default {
       type: 'string',
       validation: Rule =>
         Rule.required()
-          .min(10)
+          .min(2)
           .max(72)
           .warning("A title shouldn't exceed 72 characters.")
     },
@@ -122,7 +122,7 @@ export default {
       publishedAt: 'startDate',
       image: 'figure'
     },
-    prepare ({ title = 'No title', image }) {
+    prepare({ title = 'No title', image }) {
       return {
         title,
         media: image

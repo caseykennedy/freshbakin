@@ -137,7 +137,6 @@ export type EventData = {
 }
 
 export type EventQuery = {
-  _rawExcerpt: string
   _rawInfo: string
   address: string
   ageGroup: string
@@ -171,14 +170,12 @@ export type EventContextShape = {
   pageContext: {
     event: EventQuery
     prev: {
-      _rawExcerpt: string
       title: string
       slug: {
         current: string
       }
     }
     next: {
-      _rawExcerpt: string
       title: string
       slug: {
         current: string

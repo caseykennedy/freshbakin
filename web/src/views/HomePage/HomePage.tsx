@@ -1,21 +1,14 @@
 // HomePage:
 
 import React from 'react'
-import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { format } from 'date-fns'
 
 // Theme + ui
-import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Button, Flex, Heading, Text, Grid } from 'theme-ui'
+import { Heading } from 'theme-ui'
 
 // Components
-import Section from '../../components/Section'
-import Newsletter from '../../components/Footer/SubscribeForm'
-import EventList from '../../components/EventList'
-
-import useEvent from '../../hooks/useEvent'
+import Section from '@/components/Section'
+import EventList from '@/components/EventList'
 
 const HomePage: React.FC = () => {
   return (
