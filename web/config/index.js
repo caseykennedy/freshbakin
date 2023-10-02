@@ -10,7 +10,7 @@ module.exports = {
   // Banner
   // banner: settings.banner.asset.fluid.src,
   banner: '',
-  
+
 
   siteTitle: settings.title, // Navigation and Site Title
   siteTitleAlt: settings.titleAlt, // Alternative Site title for SEO

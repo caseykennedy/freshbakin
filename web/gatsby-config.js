@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'r6reilsl',
-        dataset: 'production',
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
         // token: process.env.GATSBY_SANITY_TOKEN,
@@ -67,8 +67,8 @@ module.exports = {
       resolve: 'gatsby-plugin-sanity-image',
       options: {
         // Sanity project info (required)
-        projectId: 'r6reilsl',
-        dataset: 'production',
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
       },
     },
     {

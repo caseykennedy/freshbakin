@@ -19,7 +19,6 @@ const useSiteSettings = () => {
               }
             }
             description
-            googleAnalyticsID
             headline
             language
             logo

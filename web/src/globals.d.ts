@@ -29,7 +29,6 @@ export type SettingsShape = {
           }
         }
         description: string
-        googleAnalyticsID: string
         headline: string
         language: string
         logo: string
