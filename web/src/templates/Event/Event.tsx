@@ -23,7 +23,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const eventStartTime = format(new Date(post.startDate), 'haaa')
 
   const BuyButton = () => (
-    <S.BuyButton href={post.ticketUrl} target="_blank" rel="nofollow noreferrer">
+    <S.BuyButton href={post.ticketUrl || '#'} target="_blank" rel="nofollow noreferrer">
       <span>Buy Tickets {!post.ticketUrl && 'Soon'}</span>
     </S.BuyButton>
   )
@@ -40,7 +40,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
         eventTicketUrl={post.ticketUrl}
         eventStartDate={post.startDate}
         banner={`${post.figure.asset.url}`}
-        title={`${post.title} at ${post.venue} | ${siteSettings.title}`}
+        title={`${post.title} at ${post.venue} | ${siteSettings.title} | ${siteSettings.siteName}`}
         desc={`${post.title} at ${post.venue} | ${post.address} | ${post.startDate}`}
         pathname={`/events/${post.slug.current}`}
       />

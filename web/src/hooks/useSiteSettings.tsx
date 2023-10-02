@@ -14,11 +14,11 @@ const useSiteSettings = () => {
             backgroundColor
             banner {
               asset {
-                gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
                 url
               }
             }
             description
+            googleTagID
             headline
             language
             logo

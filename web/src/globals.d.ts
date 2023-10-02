@@ -24,11 +24,11 @@ export type SettingsShape = {
         backgroundColor: string
         banner: {
           asset: {
-            gatsbyImageData: any
             url: string
           }
         }
         description: string
+        googleTagID: string
         headline: string
         language: string
         logo: string

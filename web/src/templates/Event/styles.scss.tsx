@@ -1,7 +1,7 @@
 // Event Post Styles:
 
 import styled from 'styled-components'
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '@/gatsby-plugin-theme-ui'
 
 export const BuyButton = styled.a`
   display: flex;

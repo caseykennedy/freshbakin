@@ -5,27 +5,17 @@ require('dotenv').config({
 const config = require('./config')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
-// Get Sanity config
-// const {
-//   api: { projectId, dataset },
-// } = requireConfig('../studio/sanity.json')
-
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: config.siteURL + pathPrefix,
     pathPrefix,
-    title: config.siteTitle,
-    titleAlt: config.siteTitleAlt,
-    description: config.siteDescription,
-    logo: config.siteLogo,
+    title: config.title,
+    titleAlt: config.titleAlt,
+    titleShort: config.titleShort,
+    description: config.description,
     defaultBanner: config.banner,
-    headline: config.siteHeadline,
-    siteLanguage: config.siteLanguage,
-    ogLanguage: config.ogLanguage,
-    author: config.author,
-    twitter: config.userTwitter,
-    facebook: config.ogSiteName,
+    googleTagID: config.googleTagID,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -96,16 +86,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `#8C7746`,
+        color: config.themeColor,
         showSpinner: false,
       },
     },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
+        name: config.title,
+        short_name: config.titleShort,
+        description: config.description,
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
@@ -116,26 +106,3 @@ module.exports = {
     },
   ],
 }
-
-/**
- * We're requiring a file in the studio folder to make the monorepo
- * work "out-of-the-box". Sometimes you would to run this web frontend
- * in isolation (e.g. on codesandbox). This will give you an error message
- * with directions to enter the info manually or in the environment.
- */
-
-// function requireConfig(path) {
-//   try {
-//     return require('../studio/sanity.json')
-//   } catch (e) {
-//     console.error(
-//       'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
-//     )
-//     return {
-//       api: {
-//         projectId: process.env.GATSBY_SANITY_PROJECT_ID || '',
-//         dataset: process.env.GATSBY_SANITY_DATASET || '',
-//       },
-//     }
-//   }
-// }

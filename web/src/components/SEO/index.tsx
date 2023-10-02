@@ -5,7 +5,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import useSiteSettings from '../../hooks/useSiteSettings'
+import useSiteSettings from '@/hooks/useSiteSettings'
 
 import Facebook from './facebook'
 import Twitter from './twitter'
@@ -57,9 +57,9 @@ const SEO = ({
   const { buildTime } = site
 
   const seo = {
-    title: `${title}` || settings.title,
+    title: title || `${settings.siteName} | ${settings.titleAlt}`,
     description: desc || settings.description,
-    image: `${banner || settings.banner.asset.url}`,
+    image: banner || settings.banner.asset.url,
     url: `${settings.url}${pathname || ''}`,
   }
 

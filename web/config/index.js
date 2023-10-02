@@ -1,33 +1,24 @@
-const settings = require.resolve('../src/hooks/useSiteSettings.tsx')
-
 module.exports = {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
-
-  // Hard Coded Values
-  siteUrl: 'http://freshbakin.com', // Domain of your site. No trailing slash!
-  googleTagID: 'GTM-56KNG2F',
-
-  // Banner
-  // banner: settings.banner.asset.fluid.src,
-  banner: '',
+  pathPrefix: '/',
+  siteURL: 'http://freshbakin.com', // Domain of your site. No trailing slash!
+  googleTagID: `GTM-56KNG2F`,
+  banner: 'https://cdn.sanity.io/images/r6reilsl/production/baf837905518ddc00880187841ffa58c4b54e248-602x315.png',
 
 
-  siteTitle: settings.title, // Navigation and Site Title
-  siteTitleAlt: settings.titleAlt, // Alternative Site title for SEO
-  siteTitleShort: settings.titleShort, // short_name for manifest
-  siteHeadline: settings.headline, // Headline for schema.org JSONLD
-  siteLanguage: settings.language, // Language Tag on <html> element
-  siteLogo: settings.logo, // Used for SEO and manifest
-  siteDescription: settings.description,
+  title: `Bakin' up the freshest shows & music events in Reno, Tahoe & beyond!`,
+  titleAlt: `Live music events, festivals & shows in Reno & Tahoe`,
+  titleShort: `Live music events in Reno & Tahoe`,
+  description: `Live music events, festivals & shows in Reno, Tahoe and beyond! Fresh Bakin’ evolves art, music, community and culture… nicely.`,
+  defaultBanner: ``,
+  googleTagID: `GTM-56KNG2F`,
 
-  author: settings.author, // Author for schema.org JSONLD
+  author: `Casey Kennedy`, // Author for schema.org JSONLD
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: settings.userTwitter, // Twitter Username
-  ogSiteName: settings.ogSiteName, // Facebook Site Name
-  ogLanguage: settings.ogLanguage, // og:language
+  userTwitter: `freshbakin`, // Twitter Username
+  ogSiteName: `freshbakin`, // Facebook Site Name
+  ogLanguage: `en`, // og:language
 
   // Manifest and Progress color
-  themeColor: settings.themeColor,
-  backgroundColor: settings.backgroundColor
+  themeColor: `#4d91ae`,
+  backgroundColor: `#000000`
 }
