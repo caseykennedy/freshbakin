@@ -2,9 +2,7 @@
 
 import styled from 'styled-components'
 import { Flex } from 'theme-ui'
-import theme from '../../gatsby-plugin-theme-ui'
-
-import Section from '../Section'
+import theme from '@/gatsby-plugin-theme-ui'
 
 export const Footer = styled(Flex)`
   flex-direction: column;
@@ -26,7 +24,7 @@ export const Footer = styled(Flex)`
       align-items: center;
       width: 100%;
 
-      .form {
+      &__form {
         border-right: ${theme.border};
         flex: 2;
         margin: ${theme.space[2]} ${theme.space[2]} ${theme.space[2]} 0;

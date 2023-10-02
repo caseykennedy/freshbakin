@@ -7,14 +7,13 @@ import { Box, Flex, Text, Heading } from 'theme-ui'
 
 import * as S from './styles.scss'
 
-import Pill from '../../components/Pill'
-import SEO from '../../components/SEO'
-import Section from '../../components/Section'
-import BlockContent from '../../components/BlockContent'
-import PrevNext from '../../components/PrevNext'
-import EventList from '../../components/EventList'
+import Pill from '@/components/Pill'
+import SEO from '@/components/SEO'
+import Section from '@/components/Section'
+import BlockContent from '@/components/BlockContent'
+import EventList from '@/components/EventList'
 
-import useSiteSettings from '../../hooks/useSiteSettings'
+import useSiteSettings from '@/hooks/useSiteSettings'
 import { EventContextShape } from '@/globals'
 
 const Event: React.FC<EventContextShape> = ({ pageContext }) => {
@@ -24,9 +23,9 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
   const eventStartTime = format(new Date(post.startDate), 'haaa')
 
   const BuyButton = () => (
-    <a href={post.ticketUrl} target="_blank" className="button">
-      <Box py={[5]}>Buy Tickets {!post.ticketUrl && 'Soon'}</Box>
-    </a>
+    <S.BuyButton href={post.ticketUrl} target="_blank" rel="nofollow noreferrer">
+      <span>Buy Tickets {!post.ticketUrl && 'Soon'}</span>
+    </S.BuyButton>
   )
 
   return (
@@ -41,11 +40,11 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
         eventTicketUrl={post.ticketUrl}
         eventStartDate={post.startDate}
         banner={`${post.figure.asset.url}`}
-        title={`${post.title} at ${post.venue} | ${siteSettings.titleShort}`}
+        title={`${post.title} at ${post.venue} | ${siteSettings.title}`}
         desc={`${post.title} at ${post.venue} | ${post.address} | ${post.startDate}`}
         pathname={`/events/${post.slug.current}`}
       />
-      <S.Event>
+      <div>
         <Section bg="black" color="white">
           <Flex sx={{ justifyContent: 'space-between' }}>
             <Heading className="text--md">{eventStartDate}</Heading>
@@ -153,7 +152,7 @@ const Event: React.FC<EventContextShape> = ({ pageContext }) => {
           </Heading>
           <EventList grid={false} listSliceStart={0} listSliceEnd={6} />
         </Section>
-      </S.Event>
+      </div>
     </>
   )
 }
