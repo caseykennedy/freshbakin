@@ -23,5 +23,5 @@ export const schemaTypes = [
   postCategory,
   siteSettings,
   socialLink,
-  tag
+  tag,
 ]

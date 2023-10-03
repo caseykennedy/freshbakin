@@ -1,28 +1,16 @@
-import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
-import { dashboardTool } from '@sanity/dashboard'
-import { visionTool } from '@sanity/vision'
-import {
-  MdArticle,
-  MdCategory,
-  MdSettings,
-  MdLibraryMusic,
-  MdVideogameAsset,
-} from 'react-icons/md'
-import { netlifyWidget } from 'sanity-plugin-dashboard-widget-netlify'
-import { schemaTypes } from './schemas'
+import {defineConfig} from 'sanity'
+import {deskTool} from 'sanity/desk'
+import {dashboardTool} from '@sanity/dashboard'
+import {visionTool} from '@sanity/vision'
+import {MdArticle, MdCategory, MdSettings, MdLibraryMusic, MdVideogameAsset} from 'react-icons/md'
+import {netlifyWidget} from 'sanity-plugin-dashboard-widget-netlify'
+import {schemaTypes} from './schemas'
 
 // Define the actions that should be available for singleton documents
-const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
+// const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 // Define the singleton document types
-const singletonTypes = new Set([
-  'person',
-  'postCategory',
-  'post',
-  'event',
-  'experience',
-])
+// const singletonTypes = new Set(['person', 'postCategory', 'post', 'event', 'experience'])
 
 export default defineConfig({
   name: 'default',
@@ -56,45 +44,38 @@ export default defineConfig({
             S.listItem()
               .title('Site Settings')
               .child(
-                S.editor()
-                  .id('siteSettings')
-                  .schemaType('siteSettings')
-                  .documentId('siteSettings')
+                S.editor().id('siteSettings').schemaType('siteSettings').documentId('siteSettings')
               )
               .icon(MdSettings),
 
             S.listItem()
-              .title('People')
+              .title('Authors')
               .schemaType('person')
               .child(S.documentTypeList('person').title('People')),
 
-            S.listItem()
-              .title('Post Categories')
-              .schemaType('postCategory')
-              .child(S.documentTypeList('postCategory').title('Post Category'))
-
-              .icon(MdCategory),
-
-            S.listItem()
-              .title('Posts')
-              .schemaType('post')
-              .child(S.documentTypeList('post').title('Post'))
-
-              .icon(MdArticle),
+            // S.listItem()
+            //   .title('Post Categories')
+            //   .schemaType('postCategory')
+            //   .child(S.documentTypeList('postCategory').title('Post Category'))
+            //   .icon(MdCategory),
 
             S.listItem()
               .title('Events')
               .schemaType('event')
               .child(S.documentTypeList('event').title('Events'))
-
               .icon(MdLibraryMusic),
 
             S.listItem()
               .title('Experiential')
               .schemaType('experience')
               .child(S.documentTypeList('experience').title('Experiential'))
-
               .icon(MdVideogameAsset),
+
+            S.listItem()
+              .title('Blog')
+              .schemaType('post')
+              .child(S.documentTypeList('post').title('Blog posts'))
+              .icon(MdLibraryMusic),
           ]),
     }),
     visionTool(),
@@ -104,16 +85,15 @@ export default defineConfig({
     types: schemaTypes,
 
     // Filter out singleton types from the global “New document” menu options
-    templates: (templates) =>
-      templates.filter(({ schemaType }) => !singletonTypes.has(schemaType)),
+    // templates: (templates) => templates.filter(({schemaType}) => !singletonTypes.has(schemaType)),
   },
 
-  document: {
-    // For singleton types, filter out actions that are not explicitly included
-    // in the `singletonActions` list defined above
-    actions: (input, context) =>
-      singletonTypes.has(context.schemaType)
-        ? input.filter(({ action }) => action && singletonActions.has(action))
-        : input,
-  },
+  // document: {
+  //   // For singleton types, filter out actions that are not explicitly included
+  //   // in the `singletonActions` list defined above
+  //   actions: (input, context) =>
+  //     singletonTypes.has(context.schemaType)
+  //       ? input.filter(({action}) => action && singletonActions.has(action))
+  //       : input,
+  // },
 })
