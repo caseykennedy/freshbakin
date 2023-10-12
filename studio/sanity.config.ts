@@ -53,12 +53,6 @@ export default defineConfig({
               .schemaType('person')
               .child(S.documentTypeList('person').title('People')),
 
-            // S.listItem()
-            //   .title('Post Categories')
-            //   .schemaType('postCategory')
-            //   .child(S.documentTypeList('postCategory').title('Post Category'))
-            //   .icon(MdCategory),
-
             S.listItem()
               .title('Events')
               .schemaType('event')
@@ -76,6 +70,12 @@ export default defineConfig({
               .schemaType('post')
               .child(S.documentTypeList('post').title('Blog posts'))
               .icon(MdLibraryMusic),
+
+            S.listItem()
+              .title('Post Categories')
+              .schemaType('postCategory')
+              .child(S.documentTypeList('postCategory').title('Post Category'))
+              .icon(MdCategory),
           ]),
     }),
     visionTool(),

@@ -24,18 +24,18 @@ const data = [
   {
     name: 'shows',
     link: '/',
-    span: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
+    detail: "Bakin' up the freshest shows in Reno, Tahoe & beyond.",
   },
   {
-    name: 'interactive',
+    name: 'experiences',
     link: '/interactive',
-    span: 'Elevating events with immersive experiences.',
+    detail: 'Elevating events with interactive experiences.',
   },
-  //   {
-  //     name: 'news',
-  //     link: '/news',
-  //     span: 'Never miss a beat. Stay in tune with Reno events.',
-  //   },
+  {
+    name: 'blog',
+    link: '/blog',
+    detail: 'Never miss a beat. Stay in tune with Reno events.',
+  },
 ]
 
 const Navigation = () => {
@@ -57,11 +57,15 @@ const Navigation = () => {
               </svg>
             </S.Orb>
 
-            <span>{item.span}</span>
+            <span>{item.detail}</span>
           </S.LinkMotion>
         </Link>
       ))}
-      <a href="https://www.sacredstatedesign.com/fresh-bakin" target="_blank" rel="noreferrer">
+      {/* <a
+        href="https://www.sacredstatedesign.com/fresh-bakin"
+        target="_blank"
+        rel="noreferrer"
+      >
         <S.LinkMotion initial="rest" whileHover="hover" animate="rest">
           <Heading className="text--md">shop</Heading>
 
@@ -73,7 +77,7 @@ const Navigation = () => {
 
           <span>Snag some swag.</span>
         </S.LinkMotion>
-      </a>
+      </a> */}
     </S.Nav>
   )
 }

@@ -202,7 +202,7 @@ async function createEventPostPages(graphql, actions) {
 }
 
 // News Post Pages
-async function createNewsPostPages(graphql, actions) {
+async function createBlogPostPages(graphql, actions) {
   // Get Gatsby‘s method for creating new pages
   const { createPage } = actions
   const PostTemplate = require.resolve('./src/templates/Article/index.tsx')
@@ -217,7 +217,7 @@ async function createNewsPostPages(graphql, actions) {
           _rawExcerpt
           _rawBody
           _id
-          publishedAt(formatString: "MMM. DD, YYYY | hh:mma")
+          publishedAt(formatString: "MMM. DD ● YYYY")
           slug {
             current
           }
@@ -261,7 +261,7 @@ async function createNewsPostPages(graphql, actions) {
       // If there isn't a slug, we want to do nothing
       if (!slug) return
       // Make the URL with the current slug
-      const path = `/news/${slug.current}`
+      const path = `/blog/${slug.current}`
       // Create the page using the URL path and the template file, and pass down the id
       // that we can use to query for the right category in the template file
       createPage({
@@ -277,5 +277,5 @@ async function createNewsPostPages(graphql, actions) {
 exports.createPages = async ({ graphql, actions }) => {
   await createExperiencePostPages(graphql, actions)
   await createEventPostPages(graphql, actions)
-  await createNewsPostPages(graphql, actions)
+  await createBlogPostPages(graphql, actions)
 }

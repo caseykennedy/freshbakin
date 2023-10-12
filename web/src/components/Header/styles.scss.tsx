@@ -34,6 +34,10 @@ export const Header = styled.header`
       align-items: flex-start;
       justify-content: flex-end;
       height: 100%;
+
+      @media ${theme.mq.desktop} {
+        flex: 1;
+      }
     }
   }
 `
@@ -41,6 +45,11 @@ export const Header = styled.header`
 export const Logo = styled(Flex)`
   display: flex;
   flex-direction: column;
+  margin-bottom: ${theme.space[5]};
+
+  a {
+    margin-right: auto;
+  }
 `
 
 export const Toggle = styled.div`

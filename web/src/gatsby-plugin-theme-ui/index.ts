@@ -88,7 +88,7 @@ const theme: ThemeShape = {
     text: '#000000',
     background: '#EEEEEE',
 
-    primary: '#4d91ae',
+    primary: 'hsla(198, 39%, 59%, 1)',
     secondary: '#e52a63',
     tertiary: '#34FFDD',
     muted: '#DBDBDB',

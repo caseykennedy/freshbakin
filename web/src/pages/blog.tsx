@@ -4,19 +4,19 @@ import React from 'react'
 
 // Components
 import SEO from '../components/SEO'
-import NewsPage from '../views/NewsPage'
+import Blog from '../views/Blog'
 
 // Data
 import useSiteSettings from '../hooks/useSiteSettings'
 
-const News = () => {
+const BlogPage = () => {
   const site = useSiteSettings()
   return (
     <>
-      <SEO pathname={`/news`} title={`News | ${site.titleShort}`} />
-      <NewsPage />
+      <SEO pathname={`/blog`} title={`Blog | ${site.titleShort}`} />
+      <Blog />
     </>
   )
 }
 
-export default News
+export default BlogPage

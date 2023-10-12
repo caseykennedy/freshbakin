@@ -1,6 +1,7 @@
 import blockContent from './blockContent'
 import blockText from './blockText'
 import event from './event'
+import eventDocument from './eventDocument'
 import experience from './experience'
 import figure from './figure'
 import mainImage from './mainImage'
@@ -15,6 +16,7 @@ export const schemaTypes = [
   blockContent,
   blockText,
   event,
+  eventDocument,
   experience,
   figure,
   mainImage,

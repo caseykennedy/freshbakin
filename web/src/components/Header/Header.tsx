@@ -1,5 +1,4 @@
 // Header:
-// Site Header with logo
 
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
@@ -28,7 +27,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
     <>
       <S.Header>
         <div className="header__billboard">
-          <S.Logo sx={{ mb: 5 }} onClick={() => setNavOpen(false)}>
+          <S.Logo onClick={() => setNavOpen(false)}>
             <Link to="/" className="logo" aria-label="Fresh Bakin', back to home">
               <Symbol />
             </Link>
