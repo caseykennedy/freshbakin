@@ -41,7 +41,7 @@ export const Article = styled.article`
     &__aside {
       display: flex;
       flex-flow: column nowrap;
-      gap: ${theme.space[4]};
+      gap: ${theme.space[2]};
       width: 100%;
       flex: 1;
       top: 0;

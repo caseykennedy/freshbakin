@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 
 // Theme + UI
 import * as S from './styles.scss'
-import { Box, Flex, Text, Heading } from 'theme-ui'
+import { Box, Heading } from 'theme-ui'
 
 // Components
 import SEO from '@/components/SEO'
