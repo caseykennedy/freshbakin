@@ -35,22 +35,22 @@ export const Article = styled.article`
     }
 
     &__block {
-      flex: 2;
+      flex: 1;
     }
 
     &__aside {
+      flex: 1;
       display: flex;
       flex-flow: column nowrap;
       gap: ${theme.space[2]};
+
       width: 100%;
-      flex: 1;
-      top: 0;
       padding-top: ${theme.space[2]};
       text-align: right;
 
       @media ${theme.mq.tablet} {
         position: sticky;
-        /* width: initial; */
+        top: 0;
       }
     }
   }
