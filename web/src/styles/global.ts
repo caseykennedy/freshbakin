@@ -13,25 +13,19 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     width: 0;
   }
-
-  /* Track */
   ::-webkit-scrollbar-track {
     background: ${theme.colors.black};
   }
-
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: ${theme.colors.background};
     border-left: ${theme.border};
     border-color: ${theme.colors.black};
   }
-
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-  }
+  } */
   
   html,
   body {

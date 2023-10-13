@@ -223,6 +223,9 @@ export type PostQuery = {
   tags: {
     tag: string
   }[]
+  eventReference: {
+    event: EventQuery
+  }
 }
 
 export type PostAuthor = {

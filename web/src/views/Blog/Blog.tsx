@@ -23,10 +23,12 @@ const Card = ({ post }: PostData) => {
     <>
       <S.Card to={`/blog/${post.slug.current}`}>
         <div className="card__title">
-          <Heading as="h2" sx={{ fontSize: [4, 4, 5], maxWidth: '14ch' }}>
+          <Heading as="h2" sx={{ fontSize: [4], textTransform: 'uppercase', maxWidth: '14ch' }}>
             {post.title}
           </Heading>
-          <Heading className="text--md">{format(new Date(post.publishedAt), 'MMM. do')}</Heading>
+          <Heading sx={{ fontSize: [3], textTransform: 'uppercase' }}>
+            {format(new Date(post.publishedAt), 'MMM. do')}
+          </Heading>
         </div>
 
         <div className="card__figure">
@@ -43,8 +45,7 @@ const Card = ({ post }: PostData) => {
         <div className="card__excerpt">{post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}</div>
 
         <div className="card__action">
-          Read post
-          <Icon name="arrow" color="black" />
+          <span>●</span>
         </div>
       </S.Card>
     </>

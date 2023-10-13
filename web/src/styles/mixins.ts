@@ -34,7 +34,7 @@ export const textCrop = (lineHeight = 1.3, topAdjustment = 0, bottomAdjustment =
 }
 
 // Breakpoints
-const breakpoints: string[] = ['768px', '1140px']
+const breakpoints: string[] = ['824px', '1024px']
 export const breakpoint = {
   tablet: `(min-width: ${breakpoints[0]})`,
   desktop: `(min-width: ${breakpoints[1]})`,

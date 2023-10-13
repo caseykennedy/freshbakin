@@ -26,7 +26,7 @@ const hoverMotion = {
 const hoverTransitions = {
   type: 'spring',
   stiffness: 150,
-  damping: 18,
+  damping: 22,
 }
 
 type Props = {

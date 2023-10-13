@@ -17,21 +17,21 @@ const serializers = {
 
         case 'h2':
           return (
-            <Heading as="h2" mt={4} mb={3}>
+            <Heading as="h2" mb={3} sx={{ textTransform: 'uppercase' }}>
               {props.children}
             </Heading>
           )
 
         case 'h3':
           return (
-            <Heading as="h3" mt={4} mb={3}>
+            <Heading as="h3" mt={4} mb={3} sx={{ textTransform: 'uppercase' }}>
               {props.children}
             </Heading>
           )
 
         case 'h4':
           return (
-            <Heading as="h4" mt={4} mb={3}>
+            <Heading as="h4" mt={4} mb={3} sx={{ textTransform: 'uppercase' }}>
               {props.children}
             </Heading>
           )
@@ -54,7 +54,7 @@ const serializers = {
 
         default:
           return (
-            <Text as="p" sx={{ fontSize: 4, mb: 3 }}>
+            <Text as="p" sx={{ fontSize: [3, 4], mb: 3 }}>
               {props.children}
             </Text>
           )

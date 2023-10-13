@@ -36,7 +36,7 @@ export const Header = styled.header`
       height: 100%;
 
       @media ${theme.mq.desktop} {
-        flex: 1;
+        /* flex: 1; */
       }
     }
   }

@@ -34,7 +34,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
           </S.Logo>
 
           {isHome && (
-            <Text as="span" sx={{ mt: 6, fontWeight: 600 }}>
+            <Text as="span" sx={{ mt: 6 }}>
               Fresh Bakin’ evolves art,
               <br />
               music, community and culture… nicely.
