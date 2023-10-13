@@ -32,7 +32,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
 
   const EventButton = () => (
     <Link to={`/events/${FeaturedEvent.slug.current || '#'}`} rel="nofollow noreferrer" className="article__btn">
-      <span>Event Details</span>
+      <span>Event Info</span>
     </Link>
   )
   return (
