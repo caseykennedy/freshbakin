@@ -1,10 +1,10 @@
 // Blog Styles:
 
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
+import { motion } from 'framer-motion'
 
-export const Card = styled(Link)`
+export const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.background};
@@ -12,7 +12,7 @@ export const Card = styled(Link)`
   transition: all 0.0667s ease-in-out;
 
   &:hover {
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.white};
 
     .card__action span {
       margin-right: 0;
@@ -52,6 +52,17 @@ export const Card = styled(Link)`
       margin-right: ${theme.space[2]};
       transition: all 0.0667s ease-in-out;
     }
+  }
+`
+
+export const Orb = styled(motion.div)`
+  position: relative;
+  opacity: 0;
+
+  svg {
+    width: auto;
+    height: 32px;
+    object-fit: scale-down;
   }
 `
 

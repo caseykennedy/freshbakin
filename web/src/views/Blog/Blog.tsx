@@ -15,13 +15,28 @@ import Section from '../../components/Section'
 import BlockContent from '../../components/BlockContent'
 
 import usePost from '../../hooks/usePost'
-
 import { PostData } from '../../globals'
+
+const orbMotion = {
+  rest: {
+    opacity: 0,
+    right: '0px',
+  },
+  hover: {
+    opacity: 1,
+    right: '32px',
+    transition: {
+      type: 'spring',
+      stiffness: 200,
+      damping: 10,
+    },
+  },
+}
 
 const Card = ({ post }: PostData) => {
   return (
-    <>
-      <S.Card to={`/blog/${post.slug.current}`}>
+    <Link to={`/blog/${post.slug.current}`}>
+      <S.Card initial="rest" whileHover="hover" animate="rest">
         <div className="card__title">
           <Heading as="h2" sx={{ fontSize: [4], textTransform: 'uppercase', maxWidth: '14ch' }}>
             {post.title}
@@ -45,10 +60,14 @@ const Card = ({ post }: PostData) => {
         <div className="card__excerpt">{post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}</div>
 
         <div className="card__action">
-          <span>●</span>
+          <S.Orb variants={orbMotion}>
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="50" />
+            </svg>
+          </S.Orb>
         </div>
       </S.Card>
-    </>
+    </Link>
   )
 }
 
