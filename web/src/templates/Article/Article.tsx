@@ -13,7 +13,7 @@ import { Box, Heading } from 'theme-ui'
 import SEO from '@/components/SEO'
 import Section from '@/components/Section'
 import BlockContent from '@/components/BlockContent'
-import Pill from '@/components/Pill'
+// import Pill from '@/components/Pill'
 
 // Data
 import useSiteSettings from '@/hooks/useSiteSettings'
@@ -22,16 +22,16 @@ import { PostContextShape } from '@/globals'
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
   const siteSettings = useSiteSettings()
-  const FeaturedEvent = post.eventReference.event
+  const { ticketUrl, slug } = post.eventReference?.event ?? {}
 
   const BuyButton = () => (
-    <a href={FeaturedEvent.ticketUrl || '#'} target="_blank" rel="nofollow noreferrer" className="article__btn">
-      <span>Buy Tickets {!FeaturedEvent.ticketUrl && 'Soon'}</span>
+    <a href={ticketUrl || '#'} target="_blank" rel="nofollow noreferrer" className="article__btn">
+      <span>Buy Tickets {!ticketUrl && 'Soon'}</span>
     </a>
   )
 
   const EventButton = () => (
-    <Link to={`/events/${FeaturedEvent.slug.current || '#'}`} rel="nofollow noreferrer" className="article__btn">
+    <Link to={`/events/${slug?.current || '#'}`} rel="nofollow noreferrer" className="article__btn">
       <span>Event Info</span>
     </Link>
   )
@@ -83,8 +83,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               {/* <Heading as="h4" sx={{ mt: 0 }}>
                 {FeaturedEvent.title}
               </Heading> */}
-              <BuyButton />
-              <EventButton />
+              {ticketUrl && <BuyButton />}
+              {slug && <EventButton />}
             </aside>
           </div>
         </Section>

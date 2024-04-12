@@ -7,9 +7,11 @@ import { motion } from 'framer-motion'
 export const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: ${theme.colors.background};
   padding: ${theme.space[2]};
   transition: all 0.0667s ease-in-out;
+  width: 100%;
 
   &:hover {
     background-color: ${theme.colors.white};
@@ -24,9 +26,15 @@ export const Card = styled(motion.div)`
     justify-content: space-between;
   }
 
+  .card__util {
+    display: flex;
+    flex-direction: column;
+    gap: ${theme.space[3]};
+  }
+
   .card__figure {
     display: flex;
-    margin: ${theme.space[5]} 0;
+    margin-top: ${theme.space[7]};
 
     &__container {
       flex: 0.75;
@@ -43,7 +51,6 @@ export const Card = styled(motion.div)`
     align-items: center;
     justify-content: flex-end;
     gap: ${theme.space[2]};
-    margin-top: ${theme.space[4]};
     font-size: ${theme.fontSizes[3]};
     text-transform: uppercase;
 

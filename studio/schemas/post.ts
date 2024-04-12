@@ -76,13 +76,13 @@ export default defineType({
       title: 'Has ticket button?',
       type: 'boolean',
     }),
-    defineField({
-      name: 'ticketUrl',
-      title: 'Ticket URL',
-      type: 'url',
-      description: 'Use a valid URL. e.g.: https://eventbrite.com/event-url',
-      hidden: ({document}) => !document?.hasTicket,
-    }),
+    // defineField({
+    //   name: 'ticketUrl',
+    //   title: 'Ticket URL',
+    //   type: 'url',
+    //   description: 'Use a valid URL. e.g.: https://eventbrite.com/event-url',
+    //   hidden: ({document}) => !document?.hasTicket,
+    // }),
     defineField({
       name: 'hasEvent',
       title: 'Has event post?',

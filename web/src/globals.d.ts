@@ -223,7 +223,7 @@ export type PostQuery = {
   tags: {
     tag: string
   }[]
-  eventReference: {
+  eventReference?: {
     event: EventQuery
   }
 }
