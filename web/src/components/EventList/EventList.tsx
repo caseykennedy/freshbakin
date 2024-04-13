@@ -42,6 +42,7 @@ const EventList: React.FC<Props> = ({ grid, inverted, gridSlice = 8, listSliceSt
   const filteredDates = events.filter((event) => {
     const startDate = new Date(event.node.startDate)
     const currentDate = new Date()
+    currentDate.setDate(currentDate.getDate() - 1) // Add one extra day
     return startDate > currentDate
   })
   return (
