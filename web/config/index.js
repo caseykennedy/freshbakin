@@ -19,6 +19,6 @@ module.exports = {
   ogLanguage: `en`, // og:language
 
   // Manifest and Progress color
-  themeColor: `#ffffff`,
+  themeColor: `#EEEEEE`,
   backgroundColor: `#000000`
 }
