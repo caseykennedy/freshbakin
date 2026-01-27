@@ -31,6 +31,15 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       </S.Wordmark>
       <Header isHome={isHome} />
       <S.Main ref={mainRef}>{children}</S.Main>
+      <iframe
+        id="laylo-drop-tTiAC"
+        frameborder="0"
+        scrolling="no"
+        allow="web-share"
+        allowtransparency="true"
+        style={{ width: '1px', minWidth: '100%', maxWidth: '1000px' }}
+        src="https://embed.laylo.com?dropId=tTiAC&color=ffffff&minimal=false&theme=light"
+      />
       <Footer />
     </S.Wrapper>
   )

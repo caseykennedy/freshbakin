@@ -30,5 +30,6 @@ export const onRenderBody = ({ setHeadComponents }) => {
         src="https://www.facebook.com/tr?id=101952413626021&ev=PageView&noscript=1"
       />
     </noscript>,
+    <script src="https://embed.laylo.com/laylo-sdk.js" />,
   ])
 }
