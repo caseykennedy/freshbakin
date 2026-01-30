@@ -16,7 +16,16 @@ const Footer: React.FC = () => (
 
     <div className="footer__subscribe">
       <div className="footer__subscribe__form">
-        <SubscribeForm />
+        {/* <SubscribeForm /> */} <h4>Never miss a beat</h4>
+        <iframe
+          id="laylo-drop-tTiAC"
+          frameborder="0"
+          scrolling="no"
+          allow="web-share"
+          allowtransparency="true"
+          style={{ width: '1px', minWidth: '100%', maxWidth: '1000px' }}
+          src="https://embed.laylo.com?dropId=tTiAC&color=ffffff&minimal=false&theme=light"
+        />
       </div>
       <div className="social">
         <a href="https://instagram.com/freshbakin/" target="_blank" rel="noreferrer nofollow">

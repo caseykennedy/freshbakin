@@ -28,10 +28,14 @@ export const Footer = styled(Flex)`
         border-right: ${theme.border};
         flex: 2;
         margin: ${theme.space[2]} ${theme.space[2]} ${theme.space[2]} 0;
-        padding: ${theme.space[6]} ${theme.space[2]} 0 0;
+        padding: ${theme.space[4]} ${theme.space[2]} 0 0;
 
         @media ${theme.mq.tablet} {
           flex: 1;
+        }
+
+        h4 {
+          margin-bottom: ${theme.space[2]};
         }
       }
 
